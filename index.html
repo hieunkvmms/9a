@@ -5,34 +5,11 @@
     <meta charset="UTF-8">
     <meta name="description" content="Your site's description should be here">
     <meta name="keywords" content="Your site's keywords should be here">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css"> 
-    <!--[if IE 6]>
-	<style type="text/css">
-		* html .group {
-			height: 1%;
-		}
-	<      <div class="group-18 fade-in-scroll">
-        <p class="text-51 animate-fadeInUp">Thông tin, Hoạt động của Giải thưởng</p>
-        <div class="group-19 group news-card">
-          <img class="rectangle-1-copy-4" src="images/rectangle_1_copy_4.jpg" alt="">
-          <div class="col-5">
-            <p class="text-52">Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày 30/12/2024</p>
-            <p class="text-53">(CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ số Make in Viet Nam năm 2024 vừa tổ chức phiên họplần thứ nhất.<br>Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực công nghệ thông tin và truyền thông, trao tặng hằng năm cho các tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.</p>
-            <p class="text-54 animate-pulse">→</p>
-          </div>
-        </div><![endif]--> 
-    <!--[if IE 7]>
-	<style type="text/css">
-		*:first-child+html .group {
-			min-height: 1px;
-		}
-	</style>
-  <![endif]--> 
-    <!--[if lt IE 9]> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> 
-  <![endif]--> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic&amp;subset=latin,latin-ext,thai,vietnamese">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin,latin-ext,math,symbols,vietnamese">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -485,6 +462,222 @@
         display: flex;
         align-items: center;
       }
+
+      /* Mobile Header Styles */
+      @media (max-width: 768px) {
+        .menu {
+          position: relative;
+          background: white;
+          border-bottom: 1px solid #e0e0e0;
+          min-height: auto;
+        }
+
+        .l-constrained-4 {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 20px;
+          position: relative;
+        }
+
+        .logo {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 0;
+          flex: 1;
+        }
+
+        .logo .layer-8,
+        .logo .logo-2 {
+          width: 35px;
+          height: 35px;
+        }
+
+        .logo .text-13 {
+          font-size: 12px;
+          margin-left: 8px;
+          line-height: 1.2;
+        }
+
+        /* Hide desktop navigation on mobile */
+        .col-12 {
+          display: none;
+        }
+
+        /* Mobile menu toggle button */
+        .mobile-menu-toggle {
+          border: none !important;
+          box-shadow: none !important;
+          padding: 8px !important;
+        }
+
+        .mobile-menu-toggle:focus {
+          box-shadow: none !important;
+        }
+
+        .hamburger {
+          width: 25px;
+          height: 18px;
+          position: relative;
+          transform: rotate(0deg);
+          transition: 0.5s ease-in-out;
+        }
+
+        .hamburger span {
+          display: block;
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          background: #991d4a;
+          border-radius: 2px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) {
+          top: 0px;
+        }
+
+        .hamburger span:nth-child(2) {
+          top: 7px;
+        }
+
+        .hamburger span:nth-child(3) {
+          top: 14px;
+        }
+      }
+
+      /* Offcanvas Custom Styles */
+      .offcanvas {
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+      }
+
+      .offcanvas-header {
+        background: linear-gradient(135deg, #991d4a, #c11e47);
+        color: white;
+        border-bottom: none;
+      }
+
+      .offcanvas-title {
+        color: white !important;
+      }
+
+      .btn-close {
+        filter: brightness(0) invert(1);
+      }
+
+      .mobile-nav-list {
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile-nav-item {
+        margin-bottom: 0;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      .mobile-nav-item:last-child {
+        border-bottom: none;
+      }
+
+      .mobile-nav-link {
+        display: block;
+        padding: 16px 0;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-nav-link:hover,
+      .mobile-nav-link.active {
+        color: #991d4a;
+        background: rgba(153, 29, 74, 0.05);
+        padding-left: 12px;
+      }
+
+      .mobile-nav-link.active {
+        font-weight: 600;
+      }
+
+      .mobile-nav-dropdown .dropdown-toggle {
+        border: none;
+        background: none;
+      }
+
+      .mobile-nav-dropdown .dropdown-toggle::after {
+        display: none;
+      }
+
+      .mobile-nav-dropdown .fa-chevron-down {
+        transition: transform 0.3s ease;
+        font-size: 12px;
+      }
+
+      .mobile-nav-dropdown .dropdown-toggle[aria-expanded="true"] .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+
+      .mobile-dropdown-list {
+        padding: 8px 0;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin-top: 8px;
+      }
+
+      .mobile-dropdown-link {
+        display: block;
+        padding: 12px 16px;
+        color: #666;
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-dropdown-link:hover {
+        color: #991d4a;
+        background: rgba(153, 29, 74, 0.05);
+      }
+
+      .mobile-login-btn {
+        background: linear-gradient(135deg, #991d4a, #c11e47) !important;
+        border: none !important;
+        border-radius: 25px !important;
+        padding: 12px 24px !important;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(153, 29, 74, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .mobile-login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(153, 29, 74, 0.4);
+      }
+
+      /* Hide desktop navigation items on mobile */
+      @media (max-width: 991.98px) {
+        .nav-list {
+          display: none;
+        }
+        
+        .text-14 {
+          display: none;
+        }
+      }
+
+      /* Hide mobile login button on desktop */
+      .mobile-login-btn {
+        display: none;
+      }
+
+      /* Hide mobile menu toggle on desktop */
+      .mobile-menu-toggle {
+        display: none;
+      }
     </style>
     
     <!-- Loading Screen -->
@@ -574,85 +767,106 @@
         scrollProgress.css('width', scrollPercent + '%');
       });
 
-      // Menu line positioning and animations
+      // Desktop Menu line positioning and animations
       function initMenuLine() {
         const $menuLine = $('.menu-line');
         const $navItems = $('.nav-list li');
         
-        // Position menu line initially to selected item
-        const $selectedItem = $('.nav-list .selected').parent();
-        if ($selectedItem.length) {
-          const position = $selectedItem.position();
-          const width = $selectedItem.outerWidth();
-          $menuLine.css({
-            left: position.left + 'px',
-            width: width + 'px'
-          });
-        }
-        
-        // Add hover effects to nav items
-        $navItems.hover(
-          function() {
+        // Position menu line initially to selected item (only on desktop)
+        if ($(window).width() > 991) {
+          const $selectedItem = $('.nav-list .selected').parent();
+          if ($selectedItem.length) {
+            const position = $selectedItem.position();
+            const width = $selectedItem.outerWidth();
+            $menuLine.css({
+              left: position.left + 'px',
+              width: width + 'px'
+            });
+          }
+          
+          // Add hover effects to nav items (only on desktop)
+          $navItems.hover(
+            function() {
+              const position = $(this).position();
+              const width = $(this).outerWidth();
+              $menuLine.css({
+                left: position.left + 'px',
+                width: width + 'px'
+              });
+            },
+            function() {
+              // Return to selected item
+              const $selectedItem = $('.nav-list .selected').parent();
+              if ($selectedItem.length) {
+                const position = $selectedItem.position();
+                const width = $selectedItem.outerWidth();
+                $menuLine.css({
+                  left: position.left + 'px',
+                  width: width + 'px'
+                });
+              }
+            }
+          );
+          
+          // Handle click to change selection
+          $navItems.click(function() {
+            $('.nav-list .selected').removeClass('selected');
+            $(this).find('.text-item').addClass('selected');
+            
             const position = $(this).position();
             const width = $(this).outerWidth();
             $menuLine.css({
               left: position.left + 'px',
               width: width + 'px'
             });
-          },
-          function() {
-            // Return to selected item
-            const $selectedItem = $('.nav-list .selected').parent();
-            if ($selectedItem.length) {
-              const position = $selectedItem.position();
-              const width = $selectedItem.outerWidth();
-              $menuLine.css({
-                left: position.left + 'px',
-                width: width + 'px'
-              });
-            }
-          }
-        );
-        
-        // Handle click to change selection
-        $navItems.click(function() {
-          $('.nav-list .selected').removeClass('selected');
-          $(this).find('.text-item').addClass('selected');
-          
-          const position = $(this).position();
-          const width = $(this).outerWidth();
-          $menuLine.css({
-            left: position.left + 'px',
-            width: width + 'px'
           });
-        });
+        }
       }
 
-      // Initialize menu line
+      // Initialize desktop menu line
       initMenuLine();
 
-      // Dropdown menu enhancements
-      $('.dropdown-menu, .nav-item-dropdown').each(function() {
-        const $dropdown = $(this);
-        const $content = $dropdown.find('.dropdown-content, .nav-dropdown-content');
-        let hoverTimer;
-        
-        $dropdown.on('mouseenter', function() {
-          clearTimeout(hoverTimer);
-          $content.css('display', 'block');
-          setTimeout(() => {
-            $content.css({
-              'opacity': '1',
-              'transform': 'translateY(0)'
-            });
-          }, 10);
+      // Desktop Dropdown menu enhancements (only on desktop)
+      if ($(window).width() > 991) {
+        $('.dropdown-menu, .nav-item-dropdown').each(function() {
+          const $dropdown = $(this);
+          const $content = $dropdown.find('.dropdown-content, .nav-dropdown-content');
+          let hoverTimer;
           
-          // Show menu lines when hovering dropdown items
-          $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '1');
-        });
-        
-        $dropdown.on('mouseleave', function() {
-          hoverTimer = setTimeout(() => {
+          $dropdown.on('mouseenter', function() {
+            clearTimeout(hoverTimer);
+            $content.css('display', 'block');
+            setTimeout(() => {
+              $content.css({
+                'opacity': '1',
+                'transform': 'translateY(0)'
+              });
+            }, 10);
+            
+            $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '1');
+          });
+          
+          $dropdown.on('mouseleave', function() {
+            hoverTimer = setTimeout(() => {
+              $content.css({
+                'opacity': '0',
+                'transform': 'translateY(-10px)'
+              });
+              setTimeout(() => {
+                $content.css('display', 'none');
+              }, 300);
+              
+              if (!$('.nav-item-dropdown:hover').length) {
+                $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '0');
+              }
+            }, 150);
+          });
+          
+          $content.on('mouseenter', function() {
+            clearTimeout(hoverTimer);
+          });
+          
+          $content.on('mouseleave', function() {
             $content.css({
               'opacity': '0',
               'transform': 'translateY(-10px)'
@@ -661,50 +875,58 @@
               $content.css('display', 'none');
             }, 300);
             
-            // Hide menu lines when not hovering dropdown items
-            if (!$('.nav-item-dropdown:hover').length) {
-              $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '0');
-            }
-          }, 150); // Delay để có thời gian di chuyển chuột vào dropdown content
-        });
-        
-        // Khi hover vào dropdown content, cancel việc ẩn menu
-        $content.on('mouseenter', function() {
-          clearTimeout(hoverTimer);
-        });
-        
-        // Khi rời khỏi dropdown content thì ẩn menu
-        $content.on('mouseleave', function() {
-          $content.css({
-            'opacity': '0',
-            'transform': 'translateY(-10px)'
+            setTimeout(() => {
+              if (!$('.nav-item-dropdown:hover').length) {
+                $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '0');
+              }
+            }, 100);
           });
-          setTimeout(() => {
-            $content.css('display', 'none');
-          }, 300);
+        });
+
+        // Add click handlers for desktop dropdown items
+        $('.dropdown-content p, .nav-dropdown-content p').on('click', function() {
+          const itemText = $(this).text();
+          console.log('Clicked dropdown item:', itemText);
           
-          // Hide menu lines
+          $(this).css('transform', 'scale(0.95)');
           setTimeout(() => {
-            if (!$('.nav-item-dropdown:hover').length) {
-              $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '0');
+            $(this).css('transform', 'scale(1)');
+          }, 150);
+        });
+      }
+
+      // Bootstrap 5 Offcanvas functionality - handle mobile nav
+      document.addEventListener('DOMContentLoaded', function() {
+        // Close offcanvas when clicking on nav links (except dropdown toggles)
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link:not(.dropdown-toggle)');
+        mobileNavLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
+            if (offcanvas) {
+              offcanvas.hide();
             }
-          }, 100);
+          });
+        });
+
+        // Close offcanvas when clicking on dropdown items
+        const mobileDropdownLinks = document.querySelectorAll('.mobile-dropdown-link');
+        mobileDropdownLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
+            if (offcanvas) {
+              offcanvas.hide();
+            }
+          });
         });
       });
 
-      // Add click handlers for dropdown items
-      $('.dropdown-content p, .nav-dropdown-content p').on('click', function() {
-        const itemText = $(this).text();
-        console.log('Clicked dropdown item:', itemText);
-        // Add your click handling logic here
-        
-        // Add a small animation for feedback
-        $(this).css('transform', 'scale(0.95)');
-        setTimeout(() => {
-          $(this).css('transform', 'scale(1)');
-        }, 150);
+      // Handle window resize
+      $(window).on('resize', function() {
+        if ($(window).width() > 991) {
+          initMenuLine(); // Re-initialize menu line on desktop
+        }
       });
-		});;
+		});
 	</script>
   </head>
   <body>
@@ -767,6 +989,13 @@
           <div class="menu group">
             <div class="row-4">
               <div class="l-constrained-4 group">
+                <button class="btn btn-link mobile-menu-toggle d-lg-none p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                  <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
                 <div class="logo group">
                   <img class="layer-8" src="images/logo_b.png" alt="" width="53" height="53">
                   <img class="logo-2" src="images/logo.png" alt="" width="55" height="54">
@@ -807,6 +1036,7 @@
                         </li>
                         <li><p class="nav-item-3-5 text-item"><a href="#">Thông tin, hoạt động</a></p></li>
                       </ul>
+                      <a href="#" class="mobile-login-btn">Đăng ký/Đăng nhập</a>
                       <div class="menu-line selected"></div>
                     </nav>
                     <p class="text-14">Đăng ký/Đăng nhập</p>
@@ -964,5 +1194,116 @@
         </div>
       </div>
     </div>
+    
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <div class="offcanvas-title d-flex align-items-center" id="mobileMenuLabel">
+          <img src="images/logo_b.png" alt="Logo" width="35" height="35">
+          <img src="images/logo.png" alt="Logo" width="37" height="36" class="ms-2">
+          <div class="ms-2">
+            <div class="fw-bold" style="font-size: 12px; line-height: 1.2; color: #991d4a;">Make in Vietnam</div>
+            <div style="font-size: 10px; line-height: 1.2; color: #666;">Sản phẩm Việt chất lượng cao</div>
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list list-unstyled">
+            <li class="mobile-nav-item">
+              <a href="#" class="mobile-nav-link active">
+                <i class="fas fa-home me-2"></i>
+                Trang chủ
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <div class="mobile-nav-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#aboutDropdown" aria-expanded="false">
+                  <span><i class="fas fa-award me-2"></i>Về giải thưởng</span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="collapse" id="aboutDropdown">
+                  <ul class="mobile-dropdown-list list-unstyled ms-3">
+                    <li><a href="#" class="mobile-dropdown-link">Ban tổ chức</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Hội đồng giám khảo</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Kết quả giải thưởng</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="mobile-nav-item">
+              <div class="mobile-nav-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#criteriaDropdown" aria-expanded="false">
+                  <span><i class="fas fa-clipboard-check me-2"></i>Tiêu chí đánh giá</span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="collapse" id="criteriaDropdown">
+                  <ul class="mobile-dropdown-list list-unstyled ms-3">
+                    <li><a href="#" class="mobile-dropdown-link">Năm 2020</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Năm 2021</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Năm 2022</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Năm 2023</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Năm 2024</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Năm 2025</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="#" class="mobile-nav-link">
+                <i class="fas fa-star me-2"></i>
+                Quyền lợi
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <div class="mobile-nav-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#guideDropdown" aria-expanded="false">
+                  <span><i class="fas fa-book me-2"></i>Hướng dẫn</span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="collapse" id="guideDropdown">
+                  <ul class="mobile-dropdown-list list-unstyled ms-3">
+                    <li><a href="#" class="mobile-dropdown-link">Mẫu hồ sơ</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Lưu ý nộp hồ sơ</a></li>
+                    <li><a href="#" class="mobile-dropdown-link">Quy chế giải thưởng</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="#" class="mobile-nav-link">
+                <i class="fas fa-info-circle me-2"></i>
+                Thông tin, hoạt động
+              </a>
+            </li>
+          </ul>
+          
+          <div class="mt-4">
+            <a href="#" class="btn btn-primary w-100 mobile-login-btn">
+              <i class="fas fa-user me-2"></i>
+              Đăng ký / Đăng nhập
+            </a>
+          </div>
+          
+          <div class="mt-4 pt-4 border-top">
+            <div class="text-center">
+              <div class="mb-2">
+                <small class="text-muted">Cơ quan thường trực giải thưởng</small>
+              </div>
+              <div class="mb-2">
+                <strong style="color: #991d4a;">Cục Công nghiệp Công nghệ thông tin</strong>
+              </div>
+              <div class="small text-muted">
+                <div>📞 Hotline: 089.899.5599</div>
+                <div>✉️ Email: makeinvietnam@mst.gov.vn</div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
