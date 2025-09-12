@@ -3,10 +3,9 @@
   <head>
     <title>Your site's title should be here</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Your site's description should be here">
     <meta name="keywords" content="Your site's keywords should be here">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css"> 
@@ -162,6 +161,91 @@
       /* Counter animation */
       .text-31, .text-34, .text-37, .text-39 {
         animation: countUp 1s ease-out;
+        display: inline-block;
+        min-width: 2ch;
+        text-align: center;
+        font-feature-settings: 'tnum';
+        font-variant-numeric: tabular-nums;
+        line-height: 1 !important;
+        vertical-align: baseline !important;
+      }
+
+      /* Align countdown separators */
+      .text-33, .text-36, .text-38 {
+        line-height: 1 !important;
+        vertical-align: baseline !important;
+      }
+
+      /* Fix countdown container alignment */
+      .row-8 {
+        display: flex !important;
+        align-items: baseline !important;
+        justify-content: center !important;
+        gap: 20px !important;
+      }
+
+      .col-20, .col-21, .col-14 {
+        float: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 !important;
+      }
+
+      /* New columns for minutes and seconds */
+      .col-minutes, .col-seconds {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 !important;
+      }
+
+      .row-14 {
+        display: flex !important;
+        align-items: baseline !important;
+        justify-content: center !important;
+        gap: 10px !important;
+      }
+
+      .text-37, .text-39 {
+        float: none !important;
+        margin: 0 !important;
+      }
+
+      .text-38 {
+        float: none !important;
+        margin: 0 !important;
+      }
+
+      .text-33, .text-36 {
+        float: none !important;
+        margin: 0 !important;
+        align-self: center !important;
+        margin-top: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        height: 103px !important;
+      }
+
+      /* Style the new separator between minutes and seconds */
+      .text-38 {
+        float: none !important;
+        margin: 0 !important;
+        align-self: center !important;
+        display: flex !important;
+        align-items: center !important;
+        height: 103px !important;
+      }
+
+      /* Style the labels for minutes and seconds */
+      .text-40, .text-41 {
+        margin: 14px 0 0 !important;
+        color: #ffffff;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 1.413906rem;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
       }
 
       /* Award category boxes animation */
@@ -400,7 +484,9 @@
         font-size: 14px;
         line-height: 1.4;
       }
-
+      .dropdown-toggle::after {
+        display: none;
+      }
       .nav-dropdown-content p:last-child {
         border-bottom: none;
       }
@@ -552,13 +638,34 @@
 
       /* Offcanvas Custom Styles */
       .offcanvas {
-        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        width: 320px !important;
+        max-width: 85vw !important;
+        z-index: 1045 !important;
+      }
+
+      .offcanvas-backdrop {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 1040 !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
       .offcanvas-header {
         background: linear-gradient(135deg, #991d4a, #c11e47);
         color: white;
         border-bottom: none;
+        padding: 16px 20px;
+      }
+
+      .offcanvas-body {
+        padding: 20px;
       }
 
       .offcanvas-title {
@@ -567,6 +674,11 @@
 
       .btn-close {
         filter: brightness(0) invert(1);
+        opacity: 0.8;
+      }
+
+      .btn-close:hover {
+        opacity: 1;
       }
 
       .mobile-nav-list {
@@ -576,11 +688,17 @@
 
       .mobile-nav-item {
         margin-bottom: 0;
-        border-bottom: 1px solid #e9ecef;
+        border-bottom: 1px solid rgba(233, 236, 239, 0.5);
+        transition: all 0.3s ease;
       }
 
       .mobile-nav-item:last-child {
         border-bottom: none;
+      }
+
+      .mobile-nav-item:hover {
+        background: rgba(153, 29, 74, 0.02);
+        border-radius: 8px;
       }
 
       .mobile-nav-link {
@@ -624,9 +742,10 @@
 
       .mobile-dropdown-list {
         padding: 8px 0;
-        background: #f8f9fa;
+        background: rgba(248, 249, 250, 0.8);
         border-radius: 8px;
         margin-top: 8px;
+        border: 1px solid rgba(233, 236, 239, 0.3);
       }
 
       .mobile-dropdown-link {
@@ -671,12 +790,89 @@
 
       /* Hide mobile login button on desktop */
       .mobile-login-btn {
+        display: none !important;
+      }
+
+      /* Hide the mobile login button in nav completely */
+      .nav .mobile-login-btn {
+        display: none !important;
+      }
+
+      /* Only show mobile login button in offcanvas */
+      .offcanvas .mobile-login-btn {
+        display: block !important;
+      }
+
+      /* Show mobile menu toggle only on mobile */
+      .mobile-menu-toggle {
         display: none;
       }
 
-      /* Hide mobile menu toggle on desktop */
-      .mobile-menu-toggle {
-        display: none;
+      @media (max-width: 991.98px) {
+        .mobile-menu-toggle {
+          display: flex !important;
+        }
+
+        /* Ensure offcanvas doesn't cover too much on small screens */
+        .offcanvas {
+          width: min(320px, 80vw) !important;
+        }
+
+        /* Reduce backdrop opacity on mobile */
+        .offcanvas-backdrop {
+          background-color: rgba(0, 0, 0, 0.2) !important;
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          z-index: 1040 !important;
+        }
+
+        /* Make sure backdrop is always full screen on mobile */
+        .offcanvas-backdrop.show {
+          opacity: 0.2 !important;
+        }
+      }
+
+      /* Fix Bootstrap offcanvas body style issues */
+      body.offcanvas-open {
+        overflow: visible !important;
+        padding-right: 0 !important;
+      }
+
+      /* Prevent scrollbar jump when offcanvas opens */
+      .offcanvas-backdrop.show {
+        opacity: 0.2;
+      }
+
+      /* Ensure backdrop covers full viewport */
+      .offcanvas-backdrop {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        z-index: 1040 !important;
+      }
+
+      .offcanvas-backdrop.fade {
+        opacity: 0;
+        transition: opacity 0.15s linear;
+      }
+
+      .offcanvas-backdrop.show {
+        opacity: 0.2 !important;
+      }
+
+      /* Override Bootstrap's body padding when offcanvas is open */
+      body[style*="overflow: hidden"] {
+        overflow: visible !important;
+      }
+
+      body[style*="padding-right"] {
+        padding-right: 0 !important;
       }
     </style>
     
@@ -722,36 +918,53 @@
       $(window).on('scroll resize', animateOnScroll);
       animateOnScroll();
 
-      // Counter animation
-      function animateCounters() {
-        $('.text-31, .text-34, .text-37, .text-39').each(function() {
-          var $this = $(this);
-          var countTo = parseInt($this.text());
+      // Real countdown timer
+      function startCountdown() {
+        // Set target date: October 22, 2025, 23:59:59
+        const targetDate = new Date('2025-10-22T23:59:59').getTime();
+        
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
           
-          $({ countNum: 0 }).animate({
-            countNum: countTo
-          }, {
-            duration: 2000,
-            easing: 'linear',
-            step: function() {
-              $this.text(Math.floor(this.countNum).toString().padStart(2, '0'));
-            },
-            complete: function() {
-              $this.text(countTo.toString().padStart(2, '0'));
-            }
-          });
-        });
+          if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Update with leading zeros
+            $('.text-31').text(days.toString().padStart(2, '0'));
+            $('.text-34').text(hours.toString().padStart(2, '0'));
+            $('.text-37').text(minutes.toString().padStart(2, '0'));
+            $('.text-39').text(seconds.toString().padStart(2, '0'));
+          } else {
+            // Countdown finished
+            $('.text-31').text('00');
+            $('.text-34').text('00');
+            $('.text-37').text('00');
+            $('.text-39').text('00');
+            clearInterval(countdownInterval);
+          }
+        }
+        
+        // Update immediately and then every second
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        return countdownInterval;
       }
 
-      var counterAnimated = false;
+      var countdownStarted = false;
+      var countdownInterval = null;
       $(window).on('scroll', function() {
-        if (!counterAnimated) {
+        if (!countdownStarted) {
           var counterTop = $('.group-15').offset().top;
           var windowBottom = $(window).scrollTop() + $(window).height();
           
           if (windowBottom > counterTop) {
-            counterAnimated = true;
-            animateCounters();
+            countdownStarted = true;
+            countdownInterval = startCountdown();
           }
         }
       });
@@ -897,6 +1110,58 @@
 
       // Bootstrap 5 Offcanvas functionality - handle mobile nav
       document.addEventListener('DOMContentLoaded', function() {
+        // Fix Bootstrap offcanvas body style issues
+        const offcanvasElement = document.getElementById('mobileMenu');
+        
+        // Prevent Bootstrap from modifying body styles
+        offcanvasElement.addEventListener('show.bs.offcanvas', function () {
+          // Store original body styles
+          const body = document.body;
+          const originalOverflow = body.style.overflow;
+          const originalPaddingRight = body.style.paddingRight;
+          
+          // Remove Bootstrap's body modifications after they're applied
+          setTimeout(() => {
+            body.style.overflow = originalOverflow || '';
+            body.style.paddingRight = originalPaddingRight || '';
+            body.classList.remove('modal-open'); // Remove modal-open class if added
+          }, 10);
+        });
+
+        // Clean up when offcanvas is hidden
+        offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+          const body = document.body;
+          body.style.overflow = '';
+          body.style.paddingRight = '';
+          body.classList.remove('modal-open');
+        });
+
+        // Alternative approach: Use MutationObserver to watch for style changes
+        const bodyObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+              const body = document.body;
+              const style = body.getAttribute('style');
+              if (style && (style.includes('overflow: hidden') || style.includes('padding-right'))) {
+                // Remove problematic styles
+                let newStyle = style.replace(/overflow:\s*hidden;?/g, '')
+                                  .replace(/padding-right:\s*[\d\w\s%]+;?/g, '')
+                                  .trim();
+                if (newStyle.endsWith(';')) {
+                  newStyle = newStyle.slice(0, -1);
+                }
+                body.setAttribute('style', newStyle);
+              }
+            }
+          });
+        });
+
+        // Start observing body for style changes
+        bodyObserver.observe(document.body, {
+          attributes: true,
+          attributeFilter: ['style']
+        });
+
         // Close offcanvas when clicking on nav links (except dropdown toggles)
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link:not(.dropdown-toggle)');
         mobileNavLinks.forEach(function(link) {
@@ -1036,7 +1301,6 @@
                         </li>
                         <li><p class="nav-item-3-5 text-item"><a href="#">Thông tin, hoạt động</a></p></li>
                       </ul>
-                      <a href="#" class="mobile-login-btn">Đăng ký/Đăng nhập</a>
                       <div class="menu-line selected"></div>
                     </nav>
                     <p class="text-14">Đăng ký/Đăng nhập</p>
@@ -1087,16 +1351,14 @@
                   <p class="text-35">giờ</p>
                 </div>
                 <p class="text-36">:</p>
-                <div class="col-14">
-                  <div class="row-14 group">
-                    <p class="text-37">15</p>
-                    <p class="text-38">:</p>
-                    <p class="text-39">48</p>
-                  </div>
-                  <div class="row-15 group">
-                    <p class="text-40">phút</p>
-                    <p class="text-41">giây</p>
-                  </div>
+                <div class="col-minutes">
+                  <p class="text-37">15</p>
+                  <p class="text-40">phút</p>
+                </div>
+                <p class="text-38">:</p>
+                <div class="col-seconds">
+                  <p class="text-39">48</p>
+                  <p class="text-41">giây</p>
                 </div>
               </div>
             </div>
