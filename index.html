@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
   <head>
-    <title>Your site's title should be here</title>
+    <title>MAKE IN VIỆT NAM</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your site's description should be here">
-    <meta name="keywords" content="Your site's keywords should be here">
+    <meta name="description" content="MAKE IN VIỆT NAM">
+    <meta name="keywords" content="MAKE IN VIỆT NAM">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css"> 
@@ -833,38 +833,413 @@
         .offcanvas-backdrop.show {
           opacity: 0.2 !important;
         }
+
+        /* Fix banner responsive issues */
+        .banner {
+          top: 0px !important;
+          padding: 30px 0 250px !important;
+          position: relative !important;
+        }
+
+        /* Responsive navigation menu */
+        .menu {
+          position: sticky !important;
+          top: 0 !important;
+          z-index: 1000 !important;
+          background: rgba(255,255,255,0.95) !important;
+          backdrop-filter: blur(10px) !important;
+          border-bottom: 1px solid #e0e0e0 !important;
+        }
+
+        /* Responsive logo section */
+        .logo {
+          order: 2;
+        }
+
+        .mobile-menu-toggle {
+          order: 1;
+        }
+
+        .l-constrained-4 {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          width: 100% !important;
+        }
+
+        /* Timeline section responsive */
+        .row-9 {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 15px !important;
+        }
+
+        .row-9 > * {
+          width: 100% !important;
+          max-width: none !important;
+          margin: 0 !important;
+          float: none !important;
+        }
+
+        /* Countdown section responsive */
+        .group-15 {
+          text-align: center;
+        }
+
+        .row-8 {
+          justify-content: center !important;
+          flex-wrap: wrap !important;
+          gap: 15px !important;
+        }
+
+        /* Benefits section responsive */
+        .group-17 .row > * {
+          width: 100% !important;
+          max-width: none !important;
+          margin-bottom: 20px !important;
+        }
       }
 
-      /* Fix "Tham gia để" section layout to ensure all 5 boxes fit on one row */
-      .group-17 .row {
+      /* Additional mobile responsive fixes */
+      @media (max-width: 767px) {
+        /* Prevent horizontal scrolling */
+        html, body {
+          max-width: 100vw !important;
+        }
+
+        .home-1-copy {
+          width: 100vw !important;
+        }
+
+        .banner {
+          padding: 20px 0 180px !important;
+          top: 0 !important;
+          position: relative !important;
+        }
+
+        .text {
+          font-size: 1.8rem !important;
+        }
+
+        .text-3 {
+          font-size: 1.1rem !important;
+        }
+
+        .text-4 {
+          font-size: 1.4rem !important;
+        }
+
+        .row-7, .row-2 {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 20px !important;
+        }
+
+        .row-7 > *, .row-2 > * {
+          width: 100% !important;
+          max-width: 300px !important;
+          margin: 0 !important;
+          float: none !important;
+        }
+
+        .text-18 {
+          font-size: 1.6rem !important;
+        }
+
+        .text-31, .text-34, .text-37, .text-39 {
+          font-size: 2rem !important;
+        }
+
+        .col-20, .col-21, .col-minutes, .col-seconds {
+          min-width: 60px !important;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .banner {
+          padding: 15px 0 120px !important;
+        }
+
+        .text {
+          font-size: 1.4rem !important;
+        }
+
+        .text-3 {
+          font-size: 1rem !important;
+        }
+
+        .text-4 {
+          font-size: 1.2rem !important;
+        }
+
+        .text-18 {
+          font-size: 1.3rem !important;
+        }
+
+        .row-7 > *, .row-2 > * {
+          max-width: 280px !important;
+        }
+
+        .text-31, .text-34, .text-37, .text-39 {
+          font-size: 1.5rem !important;
+        }
+
+        .col-20, .col-21, .col-minutes, .col-seconds {
+          min-width: 50px !important;
+        }
+
+        .layer-2, .layer-3, .layer-4, .layer-5, .layer-6, .layer-7, .icon-logistics {
+          width: 80px !important;
+          height: 80px !important;
+        }
+      }
+
+      /* CRITICAL: Prevent ALL horizontal overflow */
+      @media (max-width: 991px) {
+        * {
+          max-width: 100vw !important;
+          box-sizing: border-box !important;
+        }
+
+        body, html {
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* Fix ALL containers */
+        .home-1-copy, .col-8, .wrapper-13, .banner, 
+        .text-banner, .group-2, .menu, .row-4, 
+        .l-constrained-4, .group-13, .l-constrained-3,
+        .group-16, .group-18, .group-19, .group-20,
+        .group-21, .group-22 {
+          width: 100% !important;
+          max-width: 100vw !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          left: auto !important;
+          right: auto !important;
+          position: relative !important;
+          box-sizing: border-box !important;
+        }
+
+        /* Fix all text elements to wrap properly */
+        .text-43, .text-44, .text-51, .text-52, .text-53,
+        .text-55, .text-56, .text-58, .text-59, .text-61,
+        .text-62, .text-64, .text-65 {
+          word-wrap: break-word !important;
+          overflow-wrap: break-word !important;
+          hyphens: auto !important;
+          max-width: 100% !important;
+          box-sizing: border-box !important;
+        }
+
+        /* Fix specific width issues */
+        .row-7, .row-2, .row-9, .row-8, .row-3 {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        /* Fix positioned elements */
+        .rectangle-8-copy, .rectangle-8-copy-2, .rectangle-8-copy-3 {
+          position: static !important;
+          float: none !important;
+          display: inline-block !important;
+          margin: 2px !important;
+        }
+
+        /* Responsive images */
+        img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+
+        /* Fix menu positioning */
+        .menu {
+          position: sticky !important;
+          top: 0 !important;
+          z-index: 1000 !important;
+          width: 100% !important;
+        }
+
+        /* Fix banner positioning after menu move */
+        .banner {
+          position: relative !important;
+          top: 0 !important;
+          margin-top: 0 !important;
+        }
+      }
+
+      /* Extra mobile text wrapping fixes */
+      @media (max-width: 767px) {
+        /* Force text wrapping on all potentially long text */
+        p, div, span, h1, h2, h3, h4, h5, h6 {
+          word-wrap: break-word !important;
+          overflow-wrap: break-word !important;
+          hyphens: auto !important;
+        }
+
+        /* Smaller containers on mobile */
+        .group-16, .group-18, .group-2, .group-13 {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+        }
+      }
+
+      @media (max-width: 575px) {
+        /* Ultra small mobile fixes */
+        .group-16, .group-18, .group-2, .group-13 {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        .text-43 {
+          font-size: 0.85rem !important;
+          line-height: 1.4 !important;
+        }
+
+        .text-51 {
+          font-size: 1.1rem !important;
+        }
+
+        .text-52, .text-55, .text-58, .text-61, .text-64 {
+          font-size: 0.85rem !important;
+        }
+
+        .text-53, .text-56, .text-59, .text-62, .text-65 {
+          font-size: 0.75rem !important;
+        }
+      }
+
+      /* Fix "Tham gia để" section layout - Responsive Grid System */
+      .group-17 .row.match-height.group {
         display: flex !important;
-        justify-content: space-between !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
         align-items: stretch !important;
-        flex-wrap: nowrap !important;
-        margin: 27px auto 0;
+        gap: 15px !important;
+        margin: 27px auto 0 !important;
+        width: 100% !important;
       }
 
-      .group-17 .row > * {
-        float: none !important;
-        margin: 0 !important;
-        flex: 1 !important;
-        max-width: 224px !important;
-        min-width: 200px !important;
+      /* Desktop: 5 items per row - 18% each with gaps */
+      @media (min-width: 1200px) {
+        .group-17 .row.match-height.group > * {
+          float: none !important;
+          margin: 0 !important;
+          flex: 0 0 calc(20% - 12px) !important;
+          width: calc(20% - 12px) !important;
+          max-width: 240px !important;
+          min-width: 200px !important;
+        }
       }
 
-      .group-17 .row > *:not(:last-child) {
-        margin-right: 16px !important;
+      /* Large Desktop: 5 items per row */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .group-17 .row.match-height.group > * {
+          float: none !important;
+          margin: 0 !important;
+          flex: 0 0 calc(20% - 12px) !important;
+          width: calc(20% - 12px) !important;
+          max-width: 220px !important;
+          min-width: 180px !important;
+        }
       }
 
-      /* Ensure consistent box sizing */
+      /* Tablet: 3 items per row */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .group-17 .row.match-height.group > * {
+          float: none !important;
+          margin: 0 !important;
+          flex: 0 0 calc(33.333% - 10px) !important;
+          width: calc(33.333% - 10px) !important;
+          max-width: 250px !important;
+          min-width: 200px !important;
+        }
+      }
+
+      /* Small Tablet: 2 items per row */
+      @media (min-width: 576px) and (max-width: 767px) {
+        .group-17 .row.match-height.group > * {
+          float: none !important;
+          margin: 0 !important;
+          flex: 0 0 calc(50% - 8px) !important;
+          width: calc(50% - 8px) !important;
+          max-width: 280px !important;
+          min-width: 250px !important;
+        }
+      }
+
+      /* Mobile: 1 item per row (100% width) */
+      @media (max-width: 575px) {
+        .group-17 .row.match-height.group > * {
+          float: none !important;
+          margin: 0 !important;
+          flex: 0 0 100% !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          min-width: auto !important;
+        }
+
+        .group-17 .row.match-height.group {
+          gap: 12px !important;
+        }
+      }
+
+      /* Ensure consistent box sizing for all benefit cards */
       .rectangle-1-copy-20-holder,
       .rectangle-1-copy-11-holder,
       .rectangle-1-copy-12-holder,
       .rectangle-1-copy-13-holder,
       .rectangle-1-copy-14-holder {
-        width: 100% !important;
-        margin: 0 !important;
         box-sizing: border-box !important;
+        padding: 20px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        transition: all 0.3s ease !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        color: #333 !important;
+        min-height: 140px !important;
+      }
+
+      .rectangle-1-copy-20-holder:hover,
+      .rectangle-1-copy-11-holder:hover,
+      .rectangle-1-copy-12-holder:hover,
+      .rectangle-1-copy-13-holder:hover,
+      .rectangle-1-copy-14-holder:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      @media (max-width: 767px) {
+        .rectangle-1-copy-20-holder,
+        .rectangle-1-copy-11-holder,
+        .rectangle-1-copy-12-holder,
+        .rectangle-1-copy-13-holder,
+        .rectangle-1-copy-14-holder {
+          padding: 15px !important;
+          font-size: 0.85rem !important;
+          min-height: 120px !important;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .rectangle-1-copy-20-holder,
+        .rectangle-1-copy-11-holder,
+        .rectangle-1-copy-12-holder,
+        .rectangle-1-copy-13-holder,
+        .rectangle-1-copy-14-holder {
+          padding: 12px !important;
+          font-size: 0.8rem !important;
+          min-height: 100px !important;
+        }
       }
 
       /* Prevent scrollbar jump when offcanvas opens */
@@ -1223,6 +1598,66 @@
   <body>
     <div class="home-1-copy">
       <div class="col-8">
+        <!-- Menu đã được di chuyển lên đầu -->
+        <div class="menu group">
+          <div class="row-4">
+            <div class="l-constrained-4 group">
+              <button class="btn btn-link mobile-menu-toggle d-lg-none p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                <div class="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+              <div class="logo group">
+                <img class="layer-8" src="images/logo_b.png" alt="" width="53" height="53">
+                <img class="logo-2" src="images/logo.png" alt="" width="55" height="54">
+                <p class="text-13"><span class="text-style">Make in Vietnam</span><br>Sản phẩm Việt chất lượng cao</p>
+              </div>
+              <div class="col-12 group">
+                <div class="row-10 group">
+                  <nav class="nav">
+                    <ul class="nav-list group">
+                      <li><p class="nav-item-1 text-item selected"><a href="#">Trang chủ</a></p></li>
+                      <li class="nav-item-dropdown">
+                        <p class="nav-item-3 text-item dropdown-toggle"><a href="#">Về giải thưởng</a></p>
+                        <div class="nav-dropdown-content">
+                          <p>Ban tổ chức</p>
+                          <p>Hội đồng giám khảo</p>
+                          <p>Kết quả giải thưởng</p>
+                        </div>
+                      </li>
+                      <li class="nav-item-dropdown">
+                        <p class="nav-item-3-2 text-item dropdown-toggle"><a href="#">Tiêu chí đánh giá</a></p>
+                        <div class="nav-dropdown-content">
+                          <p>Năm 2020</p>
+                          <p>Năm 2021</p>
+                          <p>Năm 2022</p>
+                          <p>Năm 2023</p>
+                          <p>Năm 2024</p>
+                          <p>Năm 2025</p>
+                        </div>
+                      </li>
+                      <li><p class="nav-item-3-3 text-item"><a href="#">Quyền lợi</a></p></li>
+                      <li class="nav-item-dropdown">
+                        <p class="nav-item-3-4 text-item dropdown-toggle"><a href="#">Hướng dẫn</a></p>
+                        <div class="nav-dropdown-content">
+                          <p>Mẫu hồ sơ</p>
+                          <p>Lưu ý nộp hồ sơ</p>
+                          <p>Quy chế giải thưởng</p>
+                        </div>
+                      </li>
+                      <li><p class="nav-item-3-5 text-item"><a href="#">Thông tin, hoạt động</a></p></li>
+                    </ul>
+                    <div class="menu-line selected"></div>
+                  </nav>
+                  <p class="text-14">Đăng ký/Đăng nhập</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div class="wrapper-13">
           <div class="banner fade-in-scroll">
             <div class="text-banner">
@@ -1274,64 +1709,6 @@
               <div class="group-9">
                 <img class="layer-7" src="images/icon_t_i_ch_nh.png" alt="" width="105" height="105">
                 <p class="text-12">Sản phẩm công nghệ số<br>xuất sắc trong lĩnh vực<br>tài chính, ngân hàng, TMDV</p>
-              </div>
-            </div>
-          </div>
-          <div class="menu group">
-            <div class="row-4">
-              <div class="l-constrained-4 group">
-                <button class="btn btn-link mobile-menu-toggle d-lg-none p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                  <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </button>
-                <div class="logo group">
-                  <img class="layer-8" src="images/logo_b.png" alt="" width="53" height="53">
-                  <img class="logo-2" src="images/logo.png" alt="" width="55" height="54">
-                  <p class="text-13"><span class="text-style">Make in Vietnam</span><br>Sản phẩm Việt chất lượng cao</p>
-                </div>
-                <div class="col-12 group">
-                  <div class="row-10 group">
-                    <nav class="nav">
-                      <ul class="nav-list group">
-                        <li><p class="nav-item-1 text-item selected"><a href="#">Trang chủ</a></p></li>
-                        <li class="nav-item-dropdown">
-                          <p class="nav-item-3 text-item dropdown-toggle"><a href="#">Về giải thưởng</a></p>
-                          <div class="nav-dropdown-content">
-                            <p>Ban tổ chức</p>
-                            <p>Hội đồng giám khảo</p>
-                            <p>Kết quả giải thưởng</p>
-                          </div>
-                        </li>
-                        <li class="nav-item-dropdown">
-                          <p class="nav-item-3-2 text-item dropdown-toggle"><a href="#">Tiêu chí đánh giá</a></p>
-                          <div class="nav-dropdown-content">
-                            <p>Năm 2020</p>
-                            <p>Năm 2021</p>
-                            <p>Năm 2022</p>
-                            <p>Năm 2023</p>
-                            <p>Năm 2024</p>
-                            <p>Năm 2025</p>
-                          </div>
-                        </li>
-                        <li><p class="nav-item-3-3 text-item"><a href="#">Quyền lợi</a></p></li>
-                        <li class="nav-item-dropdown">
-                          <p class="nav-item-3-4 text-item dropdown-toggle"><a href="#">Hướng dẫn</a></p>
-                          <div class="nav-dropdown-content">
-                            <p>Mẫu hồ sơ</p>
-                            <p>Lưu ý nộp hồ sơ</p>
-                            <p>Quy chế giải thưởng</p>
-                          </div>
-                        </li>
-                        <li><p class="nav-item-3-5 text-item"><a href="#">Thông tin, hoạt động</a></p></li>
-                      </ul>
-                      <div class="menu-line selected"></div>
-                    </nav>
-                    <p class="text-14">Đăng ký/Đăng nhập</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
