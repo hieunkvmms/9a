@@ -835,10 +835,36 @@
         }
       }
 
-      /* Fix Bootstrap offcanvas body style issues */
-      body.offcanvas-open {
-        overflow: visible !important;
-        padding-right: 0 !important;
+      /* Fix "Tham gia để" section layout to ensure all 5 boxes fit on one row */
+      .group-17 .row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: stretch !important;
+        flex-wrap: nowrap !important;
+        margin: 27px auto 0;
+      }
+
+      .group-17 .row > * {
+        float: none !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        max-width: 224px !important;
+        min-width: 200px !important;
+      }
+
+      .group-17 .row > *:not(:last-child) {
+        margin-right: 16px !important;
+      }
+
+      /* Ensure consistent box sizing */
+      .rectangle-1-copy-20-holder,
+      .rectangle-1-copy-11-holder,
+      .rectangle-1-copy-12-holder,
+      .rectangle-1-copy-13-holder,
+      .rectangle-1-copy-14-holder {
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
       }
 
       /* Prevent scrollbar jump when offcanvas opens */
