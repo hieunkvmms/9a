@@ -1,0 +1,68 @@
+
+.application-form__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.application-form__item {
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.application-form__item:hover {
+    transform: translateY(-5px);
+}
+
+.application-form__icon img {
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd700, #ffb347);
+    padding: 15px;
+}
+
+.application-form__category {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.application-form__btn {
+    border: 2px solid #fff;
+    color: #000;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.application-form__btn:hover {
+    border: 2px solid #dc3545;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: outside 0 0 10px #333;
+}
+
+@media (max-width: 768px) {
+    .application-form__item {
+        margin-bottom: 1rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .application-form__title {
+        font-size: 1.25rem;
+    }
+    
+    .application-form__category {
+        font-size: 0.9rem;
+        min-height: 50px;
+    }
+}
