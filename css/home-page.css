@@ -152,7 +152,7 @@
 }
 
 .hero {
-  background: url("images/banner.svg") center -90px / cover no-repeat;
+  background: url("/images/banner.svg") center -90px / cover no-repeat;
 }
 
 .hero__icon {
@@ -177,7 +177,7 @@
 }
 
 .hero__year {
-  background: url("images/hero-title.svg") no-repeat center left;
+  background: url("/images/hero-title.svg") no-repeat center left;
 }
 
 .hero__category-card > div {
@@ -200,7 +200,7 @@
 }
 
 .timeline .timeline__content {
-  background: url("images/timeline.svg") no-repeat center top / contain;
+  background: url("/images/timeline.svg") no-repeat center top / contain;
   width: 100%;
   min-width: 1325px;
 }
@@ -373,7 +373,7 @@
   position: absolute;
   top: 288px;
   width: 100%;
-  background: url(images/rectangle_4.jpg) no-repeat center 0;
+  background: url("/images/rectangle_4.jpg") no-repeat center 0;
   background-size: cover;
 }
 

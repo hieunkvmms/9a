@@ -1,0 +1,123 @@
+/* Bootstrap 4.5.0 Compatibility & Mobile Menu Styles */
+
+/* Object-fit utilities for Bootstrap 4.5.0 */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+/* Additional Bootstrap 4 utilities */
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+/* Mobile menu container */
+.navbar-collapse {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  z-index: 1050;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.navbar-collapse.show {
+  right: 0;
+}
+
+/* Mobile menu header */
+.mobile-menu-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.mobile-menu-header .close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: auto;
+  cursor: pointer;
+  color: #000;
+  opacity: 0.5;
+}
+
+.mobile-menu-header .close:hover {
+  opacity: 0.75;
+}
+
+/* Mobile menu body */
+.mobile-menu-body {
+  padding: 1rem;
+}
+
+.mobile-menu-body .nav-link {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.mobile-menu-body .nav-link:hover {
+  color: #991d4a !important;
+}
+
+/* Collapse arrow animation */
+.collapse-arrow {
+  transition: transform 0.2s ease;
+}
+
+.nav-link[aria-expanded="true"] .collapse-arrow {
+  transform: rotate(180deg);
+}
+
+/* Overlay background */
+.navbar-collapse.show::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 300px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Bootstrap 4 responsive utilities */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  
+  .mobile-menu-header,
+  .mobile-menu-body {
+    display: none;
+  }
+}

@@ -41,6 +41,15 @@ function startCountdown() {
 // Start the countdown when the page loads
 document.addEventListener("DOMContentLoaded", startCountdown);
 
+document.addEventListener("DOMContentLoaded", function() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.remove('show');
+    }
+  });
+});
+
 // Fade in animation on scroll
 function fadeInOnScroll() {
   const elements = document.querySelectorAll(".benefits-fade-in");
