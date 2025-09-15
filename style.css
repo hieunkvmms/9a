@@ -150,7 +150,6 @@
   background: #f7f7f7;
 }
 
-
 /* Footer Section */
 .footer-section {
   color: #6d6d6d;
@@ -213,22 +212,41 @@
   }
 }
 
-.gradient-text {
-    background: linear-gradient(-90deg, #dc3545 0%, #b91c3c 50%, #991b2e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    background-clip: text;
-    color: transparent;
+.banner-section {
+  background-image: url("images/bg_hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner__bg {
-    background: url('/images/bg_hero.png') center center/cover no-repeat;
-    min-height: 300px;
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
-.banner__title {
-    font-size: 64px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.banner-title {
+  font-size: 64px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(-90deg, #dc3545 0%, #b91c3c 50%, #991b2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  .banner-section {
+    min-height: 30vh;
+  }
 }
