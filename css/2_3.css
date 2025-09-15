@@ -1,8 +1,6 @@
-
 .award-header {
   padding: 1.5rem 0;
   margin-bottom: 1rem;
-
 }
 
 /*  Simplified year sections - removed shadows and rounded corners */
@@ -24,6 +22,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Remove focus outline/border when button is clicked */
+.year-header:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.year-header:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /*  Simple category title - removed background color */

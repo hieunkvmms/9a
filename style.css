@@ -161,12 +161,14 @@
   position: relative;
   width: 378px;
 }
+
 .main-title {
   position: relative;
   font-size: 1.874727rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #6d6d6d;
+  padding-left: 5rem;
 }
 .year-title {
   margin: -20px 0 0;
@@ -175,11 +177,11 @@
   text-align: right;
   text-transform: uppercase;
   color: #6d6d6d;
+  padding-right: 5rem;
 }
 .description-text {
   margin: 5px auto 0;
   position: relative;
-
   width: 352px;
   line-height: 23.99651px;
   text-align: justify;
@@ -195,6 +197,27 @@
 .section-footer-title {
   margin-bottom: 20px;
 }
+@media (max-width: 1399px) {
+  .main-title {
+    padding-left: 3rem;
+  }
+  .year-title {
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 1200px) {
+  .main-title {
+    padding-left: 0rem;
+  }
+  .year-title {
+    padding-right: 0rem;
+  }
+}
+@media (max-width: 992px) {
+  .year-title {
+    margin: -20px -27px 1px;
+  }
+}
 @media (min-width: 766px) {
   .section-footer-nav {
     padding-top: 184px;
@@ -203,12 +226,15 @@
     padding-top: 50px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer-section-center {
     text-align: center;
   }
   .section-footer-nav {
     text-align: center;
+  }
+  .year-title {
+    margin: -20px -8px 1px;
   }
 }
 
