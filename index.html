@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="MAKE IN VIỆT NAM">
   <meta name="keywords" content="MAKE IN VIỆT NAM">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
   <link href="style.css" rel="stylesheet">
-  <link href="css/home-page.css" rel="stylesheet">
   <link href="global.css" rel="stylesheet">
+  <link href="/css/home-page.css" rel="stylesheet">
+  <link href="/css/mobile-menu.css" rel="stylesheet">
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </head>
 
@@ -21,22 +25,22 @@
       <div class="logo col-7 col-sm col-md-5 col-lg-3 py-2">
         <img src="images/logo.png" class="w-100 h-100 object-fit-cover" alt="Logo make in vietnam">
       </div>
-      <div class="menu d-none d-lg-flex align-items-center col-10 d-flex justify-content-end">
-        <ul class="menu__list list-group-numbered d-flex mb-0">
+      <div class="menu d-none d-lg-flex align-items-center col-10 justify-content-end">
+        <ul class="menu__list list-unstyled d-flex mb-0">
           <li class="menu__item menu__item--active">
-            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Trang chủ</a>
+            <a class="menu__link text-decoration-none text-dark py-4 d-block px-3 fw-4" href="#">Trang chủ</a>
           </li>
           <li class="menu__item menu__item--has-dropdown position-relative">
-            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Về giải thưởng</a>
-            <ul class="menu__dropdown list-group-numbered position-absolute">
+            <a class="menu__link text-decoration-none text-dark py-4 d-block px-3 fw-4" href="#">Về giải thưởng</a>
+            <ul class="menu__dropdown list-unstyled position-absolute">
               <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
               <li><a class="dropdown-item" href="#">Hội đồng giám khảo</a></li>
               <li><a class="dropdown-item" href="#">Kết quả giải thưởng</a></li>
             </ul>
           </li>
           <li class="menu__item menu__item--has-dropdown position-relative">
-            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Tiêu chí đánh giá</a>
-            <ul class="menu__dropdown list-group-numbered position-absolute">
+            <a class="menu__link text-decoration-none text-dark py-4 d-block px-3 fw-4" href="#">Tiêu chí đánh giá</a>
+            <ul class="menu__dropdown list-unstyled position-absolute">
               <li><a class="dropdown-item" href="#">Năm 2020</a></li>
               <li><a class="dropdown-item" href="#">Năm 2021</a></li>
               <li><a class="dropdown-item" href="#">Năm 2022</a></li>
@@ -46,18 +50,18 @@
             </ul>
           </li>
           <li class="menu__item menu__item--has-dropdown position-relative">
-            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Quyền lợi</a>
+            <a class="menu__link text-decoration-none text-dark py-4 d-block px-3 fw-4" href="#">Quyền lợi</a>
           </li>
           <li class="menu__item menu__item--has-dropdown position-relative">
-            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Hướng dẫn</a>
-            <ul class="menu__dropdown list-group-numbered position-absolute">
+            <a class="menu__link text-decoration-none text-dark py-4 d-block px-3 fw-4" href="#">Hướng dẫn</a>
+            <ul class="menu__dropdown list-unstyled position-absolute">
               <li><a class="dropdown-item" href="#">Mẫu hồ sơ</a></li>
               <li><a class="dropdown-item" href="#">Lưu ý nộp hồ sơ</a></li>
               <li><a class="dropdown-item" href="#">Quy chế giải thưởng</a></li>
             </ul>
           </li>
           <li class="menu__item">
-            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Thông tin, hoạt
+            <a class="menu__link text-decoration-none text-dark py-4 d-block px-3 fw-4" href="#">Thông tin, hoạt
               động</a>
           </li>
           <li class="login-button d-flex align-items-center">
@@ -66,8 +70,8 @@
         </ul>
       </div>
       <div class="py-2">
-        <button class="color-1 border-0 d-lg-none ms-2" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+        <button class="color-1 border-0 d-lg-none ml-2" type="button" data-toggle="collapse" data-target="#mobileMenu"
+          aria-controls="mobileMenu">
           <span>
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <rect y="4" width="24" height="2" rx="1"></rect>
@@ -78,16 +82,18 @@
         </button>
       </div>
     </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="collapse navbar-collapse" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <h5 class="mobile-menu-title">Menu</h5>
+        <button type="button" class="close" data-toggle="collapse" data-target="#mobileMenu" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="offcanvas-body">
+      <div class="mobile-menu-body">
         <ul class="nav flex-column">
-          <li class="nav-item"><a class="nav-link text-black" href="#">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Trang chủ</a></li>
           <li class="nav-item">
-            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            <a class="nav-link text-dark d-flex justify-content-between align-items-center" data-toggle="collapse"
               href="#mobileDropdown1" role="button" aria-expanded="false" aria-controls="mobileDropdown1">
               <span>Về giải thưởng</span>
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
@@ -96,15 +102,15 @@
               </svg>
             </a>
             <div class="collapse" id="mobileDropdown1">
-              <ul class="nav flex-column ms-3">
-                <li><a class="nav-link text-black" href="#">Ban tổ chức</a></li>
-                <li><a class="nav-link text-black" href="#">Hội đồng giám khảo</a></li>
-                <li><a class="nav-link text-black" href="#">Kết quả giải thưởng</a></li>
+              <ul class="nav flex-column ml-3">
+                <li><a class="nav-link text-dark" href="#">Ban tổ chức</a></li>
+                <li><a class="nav-link text-dark" href="#">Hội đồng giám khảo</a></li>
+                <li><a class="nav-link text-dark" href="#">Kết quả giải thưởng</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            <a class="nav-link text-dark d-flex justify-content-between align-items-center" data-toggle="collapse"
               href="#mobileDropdown2" role="button" aria-expanded="false" aria-controls="mobileDropdown2">
               <span>Tiêu chí đánh giá</span>
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
@@ -113,19 +119,19 @@
               </svg>
             </a>
             <div class="collapse" id="mobileDropdown2">
-              <ul class="nav flex-column ms-3">
-                <li><a class="nav-link text-black" href="#">Năm 2020</a></li>
-                <li><a class="nav-link text-black" href="#">Năm 2021</a></li>
-                <li><a class="nav-link text-black" href="#">Năm 2022</a></li>
-                <li><a class="nav-link text-black" href="#">Năm 2023</a></li>
-                <li><a class="nav-link text-black" href="#">Năm 2024</a></li>
-                <li><a class="nav-link text-black" href="#">Năm 2025</a></li>
+              <ul class="nav flex-column ml-3">
+                <li><a class="nav-link text-dark" href="#">Năm 2020</a></li>
+                <li><a class="nav-link text-dark" href="#">Năm 2021</a></li>
+                <li><a class="nav-link text-dark" href="#">Năm 2022</a></li>
+                <li><a class="nav-link text-dark" href="#">Năm 2023</a></li>
+                <li><a class="nav-link text-dark" href="#">Năm 2024</a></li>
+                <li><a class="nav-link text-dark" href="#">Năm 2025</a></li>
               </ul>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Quyền lợi</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Quyền lợi</a></li>
           <li class="nav-item">
-            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            <a class="nav-link text-dark d-flex justify-content-between align-items-center" data-toggle="collapse"
               href="#mobileDropdown3" role="button" aria-expanded="false" aria-controls="mobileDropdown3">
               <span>Hướng dẫn</span>
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
@@ -134,15 +140,15 @@
               </svg>
             </a>
             <div class="collapse" id="mobileDropdown3">
-              <ul class="nav flex-column ms-3">
-                <li><a class="nav-link text-black" href="#">Mẫu hồ sơ</a></li>
-                <li><a class="nav-link text-black" href="#">Lưu ý nộp hồ sơ</a></li>
-                <li><a class="nav-link text-black" href="#">Quy chế giải thưởng</a></li>
+              <ul class="nav flex-column ml-3">
+                <li><a class="nav-link text-dark" href="#">Mẫu hồ sơ</a></li>
+                <li><a class="nav-link text-dark" href="#">Lưu ý nộp hồ sơ</a></li>
+                <li><a class="nav-link text-dark" href="#">Quy chế giải thưởng</a></li>
               </ul>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link text-black" href="#">Thông tin, hoạt động</a></li>
-          <li class="nav-item"><a class="nav-link color-1 btn btn-primary mt-2" href="#">Đăng ký/Đăng nhập</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">Thông tin, hoạt động</a></li>
+          <li class="nav-item"><a class="nav-link color-1 btn mt-2" href="#">Đăng ký/Đăng nhập</a></li>
         </ul>
       </div>
     </div>
@@ -163,8 +169,8 @@
         <div class="hero__main-category d-flex justify-content-center">
           <div class="hero__category-card col-12 col-md-8 col-lg-7 col-xl-3 mb-4">
             <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-              <div
-                class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+              <div class="position-absolute"
+                style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                 <img src="images/ai-icon.svg" alt="" class="hero__icon--big mb-2 object-fit-contain">
               </div>
               <div class="hero__category-title px-4 mt-4 fw-4">Sản phẩm công nghệ số <br> chiến lược xuất sắc
@@ -176,8 +182,8 @@
           <div class="col-12 col-md-8 col-lg-7 col-xl-3 mb-4">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/natural-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực NN, tài
@@ -190,8 +196,8 @@
           <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/construction-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực công
@@ -204,8 +210,8 @@
           <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/education-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực giáo dục,
@@ -220,8 +226,8 @@
           <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/potential-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số tiềm năng</div>
@@ -232,8 +238,8 @@
           <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/export-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số <br>xuất sắc<br> cho thị trường
@@ -245,8 +251,8 @@
           <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/logistics-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực giao
@@ -259,8 +265,8 @@
           <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
             <div class="hero__category-card h-100">
               <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-4">
-                <div
-                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <div class="position-absolute"
+                  style="top: -30px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
                   <img src="images/finance-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
                 </div>
                 <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực tài
@@ -274,7 +280,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="timeline py-4 py-md-5">
     <div class="container">
       <div class="timeline__header text-center mb-5">
@@ -291,39 +297,42 @@
                 <div class="timeline__step col-2 mb-4 mb-lg-0">
                   <div
                     class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-dark" style="font-size: 14px;">
                       TIẾP
                       NHẬN HỒ
                       SƠ</h4>
-                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">04.09 - 22.10.2025</p>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">04.09 - 22.10.2025
+                    </p>
                   </div>
                 </div>
 
                 <div class="timeline__step col-2 mb-4 mb-lg-0">
                   <div
                     class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">SƠ
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-dark" style="font-size: 14px;">SƠ
                       TUYỂN HỒ SƠ
                     </h4>
-                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">04.10 - 22.10.2025</p>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">04.10 - 22.10.2025
+                    </p>
                   </div>
                 </div>
 
                 <div class="timeline__step col-2 mb-4 mb-lg-0">
                   <div
                     class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-dark" style="font-size: 14px;">
                       VÒNG
                       SƠ KHẢO
                     </h4>
-                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">24.10 - 15.11.2025</p>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">24.10 - 15.11.2025
+                    </p>
                   </div>
                 </div>
 
                 <div class="timeline__step col-2 mb-4 mb-lg-0">
                   <div
                     class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-dark" style="font-size: 14px;">
                       VÒNG
                       CHUNG
                       KHẢO</h4>
@@ -335,11 +344,12 @@
                   <div class="timeline__step-content text-center">
                     <div
                       class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
-                      <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                      <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-dark" style="font-size: 14px;">
                         LỄ
                         TRAO GIẢI
                       </h4>
-                      <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">THÁNG 12 NĂM 2025</p>
+                      <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">THÁNG 12 NĂM 2025
+                      </p>
                     </div>
                   </div>
 
@@ -355,7 +365,8 @@
     <div class="container">
       <div class="countdown__content text-center">
         <div class="countdown__header mb-4">
-          <h3 class="countdown__title text-danger fw-bold mb-2 fs-3">Giải thưởng chính thức tiếp nhận đăng ký <br class="d-none d-md-block">tham
+          <h3 class="countdown__title text-danger fw-bold mb-2 fs-3">Giải thưởng chính thức tiếp nhận đăng ký <br
+              class="d-none d-md-block">tham
             gia từ ngày 04/09 - 22/10/2025</h3>
         </div>
 
@@ -396,252 +407,221 @@
     </div>
   </section>
 
-    <section class="quote-section">
-      <div class="group-16">
-        <div class="rectangle-4"></div>
-        <img
-          class="hue-saturation-1"
-          src="images/hue_saturation_1.png"
-          alt="Portrait"
-        />
-        <p class="text-42 mb-0">“</p>
-        <p class="text-43">
-          Không Make in Viet Nam thì Việt Nam không thể hùng cường thịnh vượng.
-        </p>
-        <p class="text-44">
-          <em class="text-style-2">Bộ trưởng</em>
-          <span class="text-style-3">Nguyễn Mạnh Hùng</span><br />BỘ KHOA HỌC VÀ
-          CÔNG NGHỆ
-        </p>
-      </div>
-    </section>
+  <section class="quote-section">
+    <div class="group-16">
+      <div class="rectangle-4"></div>
+      <img class="hue-saturation-1" src="images/hue_saturation_1.png" alt="Portrait" />
+      <p class="text-42 mb-0">“</p>
+      <p class="text-43">
+        Không Make in Viet Nam thì Việt Nam không thể hùng cường thịnh vượng.
+      </p>
+      <p class="text-44">
+        <em class="text-style-2">Bộ trưởng</em>
+        <span class="text-style-3">Nguyễn Mạnh Hùng</span><br />BỘ KHOA HỌC VÀ
+        CÔNG NGHỆ
+      </p>
+    </div>
+  </section>
 
-    <section class="benefits-container">
-      <h1 class="benefits-main-title benefits-fade-in">THAM GIA ĐỂ</h1>
+  <section class="benefits-container">
+    <h1 class="benefits-main-title benefits-fade-in">THAM GIA ĐỂ</h1>
 
-      <div class="row g-4 d-flex justify-content-center">
-        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-          <div class="benefits-card benefits-fade-in">
-            <p class="benefits-card-text">
-              Được hỗ trợ đánh giá, nâng cao chất lượng sản phẩm từ các chuyên
-              gia hàng đầu
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-          <div class="benefits-card benefits-fade-in">
-            <p class="benefits-card-text">
-              Các sản phẩm đoạt giải sẽ được giới thiệu rộng rãi đến các địa
-              phương, cơ quan nhà nước
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-          <div class="benefits-card benefits-fade-in">
-            <p class="benefits-card-text">
-              Sản phẩm đoạt giải sẽ được đưa vào danh mục khuyến khích sử dụng
-              trong quá trình chuyển đổi số. Được hỗ trợ kết nối với
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-          <div class="benefits-card benefits-fade-in">
-            <p class="benefits-card-text">
-              Được hỗ trợ kết nối với thị trường quốc tế
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-          <div class="benefits-card benefits-fade-in">
-            <p class="benefits-card-text">
-              Được gặp gỡ các nhà đầu tư tiềm năng
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-   
-    <section class="container py-5">
-      <!-- Main Title -->
-      <h1 class="info-activities-main-title">
-        THÔNG TIN, HOẠT ĐỘNG CỦA GIẢI THƯỞNG
-      </h1>
-
-      <!-- Hero Section -->
-      <div class="info-activities-hero-section">
-        <div class="row g-0 g-md-5">
-          <div class="col-md-6">
-            <img
-              src="images/rectangle_1_copy_4.jpg"
-              alt="Conference Meeting"
-              class="info-activities-hero-image w-100 h-100 object-fit-cover"
-            />
-          </div>
-          <div class="col-md-6">
-            <div class="info-activities-hero-content">
-              <h2 class="info-activities-hero-title">
-                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
-                30/12/2024
-              </h2>
-              <p class="info-activities-hero-text mb-0">
-                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
-                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
-                nhất.<br>
-                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
-                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
-                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
-                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
-                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
-              </p>
-              <button class="info-activities-arrow-btn">
-                <p class="text-54">→</p>
-              </button>
-            </div>
-          </div>
+    <div class="row g-4 d-flex justify-content-center">
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+        <div class="benefits-card benefits-fade-in">
+          <p class="benefits-card-text">
+            Được hỗ trợ đánh giá, nâng cao chất lượng sản phẩm từ các chuyên
+            gia hàng đầu
+          </p>
         </div>
       </div>
 
-      <!-- Cards Section -->
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="info-activities-card-section">
-            <img
-              src="images/rectangle_1_copy_2.jpg"
-              alt="Award Ceremony"
-              class="info-activities-card-image"
-            />
-            <div class="info-activities-card-content">
-              <h3 class="info-activities-card-title pb-3">
-                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
-                30/12/2024
-              </h3>
-              <p class="info-activities-card-text">
-                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
-                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
-                nhất.<br />
-                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
-                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
-                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
-                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
-                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
-              </p>
-              <button class="info-activities-card-arrow">
-                <p class="text-57">→</p>
-              </button>
-            </div>
-          </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+        <div class="benefits-card benefits-fade-in">
+          <p class="benefits-card-text">
+            Các sản phẩm đoạt giải sẽ được giới thiệu rộng rãi đến các địa
+            phương, cơ quan nhà nước
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-4">
-          <div class="info-activities-card-section">
-            <img
-              src="images/rectangle_1_copy_2.jpg"
-              alt="Award Ceremony"
-              class="info-activities-card-image"
-            />
-            <div class="info-activities-card-content">
-              <h3 class="info-activities-card-title pb-3">
-                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
-                30/12/2024
-              </h3>
-              <p class="info-activities-card-text">
-                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
-                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
-                nhất.<br />
-                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
-                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
-                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
-                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
-                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
-              </p>
-              <button class="info-activities-card-arrow">
-                <p class="text-57">→</p>
-              </button>
-            </div>
-          </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+        <div class="benefits-card benefits-fade-in">
+          <p class="benefits-card-text">
+            Sản phẩm đoạt giải sẽ được đưa vào danh mục khuyến khích sử dụng
+            trong quá trình chuyển đổi số. Được hỗ trợ kết nối với
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-4">
-          <div class="info-activities-card-section">
-            <img
-              src="images/rectangle_1_copy_2.jpg"
-              alt="Award Ceremony"
-              class="info-activities-card-image"
-            />
-            <div class="info-activities-card-content ">
-              <h3 class="info-activities-card-title pb-3">
-                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
-                30/12/2024
-              </h3>
-              <p class="info-activities-card-text">
-                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
-                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
-                nhất.<br />
-                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
-                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
-                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
-                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
-                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
-              </p>
-              <button class="info-activities-card-arrow">
-                <p class="text-57">→</p>
-              </button>
-            </div>
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+        <div class="benefits-card benefits-fade-in">
+          <p class="benefits-card-text">
+            Được hỗ trợ kết nối với thị trường quốc tế
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+        <div class="benefits-card benefits-fade-in">
+          <p class="benefits-card-text">
+            Được gặp gỡ các nhà đầu tư tiềm năng
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <!-- Main Title -->
+    <h1 class="info-activities-main-title">
+      THÔNG TIN, HOẠT ĐỘNG CỦA GIẢI THƯỞNG
+    </h1>
+
+    <!-- Hero Section -->
+    <div class="info-activities-hero-section">
+      <div class="row g-0 g-md-5">
+        <div class="col-md-6">
+          <img src="images/rectangle_1_copy_4.jpg" alt="Conference Meeting"
+            class="info-activities-hero-image w-100 h-100 object-fit-cover" />
+        </div>
+        <div class="col-md-6">
+          <div class="info-activities-hero-content">
+            <h2 class="info-activities-hero-title">
+              Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+              30/12/2024
+            </h2>
+            <p class="info-activities-hero-text mb-0">
+              (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+              số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+              nhất.<br>
+              Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+              thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+              công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+              tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+              sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+            </p>
+            <button class="info-activities-arrow-btn">
+              <p class="text-54">→</p>
+            </button>
           </div>
         </div>
       </div>
-    </section>
-    
-    <section class="footer-section pt-5">
-      <div class="container">
-        <div class="row justify-content-around">
-          <!-- Left Column - Main Content -->
-          <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
-            <p class="main-title mb-0">MAKE IN VIET NAM</p>
-            <p class="year-title">2025</p>
-            <p class="description-text">
-              Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
-              sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
-              dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
-              số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
-              lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
-              tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
-              công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
-              phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
-              phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
-              lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
-              chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
-              phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
-              12/6/2025 của Thủ tướng Chính phủ.
-            </p>
-          </div>
+    </div>
 
-          <!-- Right Column - Contact & Navigation -->
-          <div class="col-lg-5 col-md-6 footer-section-center">
-            <!-- Contact Information -->
-            <div class="mb-4">
-              <div class="footer-logo group">
-                <img
-                  class="layer-9 me-2"
-                  src="images/bog_b.jpg"
-                  alt=""
-                  width="134"
-                  height="134"
-                />
-                <img
-                  class="logo-vfte"
-                  src="images/logo_vfte.png"
-                  alt=""
-                  width="117"
-                  height="117"
-                />
-              </div>
-              <div class="section-footer-contact">
-                <h5 class="section-footer-title">
+    <!-- Cards Section -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="info-activities-card-section">
+          <img src="images/rectangle_1_copy_2.jpg" alt="Award Ceremony" class="info-activities-card-image" />
+          <div class="info-activities-card-content">
+            <h3 class="info-activities-card-title pb-3">
+              Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+              30/12/2024
+            </h3>
+            <p class="info-activities-card-text">
+              (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+              số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+              nhất.<br />
+              Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+              thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+              công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+              tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+              sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+            </p>
+            <button class="info-activities-card-arrow">
+              <p class="text-57">→</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-activities-card-section">
+          <img src="images/rectangle_1_copy_2.jpg" alt="Award Ceremony" class="info-activities-card-image" />
+          <div class="info-activities-card-content">
+            <h3 class="info-activities-card-title pb-3">
+              Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+              30/12/2024
+            </h3>
+            <p class="info-activities-card-text">
+              (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+              số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+              nhất.<br />
+              Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+              thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+              công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+              tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+              sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+            </p>
+            <button class="info-activities-card-arrow">
+              <p class="text-57">→</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-activities-card-section">
+          <img src="images/rectangle_1_copy_2.jpg" alt="Award Ceremony" class="info-activities-card-image" />
+          <div class="info-activities-card-content ">
+            <h3 class="info-activities-card-title pb-3">
+              Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+              30/12/2024
+            </h3>
+            <p class="info-activities-card-text">
+              (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+              số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+              nhất.<br />
+              Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+              thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+              công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+              tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+              sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+            </p>
+            <button class="info-activities-card-arrow">
+              <p class="text-57">→</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-section pt-5">
+    <div class="container">
+      <div class="row justify-content-around">
+        <!-- Left Column - Main Content -->
+        <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
+          <p class="main-title mb-0">MAKE IN VIET NAM</p>
+          <p class="year-title">2025</p>
+          <p class="description-text">
+            Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
+            sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
+            dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
+            số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
+            lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
+            tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
+            công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
+            phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
+            phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
+            lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
+            chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
+            phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
+            12/6/2025 của Thủ tướng Chính phủ.
+          </p>
+        </div>
+
+        <!-- Right Column - Contact & Navigation -->
+        <div class="col-lg-5 col-md-6 footer-section-center">
+          <!-- Contact Information -->
+          <div class="mb-4">
+            <div class="footer-logo group">
+              <img class="layer-9 mr-2" src="images/bog_b.jpg" alt="" width="134" height="134" />
+              <img class="logo-vfte" src="images/logo_vfte.png" alt="" width="117" height="117" />
+            </div>
+            <div class="section-footer-contact">
+              <h5 class="section-footer-title">
                 CƠ QUAN THƯỜNG TRỰC GIẢI THƯỞNG
               </h5>
               <div class="contact-info">
@@ -653,41 +633,35 @@
                 <p><strong>Hotline:</strong> 089.899.5599</p>
                 <p><strong>Email:</strong> makeinvietnam@mst.gov.vn</p>
               </div>
-              </div>
-              
             </div>
 
-            <!-- Navigation Links -->
           </div>
-          <div class="col-md-2 mb-4 section-footer-nav">
-            <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
-            <ul class="nav-links list-unstyled section-footer-content">
-              <li class="pb-3">
-                <a class="text-decoration-none" href="#ban-to-chuc"
-                  >Ban tổ chức</a
-                >
-              </li>
-              <li class="pb-3">
-                <a class="text-decoration-none" href="#hoi-dong-giam-khao"
-                  >Hội đồng giám khảo</a
-                >
-              </li>
-              <li class="pb-3">
-                <a class="text-decoration-none" href="#ket-qua-giai-thuong"
-                  >Kết quả giải thưởng</a
-                >
-              </li>
-            </ul>
-          </div>
+
+          <!-- Navigation Links -->
+        </div>
+        <div class="col-md-2 mb-4 section-footer-nav">
+          <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
+          <ul class="nav-links list-unstyled section-footer-content">
+            <li class="pb-3">
+              <a class="text-decoration-none" href="#ban-to-chuc">Ban tổ chức</a>
+            </li>
+            <li class="pb-3">
+              <a class="text-decoration-none" href="#hoi-dong-giam-khao">Hội đồng giám khảo</a>
+            </li>
+            <li class="pb-3">
+              <a class="text-decoration-none" href="#ket-qua-giai-thuong">Kết quả giải thưởng</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="footer-section-bottom text-center py-4">
-        <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
-        <div class="fs-5">
-          Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
-        </div>
+    </div>
+    <div class="footer-section-bottom text-center py-4">
+      <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
+      <div class="fs-5">
+        Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
       </div>
-    </section>
+    </div>
+  </section>
 </body>
 
 </html>
