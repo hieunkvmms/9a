@@ -1,471 +1,1207 @@
 <!DOCTYPE html>
 <html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MAKE IN VIỆT NAM">
-    <meta name="keywords" content="MAKE IN VIỆT NAM">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="global.css" rel="stylesheet">
-    <link href="/css/award-regulation.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MAKE IN VIỆT NAM" />
+    <meta name="keywords" content="MAKE IN VIỆT NAM" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link href="global.css" rel="stylesheet" />
+    <link href="/css/award-regulation.css" rel="stylesheet" />
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="header container">
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="logo col-7 col-sm col-md-5 col-lg-3 py-2">
-                <img src="images/logo.png" class="w-100 h-100 object-fit-cover" alt="Logo make in vietnam">
-            </div>
-            <div class="menu d-none d-lg-flex align-items-center col-10 d-flex justify-content-end">
-                <ul class="menu__list list-group-numbered d-flex mb-0">
-                    <li class="menu__item menu__item--active">
-                        <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Trang
-                            chủ</a>
-                    </li>
-                    <li class="menu__item menu__item--has-dropdown position-relative">
-                        <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Về giải
-                            thưởng</a>
-                        <ul class="menu__dropdown list-group-numbered position-absolute">
-                            <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
-                            <li><a class="dropdown-item" href="#">Hội đồng giám khảo</a></li>
-                            <li><a class="dropdown-item" href="#">Kết quả giải thưởng</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--has-dropdown position-relative">
-                        <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Tiêu chí
-                            đánh giá</a>
-                        <ul class="menu__dropdown list-group-numbered position-absolute">
-                            <li><a class="dropdown-item" href="#">Năm 2020</a></li>
-                            <li><a class="dropdown-item" href="#">Năm 2021</a></li>
-                            <li><a class="dropdown-item" href="#">Năm 2022</a></li>
-                            <li><a class="dropdown-item" href="#">Năm 2023</a></li>
-                            <li><a class="dropdown-item" href="#">Năm 2024</a></li>
-                            <li><a class="dropdown-item" href="#">Năm 2025</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--has-dropdown position-relative">
-                        <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Quyền
-                            lợi</a>
-                    </li>
-                    <li class="menu__item menu__item--has-dropdown position-relative">
-                        <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Hướng
-                            dẫn</a>
-                        <ul class="menu__dropdown list-group-numbered position-absolute">
-                            <li><a class="dropdown-item" href="#">Mẫu hồ sơ</a></li>
-                            <li><a class="dropdown-item" href="#">Lưu ý nộp hồ sơ</a></li>
-                            <li><a class="dropdown-item" href="#">Quy chế giải thưởng</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Thông tin,
-                            hoạt
-                            động</a>
-                    </li>
-                    <li class="login-button d-flex align-items-center">
-                        <a class="menu__link text-decoration-none fw-4 color-1" href="#">Đăng ký/Đăng nhập</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="py-2">
-                <button class="color-1 border-0 d-lg-none ms-2" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                    <span>
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect y="4" width="24" height="2" rx="1"></rect>
-                            <rect y="11" width="24" height="2" rx="1"></rect>
-                            <rect y="18" width="24" height="2" rx="1"></rect>
-                        </svg>
-                    </span>
-                </button>
-            </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="logo col-7 col-sm col-md-5 col-lg-3 py-2">
+          <img
+            src="images/logo.png"
+            class="w-100 h-100 object-fit-cover"
+            alt="Logo make in vietnam"
+          />
         </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link text-black" href="#">Trang chủ</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black d-flex justify-content-between align-items-center"
-                            data-bs-toggle="collapse" href="#mobileDropdown1" role="button" aria-expanded="false"
-                            aria-controls="mobileDropdown1">
-                            <span>Về giải thưởng</span>
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="collapse" id="mobileDropdown1">
-                            <ul class="nav flex-column ms-3">
-                                <li><a class="nav-link text-black" href="#">Ban tổ chức</a></li>
-                                <li><a class="nav-link text-black" href="#">Hội đồng giám khảo</a></li>
-                                <li><a class="nav-link text-black" href="#">Kết quả giải thưởng</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black d-flex justify-content-between align-items-center"
-                            data-bs-toggle="collapse" href="#mobileDropdown2" role="button" aria-expanded="false"
-                            aria-controls="mobileDropdown2">
-                            <span>Tiêu chí đánh giá</span>
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="collapse" id="mobileDropdown2">
-                            <ul class="nav flex-column ms-3">
-                                <li><a class="nav-link text-black" href="#">Năm 2020</a></li>
-                                <li><a class="nav-link text-black" href="#">Năm 2021</a></li>
-                                <li><a class="nav-link text-black" href="#">Năm 2022</a></li>
-                                <li><a class="nav-link text-black" href="#">Năm 2023</a></li>
-                                <li><a class="nav-link text-black" href="#">Năm 2024</a></li>
-                                <li><a class="nav-link text-black" href="#">Năm 2025</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-black" href="#">Quyền lợi</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black d-flex justify-content-between align-items-center"
-                            data-bs-toggle="collapse" href="#mobileDropdown3" role="button" aria-expanded="false"
-                            aria-controls="mobileDropdown3">
-                            <span>Hướng dẫn</span>
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="collapse" id="mobileDropdown3">
-                            <ul class="nav flex-column ms-3">
-                                <li><a class="nav-link text-black" href="#">Mẫu hồ sơ</a></li>
-                                <li><a class="nav-link text-black" href="#">Lưu ý nộp hồ sơ</a></li>
-                                <li><a class="nav-link text-black" href="#">Quy chế giải thưởng</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-black" href="#">Thông tin, hoạt động</a></li>
-                    <li class="nav-item"><a class="nav-link color-1 btn btn-primary mt-2" href="#">Đăng ký/Đăng nhập</a>
-                    </li>
-                </ul>
-            </div>
+        <div
+          class="menu d-none d-lg-flex align-items-center col-10 d-flex justify-content-end"
+        >
+          <ul class="menu__list list-group-numbered d-flex mb-0">
+            <li class="menu__item menu__item--active">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Về giải thưởng</a
+              >
+              <ul class="menu__dropdown list-group-numbered position-absolute">
+                <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Hội đồng giám khảo</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Kết quả giải thưởng</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Tiêu chí đánh giá</a
+              >
+              <ul class="menu__dropdown list-group-numbered position-absolute">
+                <li><a class="dropdown-item" href="#">Năm 2020</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2021</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2022</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2023</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2024</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2025</a></li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Quyền lợi</a
+              >
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Hướng dẫn</a
+              >
+              <ul class="menu__dropdown list-group-numbered position-absolute">
+                <li><a class="dropdown-item" href="#">Mẫu hồ sơ</a></li>
+                <li><a class="dropdown-item" href="#">Lưu ý nộp hồ sơ</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Quy chế giải thưởng</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Thông tin, hoạt động</a
+              >
+            </li>
+            <li class="login-button d-flex align-items-center">
+              <a class="menu__link text-decoration-none fw-4 color-1" href="#"
+                >Đăng ký/Đăng nhập</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="py-2">
+          <button
+            class="color-1 border-0 d-lg-none ms-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+          >
+            <span>
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <rect y="4" width="24" height="2" rx="1"></rect>
+                <rect y="11" width="24" height="2" rx="1"></rect>
+                <rect y="18" width="24" height="2" rx="1"></rect>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-black d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#mobileDropdown1"
+                role="button"
+                aria-expanded="false"
+                aria-controls="mobileDropdown1"
+              >
+                <span>Về giải thưởng</span>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="collapse-arrow"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+              <div class="collapse" id="mobileDropdown1">
+                <ul class="nav flex-column ms-3">
+                  <li>
+                    <a class="nav-link text-black" href="#">Ban tổ chức</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-black" href="#"
+                      >Hội đồng giám khảo</a
+                    >
+                  </li>
+                  <li>
+                    <a class="nav-link text-black" href="#"
+                      >Kết quả giải thưởng</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-black d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#mobileDropdown2"
+                role="button"
+                aria-expanded="false"
+                aria-controls="mobileDropdown2"
+              >
+                <span>Tiêu chí đánh giá</span>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="collapse-arrow"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+              <div class="collapse" id="mobileDropdown2">
+                <ul class="nav flex-column ms-3">
+                  <li><a class="nav-link text-black" href="#">Năm 2020</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2021</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2022</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2023</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2024</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2025</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Quyền lợi</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-black d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#mobileDropdown3"
+                role="button"
+                aria-expanded="false"
+                aria-controls="mobileDropdown3"
+              >
+                <span>Hướng dẫn</span>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="collapse-arrow"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+              <div class="collapse" id="mobileDropdown3">
+                <ul class="nav flex-column ms-3">
+                  <li><a class="nav-link text-black" href="#">Mẫu hồ sơ</a></li>
+                  <li>
+                    <a class="nav-link text-black" href="#">Lưu ý nộp hồ sơ</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-black" href="#"
+                      >Quy chế giải thưởng</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Thông tin, hoạt động</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-1 btn btn-primary mt-2" href="#"
+                >Đăng ký/Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="banner-section">
-        <div class="container">
-            <div class="content-wrapper">
-                <h1 class="banner-title">QUY CHẾ GIẢI THƯỞNG</h1>
-            </div>
+      <div class="container">
+        <div class="content-wrapper">
+          <h1 class="banner-title">QUY CHẾ GIẢI THƯỞNG</h1>
         </div>
+      </div>
     </section>
     <section class="award-regulation py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <!-- Document Header -->
-                    <div class="award-regulation__header text-center mb-5">
-                        <div class="award-regulation__ministry-info mb-4">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="award-regulation__ministry-left">
-                                        <strong>BỘ KHOA HỌC VÀ CÔNG NGHỆ</strong><br>
-                                        <strong>SỐ: 2338/QĐ-BKHCN</strong>
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p class="award-regulation__ministry-right">
-                                        <strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong><br>
-                                        <strong>ĐỘC LẬP - TỰ DO - HẠNH PHÚC</strong>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="award-regulation__date text-end mt-3">
-                                <em>Hà Nội, ngày 24 tháng 8 năm 2025</em>
-                            </p>
-                        </div>
-
-                        <div class="award-regulation__title-section mb-4">
-                            <h2 class="award-regulation__main-title">QUYẾT ĐỊNH</h2>
-                            <h3 class="award-regulation__sub-title">Ban hành Quy chế Giải thưởng</h3>
-                            <h3 class="award-regulation__award-title">"Sản phẩm Công nghệ số Make in Viet Nam" năm 2025
-                            </h3>
-                        </div>
-
-                        <h3 class="award-regulation__minister-title mb-4">BỘ TRƯỞNG BỘ KHOA HỌC VÀ CÔNG NGHỆ</h3>
-                    </div>
-
-                    <!-- Document Content -->
-                    <div class="award-regulation__content">
-                        <!-- Legal Basis -->
-                        <div class="award-regulation__section mb-4">
-                            <p class="award-regulation__text mb-0">Căn cứ Luật Công nghệ công nghệ số ngày 14 tháng 6
-                                năm
-                                2025;</p>
-                            <p class="award-regulation__text mb-0">Căn cứ Nghị định số 55/2025/NĐ-CP ngày 02 tháng 3 năm
-                                2025
-                                của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Khoa học
-                                và Công nghệ;</p>
-                            <p class="award-regulation__text mb-0">Căn cứ Quyết định số 1131/QĐ-TTg ngày 12 tháng 6 năm
-                                2025
-                                của Thủ tướng Chính phủ ban hành Danh mục công nghệ chiến lược và sản phẩm công nghệ
-                                chiến lược;</p>
-                            <p class="award-regulation__text mb-0">Căn cứ Chỉ thị số 01/CT-TTg ngày 14 tháng 01 năm 2020
-                                của
-                                Thủ tướng Chính phủ về thúc đẩy phát triển doanh nghiệp công nghệ số Việt Nam;</p>
-                            <p class="award-regulation__text mb-0">Theo đề nghị của Cục trưởng Cục Công nghệ công nghệ
-                                thông
-                                tin.</p>
-                        </div>
-
-                        <!-- Decision Text -->
-                        <div class="award-regulation__section mb-4">
-                            <p class="award-regulation__decision-title fst-italic">QUYẾT ĐỊNH:</p>
-                        </div>
-
-                        <!-- Articles -->
-                        <div class="award-regulation__articles fst-italic">
-                            <div class="award-regulation__article">
-                                <p class="award-regulation__article-title"><strong>Điều 1.</strong> Ban hành kèm theo
-                                    Quyết định này Quy chế Giải thưởng "Sản phẩm Công nghệ số Make in Viet Nam" năm
-                                    2025.</p>
-                            </div>
-
-                            <div class="award-regulation__article">
-                                <p class="award-regulation__article-title"><strong>Điều 2.</strong> Giao Cục Công nghệ
-                                    công nghệ thông tin chủ trì, phối hợp với các đơn vị liên quan tổ chức Giải thưởng
-                                    "Sản phẩm Công nghệ số Make in Viet Nam" năm 2025.</p>
-                            </div>
-
-                            <div class="award-regulation__article">
-                                <p class="award-regulation__article-title"><strong>Điều 3.</strong> Hiệu lực và trách
-                                    nhiệm thi hành</p>
-                                <p class="award-regulation__text">1. Quyết định này có hiệu lực kể từ ngày ký.</p>
-                                <p class="award-regulation__text">2. Chánh Văn phòng, Cục trưởng Cục Công nghệ công
-                                    nghệ thông tin và Thủ trưởng các đơn vị có liên quan chịu trách nhiệm thi hành Quyết
-                                    định này.//.</p>
-                            </div>
-                        </div>
-
-                        <!-- Signature Section -->
-                        <div class="award-regulation__signature mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="award-regulation__recipient-title"><strong>Nơi nhận:</strong></p>
-                                    <ul class="award-regulation__recipient-list">
-                                        <li>- Như Điều 3;</li>
-                                        <li>- Bộ trưởng (để b/c);</li>
-                                        <li>- Các Thứ trưởng;</li>
-                                        <li>- Liên đoàn TMCN Việt Nam;</li>
-                                        <li>- Các đơn vị: Học viện CNBCVT, Báo VnExpress,</li>
-                                        <li>Trung tâm Truyền thông Khoa học và Công nghệ (để p/h);</li>
-                                        <li>- Lưu: VT, CNCNTT.</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <p class="award-regulation__signature-title"><strong>KT. BỘ TRƯỞNG</strong></p>
-                                    <p class="award-regulation__signature-subtitle"><strong>THỨ TRƯỞNG</strong></p>
-                                    <div class="award-regulation__signature-space my-5"></div>
-                                    <p class="award-regulation__signature-name"><strong>BÙI HOÀNG PHƯƠNG</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Document Header -->
+            <div class="award-regulation__header text-center mb-5">
+              <div class="award-regulation__ministry-info mb-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="award-regulation__ministry-left">
+                      <strong>BỘ KHOA HỌC VÀ CÔNG NGHỆ</strong><br />
+                      <strong>SỐ: 2338/QĐ-BKHCN</strong>
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="award-regulation__ministry-right">
+                      <strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong><br />
+                      <strong>ĐỘC LẬP - TỰ DO - HẠNH PHÚC</strong>
+                    </p>
+                  </div>
                 </div>
+                <p class="award-regulation__date text-end mt-3">
+                  <em>Hà Nội, ngày 24 tháng 8 năm 2025</em>
+                </p>
+              </div>
+
+              <div class="award-regulation__title-section mb-4">
+                <h2 class="award-regulation__main-title">QUYẾT ĐỊNH</h2>
+                <h3 class="award-regulation__sub-title">
+                  Ban hành Quy chế Giải thưởng
+                </h3>
+                <h3 class="award-regulation__award-title">
+                  "Sản phẩm Công nghệ số Make in Viet Nam" năm 2025
+                </h3>
+              </div>
+
+              <h3 class="award-regulation__minister-title mb-4">
+                BỘ TRƯỞNG BỘ KHOA HỌC VÀ CÔNG NGHỆ
+              </h3>
             </div>
 
-            <div class="row justify-content-center mt-4 mt-md-5">
-                <div class="col-lg-10">
-                    <div class="regulations-content">
-                        <div class="text-center mb-3">
-                            <h2 class="fw-bold fs-3">QUY CHẾ GIẢI THƯỞNG</h2>
-                            <h3 class="fw-bold fs-3">"SẢN PHẨM CÔNG NGHỆ SỐ MAKE IN VIET
-                                NAM" NĂM 2025</h3>
-                            <p class="fst-italic fs-5">
-                                (Ban hành kèm theo Quyết định số &nbsp;&nbsp;&nbsp;&nbsp;/QĐ-BKHCN ngày &nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;&nbsp;&nbsp;/2025 của Bộ trưởng Bộ Khoa học và Công nghệ)
-                            </p>
-                        </div>
+            <!-- Document Content -->
+            <div class="award-regulation__content">
+              <!-- Legal Basis -->
+              <div class="award-regulation__section mb-4">
+                <p class="award-regulation__text mb-0">
+                  Căn cứ Luật Công nghệ công nghệ số ngày 14 tháng 6 năm 2025;
+                </p>
+                <p class="award-regulation__text mb-0">
+                  Căn cứ Nghị định số 55/2025/NĐ-CP ngày 02 tháng 3 năm 2025 của
+                  Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ
+                  chức của Bộ Khoa học và Công nghệ;
+                </p>
+                <p class="award-regulation__text mb-0">
+                  Căn cứ Quyết định số 1131/QĐ-TTg ngày 12 tháng 6 năm 2025 của
+                  Thủ tướng Chính phủ ban hành Danh mục công nghệ chiến lược và
+                  sản phẩm công nghệ chiến lược;
+                </p>
+                <p class="award-regulation__text mb-0">
+                  Căn cứ Chỉ thị số 01/CT-TTg ngày 14 tháng 01 năm 2020 của Thủ
+                  tướng Chính phủ về thúc đẩy phát triển doanh nghiệp công nghệ
+                  số Việt Nam;
+                </p>
+                <p class="award-regulation__text mb-0">
+                  Theo đề nghị của Cục trưởng Cục Công nghệ công nghệ thông tin.
+                </p>
+              </div>
 
-                        <div class="regulations-intro mb-3">
-                            <p class="text-justify">
-                                Giải thưởng "Sản phẩm Công nghệ số Make in Viet Nam" là Giải thưởng uy tín, chính thức
-                                trong lĩnh vực công nghệ số được Bộ Khoa học và Công nghệ tổ chức để trao
-                                tặng hàng năm cho các tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc
-                                được nghiên cứu, thiết kế, sáng tạo, sản xuất tại Việt Nam nhằm ghi nhận các bài
-                                toán Việt Nam và đi ra quốc tế.
-                            </p>
-                            <p class="text-justify">
-                                Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất sắc, mang tư hào trí tuệ
-                                Việt Nam, thúc đẩy chuyển đổi số toàn dân, toàn diện, toàn trình để tăng tốc,
-                                bứt phá phát triển kinh tế số, tăng tốc bứt phá trong số hóa các ngành kinh tế, tạo bước
-                                nhảy vọt về năng suất, chất lượng, hiệu quả và sức cạnh tranh của nền kinh tế,
-                                đồng thời hướng tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng, công
-                                nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản phẩm công
-                                nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự phát triển của nhân loại và làm
-                                thịnh vượng Việt Nam. Đồng thời, lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công
-                                nghệ số chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản phẩm công nghệ
-                                chiến lược tại Quyết định số 1131/QĐ-TTg ngày 12/6/2025 của Thủ tướng
-                                Chính phủ ban hành.
-                            </p>
-                        </div>
+              <!-- Decision Text -->
+              <div class="award-regulation__section mb-4">
+                <p class="award-regulation__decision-title fst-italic">
+                  QUYẾT ĐỊNH:
+                </p>
+              </div>
 
-                        <div class="regulations-sections">
-                            <div class="regulation-section mb-3">
-                                <h4 class="fw-bold text-dark fs-6">1. Tên Giải thưởng</h4>
-                                <p class="">Giải thưởng "Sản phẩm Công nghệ số Make in Viet Nam" năm
-                                    2025.</p>
-                            </div>
-
-                            <div class="regulation-section mb-3">
-                                <h4 class="fw-bold text-dark fs-6">2. Đơn vị thực hiện</h4>
-                                <p class="">- Đơn vị chủ trì: Bộ Khoa học và Công nghệ.</p>
-                                <p class="">- Đơn vị phối hợp: Liên đoàn Thương mại và Công nghiệp Việt
-                                    Nam.</p>
-                            </div>
-
-                            <div class="regulation-section mb-3">
-                                <h4 class="fw-bold text-dark fs-6">3. Thời gian</h4>
-                                <p class=" mb-2">- Họp báo công bố, phát động Giải thưởng: Tháng 9/2025.
-                                </p>
-                                <p class=" mb-2">- Thời gian nhận đăng ký hồ sơ tham gia Giải thưởng: Từ
-                                    ngày 04/9/2025 đến hết ngày 22/10/2025.</p>
-                                <p class="">- Lễ công bố và trao Giải thưởng dự kiến tổ chức: Tháng 11
-                                    hoặc tháng 12/2025 tại Hà Nội.</p>
-                            </div>
-
-                            <div class="regulation-section mb-3">
-                                <h4 class="fw-bold text-dark fs-6">4. Mục đích, ý nghĩa</h4>
-                                <div class="">
-                                    <p class="mb-2">- Tôn vinh các sản phẩm công nghệ số Make in Viet Nam xuất sắc thúc
-                                        đẩy sản xuất thông minh trong các ngành, lĩnh vực kinh tế xã hội như công
-                                        nghiệp, nông nghiệp,
-                                        thương mại, tài chính, giáo dục, y tế, giao thông, logistics... góp phần nâng
-                                        cao năng lực sản xuất, tăng năng suất, chất lượng, hiệu quả và tạo động lực cho
-                                        tăng trưởng kinh tế, nâng cao
-                                        đời sống và doanh nghiệp.</p>
-                                    <p class="mb-2">- Khuyến khích, thúc đẩy việc nghiên cứu, phát triển, làm chủ công
-                                        nghệ số chiến lược để giải quyết các bài toán cấu từ quốc gia và chính phủ thị
-                                        trường toàn cầu.</p>
-                                    <p class="mb-2">- Tuyên truyền, phổ biến, thúc đẩy chủ trương phát triển doanh
-                                        nghiệp công nghệ số Việt Nam, sản phẩm công nghệ số Make in Viet Nam đáp ứng mục
-                                        tiêu, nhiệm vụ để
-                                        ra tại Chỉ thị số 01/CT-TTg ngày 14/01/2020 của Thủ tướng Chính phủ.</p>
-                                    <p class="mb-2">- Quảng bá các sản phẩm công nghệ số Make in Viet Nam tới thị trường
-                                        trong nước và ra thị trường nước ngoài.</p>
-                                    <p>- Góp phần xây dựng Thương hiệu quốc gia, sản phẩm Chất lượng quốc gia cho các
-                                        sản phẩm công nghệ số Make in Viet Nam.</p>
-                                </div>
-                            </div>
-
-                            <!-- Section 5: Participants -->
-                            <div class="regulation-section mb-4">
-                                <h4 class="fw-bold text-dark mb-3">5. Đối tượng tham gia</h4>
-                                <div class="">
-                                    <p class="mb-3">- Đối với Hạng mục tại Điểm a, b, c, d, đ và g Mục 6.1: Đối tượng
-                                        tham gia là doanh nghiệp được thành lập theo pháp luật Việt Nam (nếu là doanh
-                                        nghiệp có vốn đầu tư
-                                        nước ngoài thì người Việt Nam phải sở hữu ít nhất 51% tổng số cổ phần) và đơn
-                                        vị, tổ chức sở nghiệp có các sản phẩm công nghệ số được nghiên cứu, thiết kế,
-                                        sáng tạo,
-                                        sản xuất tại Việt Nam và đã được đưa vào ứng dụng thực tế.</p>
-                                    <p class="mb-3">- Đối với Hạng mục tại Điểm e Mục 6.1: Đối tượng tham gia là doanh
-                                        nghiệp được thành lập theo pháp luật Việt Nam (nếu là doanh nghiệp có vốn đầu tư
-                                        nước ngoài thì
-                                        người Việt Nam phải sở hữu ít nhất 51% tổng số cổ phần) hoặc doanh nghiệp thành
-                                        lập ở nước ngoài nhưng do người Việt Nam sở hữu ít nhất 51% tổng số cổ phần.</p>
-                                    <p>- Đối với Hạng mục tại Điểm h Mục 6.1: Chỉ áp dụng đối với doanh nghiệp siêu nhỏ,
-                                        nhỏ hoặc doanh nghiệp khởi nghiệp đổi mới sáng tạo được thành lập theo pháp luật
-                                        Việt Nam (nếu là doanh nghiệp có vốn đầu tư nước ngoài thì người Việt Nam phải
-                                        sở hữu ít nhất 51% tổng số cổ phần).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <!-- Articles -->
+              <div class="award-regulation__articles fst-italic">
+                <div class="award-regulation__article">
+                  <p class="award-regulation__article-title">
+                    <strong>Điều 1.</strong> Ban hành kèm theo Quyết định này
+                    Quy chế Giải thưởng "Sản phẩm Công nghệ số Make in Viet Nam"
+                    năm 2025.
+                  </p>
                 </div>
+
+                <div class="award-regulation__article">
+                  <p class="award-regulation__article-title">
+                    <strong>Điều 2.</strong> Giao Cục Công nghệ công nghệ thông
+                    tin chủ trì, phối hợp với các đơn vị liên quan tổ chức Giải
+                    thưởng "Sản phẩm Công nghệ số Make in Viet Nam" năm 2025.
+                  </p>
+                </div>
+
+                <div class="award-regulation__article">
+                  <p class="award-regulation__article-title">
+                    <strong>Điều 3.</strong> Hiệu lực và trách nhiệm thi hành
+                  </p>
+                  <p class="award-regulation__text">
+                    1. Quyết định này có hiệu lực kể từ ngày ký.
+                  </p>
+                  <p class="award-regulation__text">
+                    2. Chánh Văn phòng, Cục trưởng Cục Công nghệ công nghệ thông
+                    tin và Thủ trưởng các đơn vị có liên quan chịu trách nhiệm
+                    thi hành Quyết định này.//.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Signature Section -->
+              <div class="award-regulation__signature mt-5">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="award-regulation__recipient-title">
+                      <strong>Nơi nhận:</strong>
+                    </p>
+                    <ul class="award-regulation__recipient-list">
+                      <li>- Như Điều 3;</li>
+                      <li>- Bộ trưởng (để b/c);</li>
+                      <li>- Các Thứ trưởng;</li>
+                      <li>- Liên đoàn TMCN Việt Nam;</li>
+                      <li>- Các đơn vị: Học viện CNBCVT, Báo VnExpress,</li>
+                      <li>
+                        Trung tâm Truyền thông Khoa học và Công nghệ (để p/h);
+                      </li>
+                      <li>- Lưu: VT, CNCNTT.</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <p class="award-regulation__signature-title">
+                      <strong>KT. BỘ TRƯỞNG</strong>
+                    </p>
+                    <p class="award-regulation__signature-subtitle">
+                      <strong>THỨ TRƯỞNG</strong>
+                    </p>
+                    <div class="award-regulation__signature-space my-5"></div>
+                    <p class="award-regulation__signature-name">
+                      <strong>BÙI HOÀNG PHƯƠNG</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="row justify-content-center mt-4 mt-md-5">
+          <div class="col-lg-10">
+            <div class="regulations-content">
+              <div class="text-center mb-3">
+                <h2 class="fw-bold fs-3">QUY CHẾ GIẢI THƯỞNG</h2>
+                <h3 class="fw-bold fs-3">
+                  "SẢN PHẨM CÔNG NGHỆ SỐ MAKE IN VIET NAM" NĂM 2025
+                </h3>
+                <p class="fst-italic fs-5">
+                  (Ban hành kèm theo Quyết định số
+                  &nbsp;&nbsp;&nbsp;&nbsp;/QĐ-BKHCN ngày
+                  &nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;&nbsp;&nbsp;/2025 của Bộ
+                  trưởng Bộ Khoa học và Công nghệ)
+                </p>
+              </div>
+
+              <div class="regulations-intro mb-3">
+                <p class="text-justify">
+                  Giải thưởng "Sản phẩm Công nghệ số Make in Viet Nam" là Giải
+                  thưởng uy tín, chính thức trong lĩnh vực công nghệ số được Bộ
+                  Khoa học và Công nghệ tổ chức để trao tặng hàng năm cho các tổ
+                  chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc
+                  được nghiên cứu, thiết kế, sáng tạo, sản xuất tại Việt Nam
+                  nhằm ghi nhận các bài toán Việt Nam và đi ra quốc tế.
+                </p>
+                <p class="text-justify">
+                  Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số
+                  xuất sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số
+                  toàn dân, toàn diện, toàn trình để tăng tốc, bứt phá phát
+                  triển kinh tế số, tăng tốc bứt phá trong số hóa các ngành kinh
+                  tế, tạo bước nhảy vọt về năng suất, chất lượng, hiệu quả và
+                  sức cạnh tranh của nền kinh tế, đồng thời hướng tới mục tiêu
+                  làm chủ các công nghệ cốt lõi, công nghệ nền tảng, công nghệ
+                  chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản phẩm
+                  công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
+                  phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng
+                  thời, lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công
+                  nghệ số chiến lược xuất sắc trong Danh mục công nghệ chiến
+                  lược và sản phẩm công nghệ chiến lược tại Quyết định số
+                  1131/QĐ-TTg ngày 12/6/2025 của Thủ tướng Chính phủ ban hành.
+                </p>
+              </div>
+
+              <div class="regulations-sections">
+                <div class="regulation-section mb-3">
+                  <h4 class="fw-bold text-dark fs-6">1. Tên Giải thưởng</h4>
+                  <p class="">
+                    Giải thưởng "Sản phẩm Công nghệ số Make in Viet Nam" năm
+                    2025.
+                  </p>
+                </div>
+
+                <div class="regulation-section mb-3">
+                  <h4 class="fw-bold text-dark fs-6">2. Đơn vị thực hiện</h4>
+                  <p class="">- Đơn vị chủ trì: Bộ Khoa học và Công nghệ.</p>
+                  <p class="">
+                    - Đơn vị phối hợp: Liên đoàn Thương mại và Công nghiệp Việt
+                    Nam.
+                  </p>
+                </div>
+
+                <div class="regulation-section mb-3">
+                  <h4 class="fw-bold text-dark fs-6">3. Thời gian</h4>
+                  <p class="mb-2">
+                    - Họp báo công bố, phát động Giải thưởng: Tháng 9/2025.
+                  </p>
+                  <p class="mb-2">
+                    - Thời gian nhận đăng ký hồ sơ tham gia Giải thưởng: Từ ngày
+                    04/9/2025 đến hết ngày 22/10/2025.
+                  </p>
+                  <p class="">
+                    - Lễ công bố và trao Giải thưởng dự kiến tổ chức: Tháng 11
+                    hoặc tháng 12/2025 tại Hà Nội.
+                  </p>
+                </div>
+
+                <div class="regulation-section mb-3">
+                  <h4 class="fw-bold text-dark fs-6">4. Mục đích, ý nghĩa</h4>
+                  <div class="">
+                    <p class="mb-2">
+                      - Tôn vinh các sản phẩm công nghệ số Make in Viet Nam xuất
+                      sắc thúc đẩy sản xuất thông minh trong các ngành, lĩnh vực
+                      kinh tế xã hội như công nghiệp, nông nghiệp, thương mại,
+                      tài chính, giáo dục, y tế, giao thông, logistics... góp
+                      phần nâng cao năng lực sản xuất, tăng năng suất, chất
+                      lượng, hiệu quả và tạo động lực cho tăng trưởng kinh tế,
+                      nâng cao đời sống và doanh nghiệp.
+                    </p>
+                    <p class="mb-2">
+                      - Khuyến khích, thúc đẩy việc nghiên cứu, phát triển, làm
+                      chủ công nghệ số chiến lược để giải quyết các bài toán cấu
+                      từ quốc gia và chính phủ thị trường toàn cầu.
+                    </p>
+                    <p class="mb-2">
+                      - Tuyên truyền, phổ biến, thúc đẩy chủ trương phát triển
+                      doanh nghiệp công nghệ số Việt Nam, sản phẩm công nghệ số
+                      Make in Viet Nam đáp ứng mục tiêu, nhiệm vụ để ra tại Chỉ
+                      thị số 01/CT-TTg ngày 14/01/2020 của Thủ tướng Chính phủ.
+                    </p>
+                    <p class="mb-2">
+                      - Quảng bá các sản phẩm công nghệ số Make in Viet Nam tới
+                      thị trường trong nước và ra thị trường nước ngoài.
+                    </p>
+                    <p>
+                      - Góp phần xây dựng Thương hiệu quốc gia, sản phẩm Chất
+                      lượng quốc gia cho các sản phẩm công nghệ số Make in Viet
+                      Nam.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Section 5: Participants -->
+                <div class="regulation-section mb-4">
+                  <h4 class="fw-bold text-dark mb-3">5. Đối tượng tham gia</h4>
+                  <div class="">
+                    <p class="mb-3">
+                      - Đối với Hạng mục tại Điểm a, b, c, d, đ và g Mục 6.1:
+                      Đối tượng tham gia là doanh nghiệp được thành lập theo
+                      pháp luật Việt Nam (nếu là doanh nghiệp có vốn đầu tư nước
+                      ngoài thì người Việt Nam phải sở hữu ít nhất 51% tổng số
+                      cổ phần) và đơn vị, tổ chức sở nghiệp có các sản phẩm công
+                      nghệ số được nghiên cứu, thiết kế, sáng tạo, sản xuất tại
+                      Việt Nam và đã được đưa vào ứng dụng thực tế.
+                    </p>
+                    <p class="mb-3">
+                      - Đối với Hạng mục tại Điểm e Mục 6.1: Đối tượng tham gia
+                      là doanh nghiệp được thành lập theo pháp luật Việt Nam
+                      (nếu là doanh nghiệp có vốn đầu tư nước ngoài thì người
+                      Việt Nam phải sở hữu ít nhất 51% tổng số cổ phần) hoặc
+                      doanh nghiệp thành lập ở nước ngoài nhưng do người Việt
+                      Nam sở hữu ít nhất 51% tổng số cổ phần.
+                    </p>
+                    <p>
+                      - Đối với Hạng mục tại Điểm h Mục 6.1: Chỉ áp dụng đối với
+                      doanh nghiệp siêu nhỏ, nhỏ hoặc doanh nghiệp khởi nghiệp
+                      đổi mới sáng tạo được thành lập theo pháp luật Việt Nam
+                      (nếu là doanh nghiệp có vốn đầu tư nước ngoài thì người
+                      Việt Nam phải sở hữu ít nhất 51% tổng số cổ phần).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <!-- Header Section -->
+            <div class="header-section">
+              <!-- split title into two separate divs with different font sizes -->
+              <div class="header-title-main">
+                TIÊU CHÍ ĐÁNH GIÁ ĐỐI VỚI CÁC HÀNG MỤC GIẢI THƯỞNG
+              </div>
+              <div class="header-title-sub">
+                "SẢN PHẨM CÔNG NGHỆ SỐ MAKE IN VIỆT NAM" NĂM 2025
+              </div>
+            </div>
+
+            <!-- Main Table -->
+            <table class="table criteria-table">
+              <div class="sub-header">
+                1. Hạng mục Sản phẩm công nghệ số xuất sắc trong 05 lĩnh vực:
+                công nghiệp và xây dựng, nông nghiệp, tài nguyên và môi trường,
+                giao thông vận tải, bưu chính và logistics, giáo dục, y tế, văn
+                hóa, xã hội, tài chính, ngân hàng, thương mại, dịch vụ
+              </div>
+              <thead>
+                <tr>
+                  <th class="number-col">TT</th>
+                  <th class="criteria-col">TIÊU CHÍ ĐÁNH GIÁ</th>
+                  <th class="points-col">ĐIỂM</th>
+                  <th class="details-col">TIÊU CHÍ THÀNH PHẦN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="number-col roman-numeral">I</td>
+                  <td><strong>Thiết kế, sáng tạo tại Việt Nam</strong></td>
+                  <td class="points-col">50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="number-col">1</td>
+                  <td>Tính sáng tạo và độc đáo của sản phẩm</td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Khác biệt với những sản phẩm quốc tế và trong nước hiện
+                    nay.<br />
+                    - Thực hiện các mô hình kinh tế mới (kinh tế chia sẻ, kinh
+                    tế xanh, kinh tế tuần hoàn...).
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">2</td>
+                  <td>Công nghệ, chất lượng sản phẩm</td>
+                  <td class="points-col">15</td>
+                  <td>
+                    - Các TCVN/QCVN/Tiêu chí kỹ thuật được áp dụng vào quy trình
+                    sản xuất, phát triển sản phẩm.<br />
+                    - Áp dụng các công nghệ số chiến lược, đổi mới công nghệ,
+                    công nghệ mới, mã nguồn mở, nền tảng phát triển mở.<br />
+                    - Khả năng kết nối, hỗ trợ tới các nền tảng và hệ sinh thái
+                    liên quan.<br />
+                    - Khả năng mở rộng và nâng lực cung cấp dịch vụ cho lượng
+                    người dùng lớn.<br />
+                    - Tính bảo mật và an toàn dữ liệu.<br />
+                    - Sự ổn định và độ tin cậy.<br />
+                    - Lưu trữ dữ liệu tại Việt Nam theo quy định.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">3</td>
+                  <td>
+                    Công đoạn cốt lõi của sản phẩm do người Việt Nam nghiên cứu,
+                    phát triển, thực hiện
+                  </td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Có chứng nhận sở hữu trí tuệ (trong nước hoặc nước ngoài)
+                    hoặc hợp đồng khoa học công nghệ hoặc thuyết minh chi tiết
+                    sản phẩm được đăng ký/công bố tại Việt Nam.<br />
+                    - Tài liệu thuyết minh sở lượng công nghệ làm chủ của sản
+                    phẩm.<br />
+                    - Khả năng đáp ứng yêu cầu người dùng, mức độ thân thiện, sự
+                    hài lòng của người dùng.<br />
+                    - Khả năng tùy biến, mở rộng.<br />
+                    - Mô hình cho thuê dịch vụ.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">4</td>
+                  <td>
+                    Tính năng sản phẩm (dễ sử dụng, tương tích, tùy biến, mở
+                    rộng,...)
+                  </td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Khả năng đáp ứng yêu cầu người dùng, mức độ thân thiện, sự
+                    hài lòng của người dùng.<br />
+                    - Khả năng tùy biến, mở rộng.<br />
+                    - Mô hình cho thuê dịch vụ.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col roman-numeral">II</td>
+                  <td>
+                    <strong>Tác động, ảnh hưởng tới phát triển kinh tế</strong>
+                  </td>
+                  <td class="points-col">50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="number-col">5</td>
+                  <td>Kết quả sản xuất, kinh doanh trong nước</td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Doanh thu, tốc độ tăng trưởng doanh thu trong 03 năm liền
+                    kề của sản phẩm.<br />
+                    - Mô hình và chiến lược kinh doanh tại thương trong nước.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">6</td>
+                  <td>Tác động, ảnh hưởng tới phát triển kinh tế</td>
+                  <td class="points-col">25</td>
+                  <td>
+                    - Thuyết minh về tính toàn diện, toàn trình của sản phẩm.<br />
+                    - Thuyết minh mang lại giá trị, hiệu quả cho đối tượng hàng
+                    tiêu biểu: Tăng năng suất lao động, tăng hiệu quả sản xuất,
+                    kinh doanh.<br />
+                    - Quy mô, lĩnh phạm, số lượng người/Doanh nghiệp/Tổ chức sử
+                    dụng được hưởng lợi từ sản phẩm.<br />
+                    - Đánh giá của khách hàng.<br />
+                    - Đối với lĩnh vực nông nghiệp, tài nguyên - môi trường và
+                    lĩnh vực giáo dục, y tế, văn hóa, xã hội: có sự tham gia,
+                    thuyết minh về đào tạo kỹ năng số, nâng cao khả năng tiếp
+                    cận sản phẩm.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">7</td>
+                  <td>
+                    Kết quả kinh doanh, khả năng mở rộng ra thị trường quốc tế
+                  </td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Thị phần và tiềm năng thị trường quốc tế<br />
+                    - Mô hình, chiến lược kinh doanh ra thị trường quốc tế
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="sub-section-header">
+                    <strong
+                      >2. Hạng mục Sản phẩm công nghệ số xuất sắc cho thị trường
+                      nước ngoài</strong
+                    >
+                  </td>
+                </tr>
+                <thead>
+                  <tr>
+                    <th class="number-col">TT</th>
+                    <th class="criteria-col">TIÊU CHÍ ĐÁNH GIÁ</th>
+                    <th class="points-col">ĐIỂM</th>
+                    <th class="details-col">TIÊU CHÍ THÀNH PHẦN</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td class="number-col roman-numeral">I</td>
+                  <td><strong>Thiết kế, sáng tạo tại Việt Nam</strong></td>
+                  <td class="points-col">45</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="number-col">1</td>
+                  <td>Tính sáng tạo và độc đáo của sản phẩm</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Khác biệt với những sản phẩm quốc tế và trong nước hiện
+                    nay.<br />
+                    - Định hình/phủ phụ xu hướng.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">2</td>
+                  <td>Công nghệ, chất lượng sản phẩm</td>
+                  <td class="points-col">15</td>
+                  <td>
+                    - Áp dụng công nghệ mới.<br />
+                    - Các tiêu chuẩn được áp dụng vào quy trình sản xuất, phát
+                    triển sản phẩm.<br />
+                    - Các chứng chỉ về năng lực công nghệ<br />
+                    - Tính bảo mật và an toàn dữ liệu.<br />
+                    - Sự ổn định và độ tin cậy.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">3</td>
+                  <td>
+                    Công đoạn cốt lõi của sản phẩm do người Việt Nam thực hiện
+                  </td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Có chứng nhận sở hữu trí tuệ (trong nước hoặc nước ngoài)
+                    hoặc hợp đồng khoa học công nghệ hoặc thuyết minh chi tiết
+                    sản phẩm được đăng ký/công bố tại Việt Nam.<br />
+                    - Tài liệu thuyết minh số lượng công nghệ làm chủ của sản
+                    phẩm.<br />
+                    - Khả năng đáp ứng yêu cầu người dùng, mức độ thân thiện, sự
+                    hài lòng của người dùng.<br />
+                    - Khả năng tùy biến.<br />
+                    - Đa ngôn ngữ.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">4</td>
+                  <td>
+                    Tính năng sản phẩm (dễ sử dụng, tương tích, tùy biến, mở
+                    rộng, đa ngôn ngữ...)
+                  </td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Khả năng đáp ứng yêu cầu người dùng, mức độ thân thiện, sự
+                    hài lòng của người dùng.<br />
+                    - Khả năng tùy biến.<br />
+                    - Đa ngôn ngữ.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col roman-numeral">II</td>
+                  <td>
+                    <strong>Giá trị đem lại từ thị trường nước ngoài</strong>
+                  </td>
+                  <td class="points-col">55</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="number-col">5</td>
+                  <td>Bài toán giải quyết</td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Thuyết minh bài toán giải quyết.<br />
+                    - Hiệu quả đem lại cho khách hàng.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">6</td>
+                  <td>Kết quả sản xuất, kinh doanh</td>
+                  <td class="points-col">25</td>
+                  <td>
+                    - Doanh thu, tốc độ tăng trưởng doanh thu trong 03 năm liền
+                    kề của sản phẩm.<br />
+                    - Mô hình, chiến lược kinh doanh.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">7</td>
+                  <td>Thị trường khách hàng</td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Quy mô thị trường, số lượng khách hàng đang sử dụng sản
+                    phẩm.<br />
+                    - Số lượng quốc gia đã mở doanh nghiệp có hiện diện thương
+                    mại.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">8</td>
+                  <td>Mức độ hài lòng của khách hàng</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Đánh giá của người sử dụng.<br />
+                    - Thời gian đã đưa vào sử dụng.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">9</td>
+                  <td>
+                    Khả năng cạnh tranh với các sản phẩm tương đương trên thế
+                    giới
+                  </td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Thuyết minh khả năng cạnh tranh với các sản phẩm tương
+                    đương trên thế giới.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="sub-section-header">
+                    <strong
+                      >3. Hạng mục Sản phẩm công nghệ số chiến lược xuất
+                      sắc</strong
+                    >
+                  </td>
+                </tr>
+                <thead>
+                  <tr>
+                    <th class="number-col">TT</th>
+                    <th class="criteria-col">TIÊU CHÍ ĐÁNH GIÁ</th>
+                    <th class="points-col">ĐIỂM</th>
+                    <th class="details-col">TIÊU CHÍ THÀNH PHẦN</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td class="number-col">1</td>
+                  <td>Tính an toàn</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Kiểm trúc giải pháp và/hoặc thiết kế nền tảng.<br />
+                    - Tuân thủ các tiêu chuẩn bảo mật.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">2</td>
+                  <td>Tính sáng tạo và độc đáo của sản phẩm</td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Tính khác biệt với những sản phẩm quốc tế và trong nước
+                    hiện nay (khác biệt về phân khúc thị trường hoặc về công
+                    nghệ hoặc kết hợp nhiều kỹ thuật).<br />
+                    - Quy trình khai thác dữ liệu, quản lý kết quả và thuật toán
+                    được sử dụng.<br />
+                    - Dự đoán và phân tích cơ hội.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">3</td>
+                  <td>Hàm lượng nghiên cứu phát triển đổi với sản phẩm</td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Tỷ lệ chi R&D trên tổng doanh thu của sản phẩm.<br />
+                    - Đội ngũ nhân lực phát triển sản phẩm.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">4</td>
+                  <td>Công nghệ, chất lượng sản phẩm</td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Áp dụng các công nghệ số chiến lược, công nghệ mới, mã
+                    nguồn mở, nền tảng phát triển mở.<br />
+                    - Độ tin cậy của sản phẩm.<br />
+                    - Sự tiến lợi của sản phẩm đối với người dùng.<br />
+                    - Hiệu năng của sản phẩm.<br />
+                    - Khả năng bảo trì, bảo hành của sản phẩm.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">5</td>
+                  <td>
+                    Công đoạn cốt lõi của sản phẩm do người Việt Nam nghiên cứu,
+                    phát triển, thực hiện
+                  </td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Có chứng nhận sở hữu trí tuệ (trong nước hoặc nước ngoài)
+                    hoặc hợp đồng khoa học công nghệ hoặc thuyết minh chi tiết
+                    sản phẩm được đăng ký/công bố tại Việt Nam.<br />
+                    - Tài liệu thuyết minh số lượng công nghệ làm chủ của sản
+                    phẩm.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">6</td>
+                  <td>
+                    Tính cấp thiết của bài toán mà sản phẩm đang giải quyết tại
+                    Việt Nam
+                  </td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Thuyết minh bài toán mà sản phẩm giải quyết.<br />
+                    - Văn đề đăng giải quyết có ý nghĩa như thế nào đối với
+                    người dùng.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">7</td>
+                  <td>Mô hình, chiến lược và quy mô thị trường</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Thị phần và tiềm năng thị trường trong nước.<br />
+                    - Mô hình, chiến lược kinh doanh.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">8</td>
+                  <td>Tác động lan tỏa của sản phẩm công nghệ số chiến lược</td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Thuyết minh số lượng ngành, lĩnh vực áp dụng sản phẩm.<br />
+                    - Thuyết minh mức độ thay đổi năng suất, chất lượng khi áp
+                    dụng sản phẩm.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">9</td>
+                  <td>Tác động kinh tế xã hội</td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Doanh thu sản phẩm.<br />
+                    - Số lượng người/Doanh nghiệp/tổ chức sử dụng.<br />
+                    - Tác động kinh tế, xã hội.<br />
+                    - Giá cạnh tranh.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">10</td>
+                  <td>Khả năng kêu gọi được vốn</td>
+                  <td class="points-col">5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="sub-section-header">
+                    <strong>4. Hạng mục Sản phẩm công nghệ số tiềm năng</strong>
+                  </td>
+                </tr>
+                <thead>
+                  <tr>
+                    <th class="number-col">TT</th>
+                    <th class="criteria-col">TIÊU CHÍ ĐÁNH GIÁ</th>
+                    <th class="points-col">ĐIỂM</th>
+                    <th class="details-col">TIÊU CHÍ THÀNH PHẦN</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td class="number-col roman-numeral">I</td>
+                  <td><strong>Thiết kế, sáng tạo tại Việt Nam</strong></td>
+                  <td class="points-col">60</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="number-col">1</td>
+                  <td>Tính sáng tạo và độc đáo của sản phẩm</td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Tính khác biệt với những sản phẩm quốc tế và trong nước
+                    hiện nay (khác biệt về phân khúc thị trường hoặc về công
+                    nghệ hoặc kết hợp nhiều kỹ thuật).<br />
+                    - Định hình/phủ hợp xu hướng.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">2</td>
+                  <td>Công nghệ, chất lượng sản phẩm</td>
+                  <td class="points-col">20</td>
+                  <td>
+                    - Áp dụng công nghệ mới.<br />
+                    - Độ tin cậy của sản phẩm.<br />
+                    - Sự tiện lợi của sản phẩm đối với người dùng.<br />
+                    - Hiệu năng của sản phẩm.<br />
+                    - Khả năng bảo trì, bảo hành của sản phẩm.<br />
+                    - Tính an toàn, bảo mật.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">3</td>
+                  <td>
+                    Công đoạn cốt lõi của sản phẩm do người Việt Nam thực hiện
+                  </td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Có chứng nhận sở hữu trí tuệ (trong nước hoặc nước ngoài)
+                    hoặc hợp đồng khoa học công nghệ hoặc thuyết minh chi tiết
+                    sản phẩm được đăng ký/công bố tại Việt Nam.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">4</td>
+                  <td>
+                    Tính năng sản phẩm (dễ sử dụng, tương tích, tùy biến, mở
+                    rộng,...)
+                  </td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Khả năng đáp ứng yêu cầu người dùng, mức độ thân thiện, sự
+                    hài lòng của người dùng.<br />
+                    - Khả năng mở rộng.<br />
+                    - Khả năng tùy biến.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col roman-numeral">II</td>
+                  <td><strong>Tác động, ảnh hưởng</strong></td>
+                  <td class="points-col">40</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="number-col">5</td>
+                  <td>
+                    Tính cấp thiết của bài toán mà sản phẩm đang giải quyết tại
+                    Việt Nam
+                  </td>
+                  <td class="points-col">10</td>
+                  <td>
+                    - Thuyết minh bài toán mà sản phẩm giải quyết.<br />
+                    - Văn đề đăng giải quyết có ý nghĩa như thế nào đối với
+                    người dùng.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">6</td>
+                  <td>Mô hình, chiến lược và quy mô thị trường</td>
+                  <td class="points-col">15</td>
+                  <td>
+                    - Thị phần và tiềm năng thị trường trong nước.<br />
+                    - Mô hình, chiến lược kinh doanh.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">7</td>
+                  <td>Tác động kinh tế xã hội</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Doanh thu sản phẩm.<br />
+                    - Số lượng người/Doanh nghiệp/tổ chức sử dụng.<br />
+                    - Tác động kinh tế, xã hội.<br />
+                    - Giá cạnh tranh.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">8</td>
+                  <td>Khả năng mở rộng ra thị trường quốc tế</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Mô hình, chiến lược kinh doanh ra thị trường nước ngoài.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="number-col">9</td>
+                  <td>Khả năng kêu gọi được vốn</td>
+                  <td class="points-col">5</td>
+                  <td>
+                    - Kết quả kêu gọi vốn đầu tư cho sản phẩm.<br />
+                    - Khả năng kêu gọi vốn đầu tư, sức hấp dẫn của sản phẩm đối
+                    với thị trường và nhà đầu tư.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="footer-section pt-5">
-        <div class="container">
-            <div class="row justify-content-around">
-                <!-- Left Column - Main Content -->
-                <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
-                    <p class="main-title mb-0">MAKE IN VIET NAM</p>
-                    <p class="year-title">2025</p>
-                    <p class="description-text">
-                        Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
-                        sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
-                        dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
-                        số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
-                        lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
-                        tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
-                        công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
-                        phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
-                        phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
-                        lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
-                        chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
-                        phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
-                        12/6/2025 của Thủ tướng Chính phủ.
-                    </p>
-                </div>
+      <div class="container">
+        <div class="row justify-content-around">
+          <!-- Left Column - Main Content -->
+          <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
+            <p class="main-title mb-0">MAKE IN VIET NAM</p>
+            <p class="year-title">2025</p>
+            <p class="description-text">
+              Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
+              sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
+              dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
+              số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
+              lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
+              tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
+              công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
+              phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
+              phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
+              lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
+              chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
+              phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
+              12/6/2025 của Thủ tướng Chính phủ.
+            </p>
+          </div>
 
-                <!-- Right Column - Contact & Navigation -->
-                <div class="col-lg-5 col-md-6 footer-section-center">
-                    <!-- Contact Information -->
-                    <div class="mb-4">
-                        <div class="footer-logo group">
-                            <img class="layer-9 me-2" src="images/bog_b.jpg" alt="" width="134" height="134" />
-                            <img class="logo-vfte" src="images/logo_vfte.png" alt="" width="117" height="117" />
-                        </div>
-                        <div class="section-footer-contact">
-                            <h5 class="section-footer-title">
-                                CƠ QUAN THƯỜNG TRỰC GIẢI THƯỞNG
-                            </h5>
-                            <div class="contact-info">
-                                <p><strong>Cục Công nghệ Công nghệ thông tin</strong></p>
-                                <p>
-                                    <strong>Địa chỉ:</strong> Tầng 18, Tòa nhà 115 Trần Duy Hưng,
-                                    P. Yên Hoà, Hà Nội
-                                </p>
-                                <p><strong>Hotline:</strong> 089.899.5599</p>
-                                <p><strong>Email:</strong> makeinvietnam@mst.gov.vn</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Navigation Links -->
+          <!-- Right Column - Contact & Navigation -->
+          <div class="col-lg-5 col-md-6 footer-section-center">
+            <!-- Contact Information -->
+            <div class="mb-4">
+              <div class="footer-logo group">
+                <img
+                  class="layer-9 me-2"
+                  src="images/bog_b.jpg"
+                  alt=""
+                  width="134"
+                  height="134"
+                />
+                <img
+                  class="logo-vfte"
+                  src="images/logo_vfte.png"
+                  alt=""
+                  width="117"
+                  height="117"
+                />
+              </div>
+              <div class="section-footer-contact">
+                <h5 class="section-footer-title">
+                  CƠ QUAN THƯỜNG TRỰC GIẢI THƯỞNG
+                </h5>
+                <div class="contact-info">
+                  <p><strong>Cục Công nghệ Công nghệ thông tin</strong></p>
+                  <p>
+                    <strong>Địa chỉ:</strong> Tầng 18, Tòa nhà 115 Trần Duy
+                    Hưng, P. Yên Hoà, Hà Nội
+                  </p>
+                  <p><strong>Hotline:</strong> 089.899.5599</p>
+                  <p><strong>Email:</strong> makeinvietnam@mst.gov.vn</p>
                 </div>
-                <div class="col-md-2 mb-4 section-footer-nav">
-                    <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
-                    <ul class="nav-links list-unstyled section-footer-content">
-                        <li class="pb-3">
-                            <a class="text-decoration-none" href="#ban-to-chuc">Ban tổ chức</a>
-                        </li>
-                        <li class="pb-3">
-                            <a class="text-decoration-none" href="#hoi-dong-giam-khao">Hội đồng giám khảo</a>
-                        </li>
-                        <li class="pb-3">
-                            <a class="text-decoration-none" href="#ket-qua-giai-thuong">Kết quả giải thưởng</a>
-                        </li>
-                    </ul>
-                </div>
+              </div>
             </div>
+
+            <!-- Navigation Links -->
+          </div>
+          <div class="col-md-2 mb-4 section-footer-nav">
+            <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
+            <ul class="nav-links list-unstyled section-footer-content">
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ban-to-chuc"
+                  >Ban tổ chức</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#hoi-dong-giam-khao"
+                  >Hội đồng giám khảo</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ket-qua-giai-thuong"
+                  >Kết quả giải thưởng</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-section-bottom text-center py-4">
-            <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
-            <div class="fs-5">
-                Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
-            </div>
+      </div>
+      <div class="footer-section-bottom text-center py-4">
+        <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
+        <div class="fs-5">
+          Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
         </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
