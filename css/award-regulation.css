@@ -1,0 +1,119 @@
+/* Award Regulation Section */
+.award-regulation {
+    background-color: #ffffff;
+    font-family: 'Times New Roman', serif;
+}
+
+.award-regulation p {
+    margin: 0;
+    padding: 0;
+}
+.award-regulation__ministry-info {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.award-regulation__ministry-left {
+    text-align: left;
+    margin: 0;
+}
+
+.award-regulation__ministry-right {
+    text-align: right;
+    margin: 0;
+}
+
+.award-regulation__date {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.award-regulation__title-section {
+    margin: 2rem 0;
+}
+
+.award-regulation__main-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.award-regulation__sub-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.award-regulation__award-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.award-regulation__minister-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.award-regulation__content {
+    text-align: left;
+}
+
+.award-regulation__section {
+    margin-bottom: 1.5rem;
+}
+
+.award-regulation__text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    text-align: justify;
+}
+.award-regulation__signature {
+    margin-top: 3rem;
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+}
+
+.award-regulation__recipient-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.award-regulation__recipient-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.award-regulation__recipient-list li {
+    margin-bottom: 0.3rem;
+}
+
+.award-regulation__signature-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.award-regulation__signature-subtitle {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.award-regulation__signature-space {
+    height: 80px;
+    margin: 2rem 0;
+}
