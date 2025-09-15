@@ -212,3 +212,11 @@
     text-align: center;
   }
 }
+
+.gradient-text {
+    background: linear-gradient(-90deg, #dc3545 0%, #b91c3c 50%, #991b2e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    color: transparent;
+}
