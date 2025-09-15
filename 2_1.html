@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAKE IN VIỆT NAM">
+  <meta name="keywords" content="MAKE IN VIỆT NAM">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="2_1.css" rel="stylesheet">
+  <link href="global.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <section class="header container">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="logo col-7 col-sm col-md-5 col-lg-3 py-2">
+        <img src="images/logo.png" class="w-100 h-100 object-fit-cover" alt="Logo make in vietnam">
+      </div>
+      <div class="menu d-none d-lg-flex align-items-center col-10 d-flex justify-content-end">
+        <ul class="menu__list list-group-numbered d-flex mb-0">
+          <li class="menu__item menu__item--active">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Trang chủ</a>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Về giải thưởng</a>
+            <ul class="menu__dropdown list-group-numbered position-absolute">
+              <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
+              <li><a class="dropdown-item" href="#">Hội đồng giám khảo</a></li>
+              <li><a class="dropdown-item" href="#">Kết quả giải thưởng</a></li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Tiêu chí đánh giá</a>
+            <ul class="menu__dropdown list-group-numbered position-absolute">
+              <li><a class="dropdown-item" href="#">Năm 2020</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2021</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2022</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2023</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2024</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2025</a></li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Quyền lợi</a>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Hướng dẫn</a>
+            <ul class="menu__dropdown list-group-numbered position-absolute">
+              <li><a class="dropdown-item" href="#">Mẫu hồ sơ</a></li>
+              <li><a class="dropdown-item" href="#">Lưu ý nộp hồ sơ</a></li>
+              <li><a class="dropdown-item" href="#">Quy chế giải thưởng</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Thông tin, hoạt
+              động</a>
+          </li>
+          <li class="login-button d-flex align-items-center">
+            <a class="menu__link text-decoration-none fw-4 color-1" href="#">Đăng ký/Đăng nhập</a>
+          </li>
+        </ul>
+      </div>
+      <div class="py-2">
+        <button class="color-1 border-0 d-lg-none ms-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+          <span>
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <rect y="4" width="24" height="2" rx="1"></rect>
+              <rect y="11" width="24" height="2" rx="1"></rect>
+              <rect y="18" width="24" height="2" rx="1"></rect>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link text-black" href="#">Trang chủ</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+              href="#mobileDropdown1" role="button" aria-expanded="false" aria-controls="mobileDropdown1">
+              <span>Về giải thưởng</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </a>
+            <div class="collapse" id="mobileDropdown1">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link text-black" href="#">Ban tổ chức</a></li>
+                <li><a class="nav-link text-black" href="#">Hội đồng giám khảo</a></li>
+                <li><a class="nav-link text-black" href="#">Kết quả giải thưởng</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+              href="#mobileDropdown2" role="button" aria-expanded="false" aria-controls="mobileDropdown2">
+              <span>Tiêu chí đánh giá</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </a>
+            <div class="collapse" id="mobileDropdown2">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link text-black" href="#">Năm 2020</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2021</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2022</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2023</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2024</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2025</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-black" href="#">Quyền lợi</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+              href="#mobileDropdown3" role="button" aria-expanded="false" aria-controls="mobileDropdown3">
+              <span>Hướng dẫn</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </a>
+            <div class="collapse" id="mobileDropdown3">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link text-black" href="#">Mẫu hồ sơ</a></li>
+                <li><a class="nav-link text-black" href="#">Lưu ý nộp hồ sơ</a></li>
+                <li><a class="nav-link text-black" href="#">Quy chế giải thưởng</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-black" href="#">Thông tin, hoạt động</a></li>
+          <li class="nav-item"><a class="nav-link color-1 btn btn-primary mt-2" href="#">Đăng ký/Đăng nhập</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+   <style>
+        .gradient-background {
+            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rectangle%202-FKDLh7kA6MspPRZ9RteANMVJ9rXZes.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 50vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gradient-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(255, 193, 7, 0.1) 0%, 
+                rgba(255, 152, 0, 0.1) 50%, 
+                rgba(255, 87, 34, 0.1) 100%);
+            z-index: 1;
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #8B0000;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+              
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .gradient-background {
+                min-height: 30vh;
+            }
+            
+        }
+    </style>
+    <div class="gradient-background">
+        <div class="container">
+            <div class="content-wrapper">
+                <h1 class="main-title">BAN TỔ CHỨC</h1>  
+            </div>
+        </div>
+    </div>
+  
+ 
+    
+    <section class="footer-section pt-5">
+      <div class="container">
+        <div class="row justify-content-around">
+          <!-- Left Column - Main Content -->
+          <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
+            <p class="main-title mb-0">MAKE IN VIET NAM</p>
+            <p class="year-title">2025</p>
+            <p class="description-text">
+              Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
+              sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
+              dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
+              số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
+              lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
+              tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
+              công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
+              phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
+              phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
+              lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
+              chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
+              phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
+              12/6/2025 của Thủ tướng Chính phủ.
+            </p>
+          </div>
+
+          <!-- Right Column - Contact & Navigation -->
+          <div class="col-lg-5 col-md-6 footer-section-center">
+            <!-- Contact Information -->
+            <div class="mb-4">
+              <div class="footer-logo group">
+                <img
+                  class="layer-9 me-2"
+                  src="images/bog_b.jpg"
+                  alt=""
+                  width="134"
+                  height="134"
+                />
+                <img
+                  class="logo-vfte"
+                  src="images/logo_vfte.png"
+                  alt=""
+                  width="117"
+                  height="117"
+                />
+              </div>
+              <div class="section-footer-contact">
+                <h5 class="section-footer-title">
+                CƠ QUAN THƯỜNG TRỰC GIẢI THƯỞNG
+              </h5>
+              <div class="contact-info">
+                <p><strong>Cục Công nghệ Công nghệ thông tin</strong></p>
+                <p>
+                  <strong>Địa chỉ:</strong> Tầng 18, Tòa nhà 115 Trần Duy Hưng,
+                  P. Yên Hoà, Hà Nội
+                </p>
+                <p><strong>Hotline:</strong> 089.899.5599</p>
+                <p><strong>Email:</strong> makeinvietnam@mst.gov.vn</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <!-- Navigation Links -->
+          </div>
+          <div class="col-md-2 mb-4 section-footer-nav">
+            <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
+            <ul class="nav-links list-unstyled section-footer-content">
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ban-to-chuc"
+                  >Ban tổ chức</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#hoi-dong-giam-khao"
+                  >Hội đồng giám khảo</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ket-qua-giai-thuong"
+                  >Kết quả giải thưởng</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section-bottom text-center py-4">
+        <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
+        <div class="fs-5">
+          Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
+        </div>
+      </div>
+    </section>
+</body>
+
+</html>

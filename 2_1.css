@@ -1,3 +1,4 @@
+/* Menu dropdown hover effect */
 .menu__item--has-dropdown:hover > .menu__dropdown,
 .menu__item--has-dropdown:focus-within > .menu__dropdown {
   display: block;

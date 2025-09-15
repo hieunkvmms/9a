@@ -1,1993 +1,692 @@
-<!doctype html>
-<html>
-  <head>
-    <title>MAKE IN VIỆT NAM</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MAKE IN VIỆT NAM">
-    <meta name="keywords" content="MAKE IN VIỆT NAM">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic&amp;subset=latin,latin-ext,thai,vietnamese">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin,latin-ext,math,symbols,vietnamese">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/match-height.js"></script> 
-    <style>
-      /* Animation Keyframes */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slideInRight {
-        from {
-          opacity: 0;
-          transform: translateX(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-
-      @keyframes countUp {
-        from { opacity: 0; transform: scale(0.5); }
-        to { opacity: 1; transform: scale(1); }
-      }
-
-      /* Smooth scrolling */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Base animation classes */
-      .animate-fadeInUp {
-        opacity: 0;
-        animation: fadeInUp 0.8s ease-out forwards;
-      }
-
-      .animate-slideInLeft {
-        opacity: 0;
-        animation: slideInLeft 0.8s ease-out forwards;
-      }
-
-      .animate-slideInRight {
-        opacity: 0;
-        animation: slideInRight 0.8s ease-out forwards;
-      }
-
-      .animate-pulse {
-        animation: pulse 2s ease-in-out infinite;
-      }
-
-      .animate-float {
-        animation: float 3s ease-in-out infinite;
-      }
-
-      /* Delay classes */
-      .delay-1 { animation-delay: 0.2s; }
-      .delay-2 { animation-delay: 0.4s; }
-      .delay-3 { animation-delay: 0.6s; }
-      .delay-4 { animation-delay: 0.8s; }
-      .delay-5 { animation-delay: 1s; }
-
-      /* Hover effects */
-      .nav-item-1, .nav-item-3, .nav-item-3-2, .nav-item-3-3, .nav-item-3-4, .nav-item-3-5 {
-        transition: all 0.3s ease;
-        position: relative;
-      }
-
-      .nav-item-1:hover, .nav-item-3:hover, .nav-item-3-2:hover, .nav-item-3-3:hover, .nav-item-3-4:hover, .nav-item-3-5:hover {
-        transform: translateY(-2px);
-        color: #991d4a;
-      }
-
-      /* Card hover effects */
-      .group-4, .cn-xd, .group-5, .group-6, .group-7, .group-8, .group-9 {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .group-4:hover, .cn-xd:hover, .group-5:hover, .group-6:hover, .group-7:hover, .group-8:hover, .group-9:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-
-      /* Image hover effects */
-      .layer, .layer-2, .layer-3, .layer-4, .layer-5, .layer-6, .layer-7, .icon-logistics {
-        transition: transform 0.3s ease;
-      }
-
-      .layer:hover, .layer-2:hover, .layer-3:hover, .layer-4:hover, .layer-5:hover, .layer-6:hover, .layer-7:hover, .icon-logistics:hover {
-        transform: scale(1.1) rotate(5deg);
-      }
-
-      /* Button/Link hover effects */
-      .text-14 {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .text-14:hover {
-        transform: scale(1.05);
-        color: #991d4a;
-      }
-
-      /* News article hover effects */
-      .group-19, .group-20, .group-21, .group-22 {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .group-19:hover, .group-20:hover, .group-21:hover, .group-22:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      }
-
-      /* Timeline animation */
-      .col-11, .col-15, .col-16, .col-17, .col-18 {
-        position: relative;
-      }
-
-      /* Counter animation */
-      .text-31, .text-34, .text-37, .text-39 {
-        animation: countUp 1s ease-out;
-        display: inline-block;
-        min-width: 2ch;
-        text-align: center;
-        font-feature-settings: 'tnum';
-        font-variant-numeric: tabular-nums;
-        line-height: 1 !important;
-        vertical-align: baseline !important;
-      }
-
-      /* Align countdown separators */
-      .text-33, .text-36, .text-38 {
-        line-height: 1 !important;
-        vertical-align: baseline !important;
-      }
-
-      /* Fix countdown container alignment */
-      .row-8 {
-        display: flex !important;
-        align-items: baseline !important;
-        justify-content: center !important;
-        gap: 20px !important;
-      }
-
-      .col-20, .col-21, .col-14 {
-        float: none !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        margin: 0 !important;
-      }
-
-      /* New columns for minutes and seconds */
-      .col-minutes, .col-seconds {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        margin: 0 !important;
-      }
-
-      .row-14 {
-        display: flex !important;
-        align-items: baseline !important;
-        justify-content: center !important;
-        gap: 10px !important;
-      }
-
-      .text-37, .text-39 {
-        float: none !important;
-        margin: 0 !important;
-      }
-
-      .text-38 {
-        float: none !important;
-        margin: 0 !important;
-      }
-
-      .text-33, .text-36, .text-38 {
-        float: none !important;
-        margin: 0 !important;
-        align-self: center !important;
-        margin-top: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-      }
-      @media (min-width: 992px) {
-        .text-33, .text-36, .text-38 {
-          height: 103px !important;
-        }
-      }
-
-      /* Style the labels for minutes and seconds */
-      .text-40, .text-41 {
-        margin: 14px 0 0 !important;
-        color: #ffffff;
-        font-family: 'Bai Jamjuree', sans-serif;
-        font-size: 1.413906rem;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      /* Award category boxes animation */
-      .group-3 {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .group-3:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 15px 30px rgba(193, 30, 71, 0.2);
-      }
-
-      /* Benefit boxes hover */
-      .rectangle-1-copy-20-holder, .rectangle-1-copy-11-holder, .rectangle-1-copy-12-holder, .rectangle-1-copy-13-holder, .rectangle-1-copy-14-holder {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .rectangle-1-copy-20-holder:hover, .rectangle-1-copy-11-holder:hover, .rectangle-1-copy-12-holder:hover, .rectangle-1-copy-13-holder:hover, .rectangle-1-copy-14-holder:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-
-      /* Fade in on scroll */
-      .fade-in-scroll {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.8s ease;
-      }
-
-      .fade-in-scroll.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Loading animation */
-      .loading-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #991d4a, #c11e47);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        transition: opacity 0.5s ease, visibility 0.5s ease;
-      }
-
-      .loading-overlay.hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .spinner {
-        width: 60px;
-        height: 60px;
-        border: 6px solid rgba(255,255,255,0.3);
-        border-top: 6px solid #ffffff;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-      .loading-text {
-        color: white;
-        font-size: 18px;
-        margin-top: 20px;
-        font-weight: bold;
-        animation: fadeInUp 0.5s ease-out;
-      }
-
-      /* Parallax effect for hero section */
-      .banner {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      /* Glowing effect for important text */
-      .text-glow {
-        text-shadow: 0 0 10px rgba(255,255,255,0.5);
-      }
-
-      /* Progress bar for countdown */
-      .countdown-progress {
-        width: 100%;
-        height: 4px;
-        background: rgba(255,255,255,0.3);
-        border-radius: 2px;
-        margin-top: 10px;
-        overflow: hidden;
-      }
-
-      .progress-fill {
-        height: 100%;
-        background: linear-gradient(90deg, #ffffff, #991d4a);
-        border-radius: 2px;
-        animation: progress 10s ease-in-out infinite;
-      }
-
-      @keyframes progress {
-        0% { width: 0%; }
-        50% { width: 100%; }
-        100% { width: 0%; }
-      }
-
-      /* Dropdown Menu Styles */
-      .dropdown-menu {
-        position: relative;
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.95);
-        min-width: 200px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        border-radius: 5px;
-        z-index: 1000;
-        padding: 10px 0;
-        top: 100%;
-        left: 0;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-        border: 1px solid #e0e0e0;
-      }
-
-      .dropdown-menu:hover .dropdown-content {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .dropdown-content p {
-        color: #333 !important;
-        padding: 8px 16px;
-        margin: 0;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        border-bottom: 1px solid #f0f0f0;
-      }
-
-      .dropdown-content p:last-child {
-        border-bottom: none;
-      }
-
-      .dropdown-content p:hover {
-        background-color: #f1f1f1;
-        color: #991d4a !important;
-        padding-left: 20px;
-      }
-
-      /* Navigation dropdown styles */
-      .nav-list {
-        position: relative;
-      }
-
-      .nav-list li {
-        position: relative;
-        padding: 32px 0px;
-      }
-
-      /* Menu line element outside li */
-      .menu-line {
-        position: absolute;
-        bottom: -3px;
-        height: 3px;
-        background: linear-gradient(90deg, #991d4a, #c11e47);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        opacity: 1;
-        width: 0;
-        z-index: 10;
-        transform-origin: center;
-        border-radius: 2px;
-        box-shadow: 0 2px 8px rgba(153, 29, 74, 0.2);
-      }
-
-      .menu-line.active {
-        opacity: 1;
-      }
-
-      /* Selected menu line */
-      .menu-line.selected {
-        opacity: 1;
-        background: linear-gradient(90deg, #991d4a, #c11e47, #991d4a);
-        box-shadow: 0 2px 12px rgba(153, 29, 74, 0.4);
-      }
-
-      .nav-item-dropdown {
-        position: relative;
-        display: inline-block;
-      }
-
-      .nav-dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.95);
-        min-width: 220px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        border-radius: 5px;
-        z-index: 1000;
-        padding: 15px 0;
-        top: 100%;
-        left: 0;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-        border: 1px solid #e0e0e0;
-        overflow: hidden;
-        margin-top: 2px;
-      }
-
-      .nav-item-dropdown:hover .nav-dropdown-content {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .nav-dropdown-content p {
-        color: #333 !important;
-        padding: 8px 20px;
-        margin: 0;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        border-bottom: 1px solid #f0f0f0;
-        font-size: 14px;
-        line-height: 1.4;
-      }
-      .dropdown-toggle::after {
-        display: none;
-      }
-      .nav-dropdown-content p:last-child {
-        border-bottom: none;
-      }
-
-      .nav-dropdown-content p:hover {
-        background-color: #f8f8f8;
-        color: #991d4a !important;
-        padding-left: 24px;
-        transform: translateX(4px);
-      }
-
-      /* Dropdown arrow indicator - removed */
-
-      /* Style for menu items that have dropdowns */
-      .group-10, .group-11, .group-12 {
-        position: relative;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .group-10:hover, .group-11:hover, .group-12:hover {
-        transform: translateY(-2px);
-      }
-
-      /* Hide menu lines by default */
-      .rectangle-7-copy,
-      .rectangle-7-copy-2,
-      .rectangle-7-copy-4 {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      /* Show menu lines only when hovering over dropdown menu items */
-      .nav-item-dropdown:hover ~ .row-11 .rectangle-7-copy,
-      .nav-item-dropdown:hover ~ .row-11 .rectangle-7-copy-2,
-      .nav-item-dropdown:hover ~ .row-11 .rectangle-7-copy-4 {
-        opacity: 1;
-      }
-
-      /* Alternative approach - show lines when any dropdown is hovered */
-      .nav:hover .rectangle-7-copy,
-      .nav:hover .rectangle-7-copy-2,
-      .nav:hover .rectangle-7-copy-4 {
-        opacity: 1;
-      }
-
-      /* Full height menu container */
-      .menu {
-        transition: all 0.3s ease;
-      }
-
-      .nav-item-dropdown:hover .menu {
-        min-height: 100vh;
-      }
-
-      /* Header layout */
-      .l-constrained-4 {
-        display: flex;
-        align-items: center;
-      }
-
-      /* Mobile Header Styles */
-      @media (max-width: 768px) {
-        .menu {
-          position: relative;
-          background: white;
-          border-bottom: 1px solid #e0e0e0;
-          min-height: auto;
-        }
-
-        .l-constrained-4 {
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          padding: 15px 20px;
-          position: relative;
-        }
-
-        .logo {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          margin-bottom: 0;
-          flex: 1;
-        }
-
-        .logo .layer-8,
-        .logo .logo-2 {
-          width: 35px;
-          height: 35px;
-        }
-
-        .logo .text-13 {
-          font-size: 12px;
-          margin-left: 8px;
-          line-height: 1.2;
-        }
-
-        /* Hide desktop navigation on mobile */
-        .col-12 {
-          display: none;
-        }
-
-        /* Mobile menu toggle button */
-        .mobile-menu-toggle {
-          border: none !important;
-          box-shadow: none !important;
-          padding: 8px !important;
-        }
-
-        .mobile-menu-toggle:focus {
-          box-shadow: none !important;
-        }
-
-        .hamburger {
-          width: 25px;
-          height: 18px;
-          position: relative;
-          transform: rotate(0deg);
-          transition: 0.5s ease-in-out;
-        }
-
-        .hamburger span {
-          display: block;
-          position: absolute;
-          height: 3px;
-          width: 100%;
-          background: #991d4a;
-          border-radius: 2px;
-          opacity: 1;
-          left: 0;
-          transform: rotate(0deg);
-          transition: 0.25s ease-in-out;
-        }
-
-        .hamburger span:nth-child(1) {
-          top: 0px;
-        }
-
-        .hamburger span:nth-child(2) {
-          top: 7px;
-        }
-
-        .hamburger span:nth-child(3) {
-          top: 14px;
-        }
-      }
-
-      /* Offcanvas Custom Styles */
-      .offcanvas {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        width: 320px !important;
-        max-width: 85vw !important;
-        z-index: 1045 !important;
-      }
-
-      .offcanvas-backdrop {
-        background-color: rgba(0, 0, 0, 0.3) !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: 1040 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      .offcanvas-header {
-        background: linear-gradient(135deg, #991d4a, #c11e47);
-        color: white;
-        border-bottom: none;
-        padding: 16px 20px;
-      }
-
-      .offcanvas-body {
-        padding: 20px;
-      }
-
-      .offcanvas-title {
-        color: white !important;
-      }
-
-      .btn-close {
-        filter: brightness(0) invert(1);
-        opacity: 0.8;
-      }
-
-      .btn-close:hover {
-        opacity: 1;
-      }
-
-      .mobile-nav-list {
-        margin: 0;
-        padding: 0;
-      }
-
-      .mobile-nav-item {
-        margin-bottom: 0;
-        border-bottom: 1px solid rgba(233, 236, 239, 0.5);
-        transition: all 0.3s ease;
-      }
-
-      .mobile-nav-item:last-child {
-        border-bottom: none;
-      }
-
-      .mobile-nav-item:hover {
-        background: rgba(153, 29, 74, 0.02);
-        border-radius: 8px;
-      }
-
-      .mobile-nav-link {
-        display: block;
-        padding: 16px 0;
-        color: #333;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 16px;
-        transition: all 0.3s ease;
-      }
-
-      .mobile-nav-link:hover,
-      .mobile-nav-link.active {
-        color: #991d4a;
-        background: rgba(153, 29, 74, 0.05);
-        padding-left: 12px;
-      }
-
-      .mobile-nav-link.active {
-        font-weight: 600;
-      }
-
-      .mobile-nav-dropdown .dropdown-toggle {
-        border: none;
-        background: none;
-      }
-
-      .mobile-nav-dropdown .dropdown-toggle::after {
-        display: none;
-      }
-
-      .mobile-nav-dropdown .fa-chevron-down {
-        transition: transform 0.3s ease;
-        font-size: 12px;
-      }
-
-      .mobile-nav-dropdown .dropdown-toggle[aria-expanded="true"] .fa-chevron-down {
-        transform: rotate(180deg);
-      }
-
-      .mobile-dropdown-list {
-        padding: 8px 0;
-        background: rgba(248, 249, 250, 0.8);
-        border-radius: 8px;
-        margin-top: 8px;
-        border: 1px solid rgba(233, 236, 239, 0.3);
-      }
-
-      .mobile-dropdown-link {
-        display: block;
-        padding: 12px 16px;
-        color: #666;
-        text-decoration: none;
-        font-size: 14px;
-        transition: all 0.3s ease;
-      }
-
-      .mobile-dropdown-link:hover {
-        color: #991d4a;
-        background: rgba(153, 29, 74, 0.05);
-      }
-
-      .mobile-login-btn {
-        background: linear-gradient(135deg, #991d4a, #c11e47) !important;
-        border: none !important;
-        border-radius: 25px !important;
-        padding: 12px 24px !important;
-        font-weight: 600;
-        box-shadow: 0 4px 15px rgba(153, 29, 74, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      .mobile-login-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(153, 29, 74, 0.4);
-      }
-
-      /* Hide desktop navigation items on mobile */
-      @media (max-width: 992px) {
-        .nav-list {
-          display: none;
-        }
-        
-        .text-14 {
-          display: none;
-        }
-      }
-
-      /* Hide mobile login button on desktop */
-      .mobile-login-btn {
-        display: none !important;
-      }
-
-      /* Hide the mobile login button in nav completely */
-      .nav .mobile-login-btn {
-        display: none !important;
-      }
-
-      /* Only show mobile login button in offcanvas */
-      .offcanvas .mobile-login-btn {
-        display: block !important;
-      }
-
-      /* Show mobile menu toggle from 992px down */
-      .mobile-menu-toggle {
-        display: none;
-      }
-
-      /* Hide desktop menu from 992px down */
-      .desktop-menu {
-        display: block;
-      }
-
-      @media (max-width: 992px) {
-        .mobile-menu-toggle {
-          display: flex !important;
-        }
-
-        .desktop-menu {
-          display: none !important;
-        }
-
-        /* Ensure layout works well at 992px */
-        .l-constrained-4 {
-          justify-content: space-between !important;
-          flex-wrap: nowrap !important;
-        }
-
-        .logo {
-          order: 2;
-          flex: 1;
-          text-align: center;
-        }
-
-        .mobile-menu-toggle {
-          order: 1;
-          flex: 0 0 auto;
-        }
-
-        /* Ensure offcanvas doesn't cover too much on small screens */
-        .offcanvas {
-          width: min(320px, 80vw) !important;
-        }
-
-        /* Reduce backdrop opacity on mobile */
-        .offcanvas-backdrop {
-          background-color: rgba(0, 0, 0, 0.2) !important;
-          position: fixed !important;
-          top: 0 !important;
-          left: 0 !important;
-          width: 100vw !important;
-          height: 100vh !important;
-          z-index: 1040 !important;
-        }
-
-        /* Make sure backdrop is always full screen on mobile */
-        .offcanvas-backdrop.show {
-          opacity: 0.2 !important;
-        }
-
-        /* Fix banner responsive issues */
-        .banner {
-          top: 0px !important;
-          padding: 30px 0 250px !important;
-          position: relative !important;
-        }
-
-        /* Responsive navigation menu */
-        .menu {
-          position: sticky !important;
-          top: 0 !important;
-          z-index: 1000 !important;
-          background: rgba(255,255,255,0.95) !important;
-          backdrop-filter: blur(10px) !important;
-          border-bottom: 1px solid #e0e0e0 !important;
-        }
-
-        /* Responsive logo section */
-        .logo {
-          order: 2;
-        }
-
-        .mobile-menu-toggle {
-          order: 1;
-        }
-
-        .l-constrained-4 {
-          display: flex !important;
-          justify-content: space-between !important;
-          align-items: center !important;
-          width: 100% !important;
-        }
-
-        /* Timeline section responsive */
-        .row-9 {
-          display: flex !important;
-          flex-direction: column !important;
-          gap: 15px !important;
-        }
-
-        .row-9 > * {
-          width: 100% !important;
-          max-width: none !important;
-          margin: 0 !important;
-          float: none !important;
-        }
-
-        /* Countdown section responsive */
-        .group-15 {
-          text-align: center;
-        }
-
-        .row-8 {
-          justify-content: center !important;
-          flex-wrap: wrap !important;
-          gap: 15px !important;
-        }
-
-        /* Benefits section responsive */
-        .group-17 .row > * {
-          width: 100% !important;
-          max-width: none !important;
-          margin-bottom: 20px !important;
-        }
-      }
-
-      /* Additional mobile responsive fixes */
-      @media (max-width: 767px) {
-        /* Prevent horizontal scrolling */
-        html, body {
-          max-width: 100vw !important;
-        }
-
-        .home-1-copy {
-          width: 100vw !important;
-        }
-
-        .banner {
-          padding: 20px 0 180px !important;
-          top: 0 !important;
-          position: relative !important;
-        }
-
-        .text {
-          font-size: 1.8rem !important;
-        }
-
-        .text-3 {
-          font-size: 1.1rem !important;
-        }
-
-        .text-4 {
-          font-size: 1.4rem !important;
-        }
-
-        .row-7, .row-2 {
-          display: flex !important;
-          flex-direction: column !important;
-          align-items: center !important;
-          gap: 20px !important;
-        }
-
-        .row-7 > *, .row-2 > * {
-          width: 100% !important;
-          max-width: 300px !important;
-          margin: 0 !important;
-          float: none !important;
-        }
-
-        .text-18 {
-          font-size: 1.6rem !important;
-        }
-
-        .text-31, .text-34, .text-37, .text-39 {
-          font-size: 2rem !important;
-        }
-
-        .col-20, .col-21, .col-minutes, .col-seconds {
-          min-width: 60px !important;
-        }
-      }
-
-      @media (max-width: 575px) {
-        .banner {
-          padding: 15px 0 120px !important;
-        }
-
-        .text {
-          font-size: 1.4rem !important;
-        }
-
-        .text-3 {
-          font-size: 1rem !important;
-        }
-
-        .text-4 {
-          font-size: 1.2rem !important;
-        }
-
-        .text-18 {
-          font-size: 1.3rem !important;
-        }
-
-        .row-7 > *, .row-2 > * {
-          max-width: 280px !important;
-        }
-
-        .text-31, .text-34, .text-37, .text-39 {
-          font-size: 1.5rem !important;
-        }
-
-        .col-20, .col-21, .col-minutes, .col-seconds {
-          min-width: 50px !important;
-        }
-
-        .layer-2, .layer-3, .layer-4, .layer-5, .layer-6, .layer-7, .icon-logistics {
-          width: 80px !important;
-          height: 80px !important;
-        }
-      }
-
-      /* CRITICAL: Prevent ALL horizontal overflow */
-      @media (max-width: 992px) {
-        * {
-          max-width: 100vw !important;
-          box-sizing: border-box !important;
-        }
-
-        body, html {
-          width: 100% !important;
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-
-        /* Fix ALL containers */
-        .home-1-copy, .col-8, .wrapper-13, .banner, 
-        .text-banner, .group-2, .menu, .row-4, 
-        .l-constrained-4, .group-13, .l-constrained-3,
-        .group-16, .group-18, .group-19, .group-20,
-        .group-21, .group-22 {
-          width: 100% !important;
-          max-width: 100vw !important;
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          left: auto !important;
-          right: auto !important;
-          position: relative !important;
-          box-sizing: border-box !important;
-        }
-
-        /* Fix all text elements to wrap properly */
-        .text-43, .text-44, .text-51, .text-52, .text-53,
-        .text-55, .text-56, .text-58, .text-59, .text-61,
-        .text-62, .text-64, .text-65 {
-          word-wrap: break-word !important;
-          overflow-wrap: break-word !important;
-          hyphens: auto !important;
-          max-width: 100% !important;
-          box-sizing: border-box !important;
-        }
-
-        /* Fix specific width issues */
-        .row-7, .row-2, .row-9, .row-8, .row-3 {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        /* Fix positioned elements */
-        .rectangle-8-copy, .rectangle-8-copy-2, .rectangle-8-copy-3 {
-          position: static !important;
-          float: none !important;
-          display: inline-block !important;
-          margin: 2px !important;
-        }
-
-        /* Responsive images */
-        img {
-          max-width: 100% !important;
-          height: auto !important;
-        }
-
-        /* Fix menu positioning */
-        .menu {
-          position: sticky !important;
-          top: 0 !important;
-          z-index: 1000 !important;
-          width: 100% !important;
-        }
-
-        /* Fix banner positioning after menu move */
-        .banner {
-          position: relative !important;
-          top: 0 !important;
-          margin-top: 0 !important;
-        }
-      }
-
-      /* Extra mobile text wrapping fixes */
-      @media (max-width: 767px) {
-        /* Force text wrapping on all potentially long text */
-        p, div, span, h1, h2, h3, h4, h5, h6 {
-          word-wrap: break-word !important;
-          overflow-wrap: break-word !important;
-          hyphens: auto !important;
-        }
-
-        /* Smaller containers on mobile */
-        .group-16, .group-18, .group-2, .group-13 {
-          padding-left: 15px !important;
-          padding-right: 15px !important;
-        }
-      }
-
-      @media (max-width: 575px) {
-        /* Ultra small mobile fixes */
-        .group-16, .group-18, .group-2, .group-13 {
-          padding-left: 10px !important;
-          padding-right: 10px !important;
-        }
-
-        .text-43 {
-          font-size: 0.85rem !important;
-          line-height: 1.4 !important;
-        }
-
-        .text-51 {
-          font-size: 1.1rem !important;
-        }
-
-        .text-52, .text-55, .text-58, .text-61, .text-64 {
-          font-size: 0.85rem !important;
-        }
-
-        .text-53, .text-56, .text-59, .text-62, .text-65 {
-          font-size: 0.75rem !important;
-        }
-      }
-
-      /* Fix "Tham gia để" section layout - Responsive Grid System */
-      .group-17 .row.match-height.group {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        align-items: stretch !important;
-        gap: 15px !important;
-        margin: 27px auto 0 !important;
-        width: 100% !important;
-      }
-
-      /* Desktop: 5 items per row - 18% each with gaps */
-      @media (min-width: 1200px) {
-        .group-17 .row.match-height.group > * {
-          float: none !important;
-          margin: 0 !important;
-          flex: 0 0 calc(20% - 12px) !important;
-          width: calc(20% - 12px) !important;
-          max-width: 240px !important;
-          min-width: 200px !important;
-        }
-      }
-
-      /* Large Desktop: 5 items per row */
-      @media (min-width: 992px) and (max-width: 1199px) {
-        .group-17 .row.match-height.group > * {
-          float: none !important;
-          margin: 0 !important;
-          flex: 0 0 calc(20% - 12px) !important;
-          width: calc(20% - 12px) !important;
-          max-width: 220px !important;
-          min-width: 180px !important;
-        }
-      }
-
-      /* Tablet: 3 items per row */
-      @media (min-width: 768px) and (max-width: 992px) {
-        .group-17 .row.match-height.group > * {
-          float: none !important;
-          margin: 0 !important;
-          flex: 0 0 calc(33.333% - 10px) !important;
-          width: calc(33.333% - 10px) !important;
-          max-width: 250px !important;
-          min-width: 200px !important;
-        }
-      }
-
-      /* Small Tablet: 2 items per row */
-      @media (min-width: 576px) and (max-width: 767px) {
-        .group-17 .row.match-height.group > * {
-          float: none !important;
-          margin: 0 !important;
-          flex: 0 0 calc(50% - 8px) !important;
-          width: calc(50% - 8px) !important;
-          max-width: 280px !important;
-          min-width: 250px !important;
-        }
-      }
-
-      /* Mobile: 1 item per row (100% width) */
-      @media (max-width: 575px) {
-        .group-17 .row.match-height.group > * {
-          float: none !important;
-          margin: 0 !important;
-          flex: 0 0 100% !important;
-          width: 100% !important;
-          max-width: 100% !important;
-          min-width: auto !important;
-        }
-
-        .group-17 .row.match-height.group {
-          gap: 12px !important;
-        }
-      }
-
-      /* Ensure consistent box sizing for all benefit cards */
-      .rectangle-1-copy-20-holder,
-      .rectangle-1-copy-11-holder,
-      .rectangle-1-copy-12-holder,
-      .rectangle-1-copy-13-holder,
-      .rectangle-1-copy-14-holder {
-        box-sizing: border-box !important;
-        padding: 20px !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        border-radius: 12px !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-        transition: all 0.3s ease !important;
-        text-align: center !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
-        color: #333 !important;
-        min-height: 140px !important;
-      }
-
-      .rectangle-1-copy-20-holder:hover,
-      .rectangle-1-copy-11-holder:hover,
-      .rectangle-1-copy-12-holder:hover,
-      .rectangle-1-copy-13-holder:hover,
-      .rectangle-1-copy-14-holder:hover {
-        transform: translateY(-5px) !important;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-      }
-
-      @media (max-width: 767px) {
-        .rectangle-1-copy-20-holder,
-        .rectangle-1-copy-11-holder,
-        .rectangle-1-copy-12-holder,
-        .rectangle-1-copy-13-holder,
-        .rectangle-1-copy-14-holder {
-          padding: 15px !important;
-          font-size: 0.85rem !important;
-          min-height: 120px !important;
-        }
-      }
-
-      @media (max-width: 575px) {
-        .rectangle-1-copy-20-holder,
-        .rectangle-1-copy-11-holder,
-        .rectangle-1-copy-12-holder,
-        .rectangle-1-copy-13-holder,
-        .rectangle-1-copy-14-holder {
-          padding: 12px !important;
-          font-size: 0.8rem !important;
-          min-height: 100px !important;
-        }
-      }
-
-      /* Prevent scrollbar jump when offcanvas opens */
-      .offcanvas-backdrop.show {
-        opacity: 0.2;
-      }
-
-      /* Ensure backdrop covers full viewport */
-      .offcanvas-backdrop {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        background-color: rgba(0, 0, 0, 0.2) !important;
-        z-index: 1040 !important;
-      }
-
-      .offcanvas-backdrop.fade {
-        opacity: 0;
-        transition: opacity 0.15s linear;
-      }
-
-      .offcanvas-backdrop.show {
-        opacity: 0.2 !important;
-      }
-
-      /* Override Bootstrap's body padding when offcanvas is open */
-      body[style*="overflow: hidden"] {
-        overflow: visible !important;
-      }
-
-      body[style*="padding-right"] {
-        padding-right: 0 !important;
-      }
-    </style>
-    
-    <!-- Loading Screen -->
-    <div class="loading-overlay" id="loadingOverlay">
-      <div style="text-align: center;">
-        <div class="spinner"></div>
-        <div class="loading-text">Đang tải Make in Vietnam 2025...</div>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAKE IN VIỆT NAM">
+  <meta name="keywords" content="MAKE IN VIỆT NAM">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="global.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <section class="header container">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="logo col-7 col-sm col-md-5 col-lg-3 py-2">
+        <img src="images/logo.png" class="w-100 h-100 object-fit-cover" alt="Logo make in vietnam">
+      </div>
+      <div class="menu d-none d-lg-flex align-items-center col-10 d-flex justify-content-end">
+        <ul class="menu__list list-group-numbered d-flex mb-0">
+          <li class="menu__item menu__item--active">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Trang chủ</a>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Về giải thưởng</a>
+            <ul class="menu__dropdown list-group-numbered position-absolute">
+              <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
+              <li><a class="dropdown-item" href="#">Hội đồng giám khảo</a></li>
+              <li><a class="dropdown-item" href="#">Kết quả giải thưởng</a></li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Tiêu chí đánh giá</a>
+            <ul class="menu__dropdown list-group-numbered position-absolute">
+              <li><a class="dropdown-item" href="#">Năm 2020</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2021</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2022</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2023</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2024</a></li>
+              <li><a class="dropdown-item" href="#">Năm 2025</a></li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Quyền lợi</a>
+          </li>
+          <li class="menu__item menu__item--has-dropdown position-relative">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Hướng dẫn</a>
+            <ul class="menu__dropdown list-group-numbered position-absolute">
+              <li><a class="dropdown-item" href="#">Mẫu hồ sơ</a></li>
+              <li><a class="dropdown-item" href="#">Lưu ý nộp hồ sơ</a></li>
+              <li><a class="dropdown-item" href="#">Quy chế giải thưởng</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4" href="#">Thông tin, hoạt
+              động</a>
+          </li>
+          <li class="login-button d-flex align-items-center">
+            <a class="menu__link text-decoration-none fw-4 color-1" href="#">Đăng ký/Đăng nhập</a>
+          </li>
+        </ul>
+      </div>
+      <div class="py-2">
+        <button class="color-1 border-0 d-lg-none ms-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+          <span>
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <rect y="4" width="24" height="2" rx="1"></rect>
+              <rect y="11" width="24" height="2" rx="1"></rect>
+              <rect y="18" width="24" height="2" rx="1"></rect>
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
-    <script>
-		$(document).ready(function() {
-      // Loading screen
-      setTimeout(function() {
-        $('#loadingOverlay').addClass('hidden');
-        initializeAnimations();
-      }, 2000);
-
-      function initializeAnimations() {
-        $('.match-height-bootstrap-row > * > *').matchHeight();
-        $('.match-height > *').matchHeight();
-
-        // Staggered animations
-        setTimeout(() => $('.banner').addClass('animate-fadeInUp'), 100);
-        setTimeout(() => $('.group-3').addClass('animate-fadeInUp delay-2'), 300);
-      }
-
-      // Scroll animations
-      function animateOnScroll() {
-        $('.fade-in-scroll').each(function() {
-          var elementTop = $(this).offset().top;
-          var elementBottom = elementTop + $(this).outerHeight();
-          var viewportTop = $(window).scrollTop();
-          var viewportBottom = viewportTop + $(window).height();
-          
-          if (elementBottom > viewportTop && elementTop < viewportBottom) {
-            $(this).addClass('show');
-          }
-        });
-      }
-
-      $('.group-2, .group-13, .group-17, .group-18, .foodter').addClass('fade-in-scroll');
-      $(window).on('scroll resize', animateOnScroll);
-      animateOnScroll();
-
-      // Real countdown timer
-      function startCountdown() {
-        // Set target date: October 22, 2025, 23:59:59
-        const targetDate = new Date('2025-10-22T23:59:59').getTime();
-        
-        function updateCountdown() {
-          const now = new Date().getTime();
-          const distance = targetDate - now;
-          
-          if (distance > 0) {
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            // Update with leading zeros
-            $('.text-31').text(days.toString().padStart(2, '0'));
-            $('.text-34').text(hours.toString().padStart(2, '0'));
-            $('.text-37').text(minutes.toString().padStart(2, '0'));
-            $('.text-39').text(seconds.toString().padStart(2, '0'));
-          } else {
-            // Countdown finished
-            $('.text-31').text('00');
-            $('.text-34').text('00');
-            $('.text-37').text('00');
-            $('.text-39').text('00');
-            clearInterval(countdownInterval);
-          }
-        }
-        
-        // Update immediately and then every second
-        updateCountdown();
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        
-        return countdownInterval;
-      }
-
-      var countdownStarted = false;
-      var countdownInterval = null;
-      $(window).on('scroll', function() {
-        if (!countdownStarted) {
-          var counterTop = $('.group-15').offset().top;
-          var windowBottom = $(window).scrollTop() + $(window).height();
-          
-          if (windowBottom > counterTop) {
-            countdownStarted = true;
-            countdownInterval = startCountdown();
-          }
-        }
-      });
-
-      // Scroll progress bar
-      const scrollProgress = $('<div style="position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#991d4a,#c11e47);z-index:10000;transition:width 0.1s ease;"></div>');
-      $('body').prepend(scrollProgress);
-
-      $(window).scroll(function() {
-        const scrollTop = $(window).scrollTop();
-        const docHeight = $(document).height() - $(window).height();
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        scrollProgress.css('width', scrollPercent + '%');
-      });
-
-      // Desktop Menu line positioning and animations
-      function initMenuLine() {
-        const $menuLine = $('.menu-line');
-        const $navItems = $('.nav-list li');
-        
-        // Position menu line initially to selected item (only on desktop)
-        if ($(window).width() > 992) {
-          const $selectedItem = $('.nav-list .selected').parent();
-          if ($selectedItem.length) {
-            const position = $selectedItem.position();
-            const width = $selectedItem.outerWidth();
-            $menuLine.css({
-              left: position.left + 'px',
-              width: width + 'px'
-            });
-          }
-          
-          // Add hover effects to nav items (only on desktop)
-          $navItems.hover(
-            function() {
-              const position = $(this).position();
-              const width = $(this).outerWidth();
-              $menuLine.css({
-                left: position.left + 'px',
-                width: width + 'px'
-              });
-            },
-            function() {
-              // Return to selected item
-              const $selectedItem = $('.nav-list .selected').parent();
-              if ($selectedItem.length) {
-                const position = $selectedItem.position();
-                const width = $selectedItem.outerWidth();
-                $menuLine.css({
-                  left: position.left + 'px',
-                  width: width + 'px'
-                });
-              }
-            }
-          );
-          
-          // Handle click to change selection
-          $navItems.click(function() {
-            $('.nav-list .selected').removeClass('selected');
-            $(this).find('.text-item').addClass('selected');
-            
-            const position = $(this).position();
-            const width = $(this).outerWidth();
-            $menuLine.css({
-              left: position.left + 'px',
-              width: width + 'px'
-            });
-          });
-        }
-      }
-
-      // Initialize desktop menu line
-      initMenuLine();
-
-      // Desktop Dropdown menu enhancements (only on desktop)
-      if ($(window).width() > 992) {
-        $('.dropdown-menu, .nav-item-dropdown').each(function() {
-          const $dropdown = $(this);
-          const $content = $dropdown.find('.dropdown-content, .nav-dropdown-content');
-          let hoverTimer;
-          
-          $dropdown.on('mouseenter', function() {
-            clearTimeout(hoverTimer);
-            $content.css('display', 'block');
-            setTimeout(() => {
-              $content.css({
-                'opacity': '1',
-                'transform': 'translateY(0)'
-              });
-            }, 10);
-            
-            $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '1');
-          });
-          
-          $dropdown.on('mouseleave', function() {
-            hoverTimer = setTimeout(() => {
-              $content.css({
-                'opacity': '0',
-                'transform': 'translateY(-10px)'
-              });
-              setTimeout(() => {
-                $content.css('display', 'none');
-              }, 300);
-              
-              if (!$('.nav-item-dropdown:hover').length) {
-                $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '0');
-              }
-            }, 150);
-          });
-          
-          $content.on('mouseenter', function() {
-            clearTimeout(hoverTimer);
-          });
-          
-          $content.on('mouseleave', function() {
-            $content.css({
-              'opacity': '0',
-              'transform': 'translateY(-10px)'
-            });
-            setTimeout(() => {
-              $content.css('display', 'none');
-            }, 300);
-            
-            setTimeout(() => {
-              if (!$('.nav-item-dropdown:hover').length) {
-                $('.rectangle-7-copy, .rectangle-7-copy-2, .rectangle-7-copy-4').css('opacity', '0');
-              }
-            }, 100);
-          });
-        });
-
-        // Add click handlers for desktop dropdown items
-        $('.dropdown-content p, .nav-dropdown-content p').on('click', function() {
-          const itemText = $(this).text();
-          console.log('Clicked dropdown item:', itemText);
-          
-          $(this).css('transform', 'scale(0.95)');
-          setTimeout(() => {
-            $(this).css('transform', 'scale(1)');
-          }, 150);
-        });
-      }
-
-      // Bootstrap 5 Offcanvas functionality - handle mobile nav
-      document.addEventListener('DOMContentLoaded', function() {
-        // Fix Bootstrap offcanvas body style issues
-        const offcanvasElement = document.getElementById('mobileMenu');
-        
-        // Prevent Bootstrap from modifying body styles
-        offcanvasElement.addEventListener('show.bs.offcanvas', function () {
-          // Store original body styles
-          const body = document.body;
-          const originalOverflow = body.style.overflow;
-          const originalPaddingRight = body.style.paddingRight;
-          
-          // Remove Bootstrap's body modifications after they're applied
-          setTimeout(() => {
-            body.style.overflow = originalOverflow || '';
-            body.style.paddingRight = originalPaddingRight || '';
-            body.classList.remove('modal-open'); // Remove modal-open class if added
-          }, 10);
-        });
-
-        // Clean up when offcanvas is hidden
-        offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
-          const body = document.body;
-          body.style.overflow = '';
-          body.style.paddingRight = '';
-          body.classList.remove('modal-open');
-        });
-
-        // Alternative approach: Use MutationObserver to watch for style changes
-        const bodyObserver = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-              const body = document.body;
-              const style = body.getAttribute('style');
-              if (style && (style.includes('overflow: hidden') || style.includes('padding-right'))) {
-                // Remove problematic styles
-                let newStyle = style.replace(/overflow:\s*hidden;?/g, '')
-                                  .replace(/padding-right:\s*[\d\w\s%]+;?/g, '')
-                                  .trim();
-                if (newStyle.endsWith(';')) {
-                  newStyle = newStyle.slice(0, -1);
-                }
-                body.setAttribute('style', newStyle);
-              }
-            }
-          });
-        });
-
-        // Start observing body for style changes
-        bodyObserver.observe(document.body, {
-          attributes: true,
-          attributeFilter: ['style']
-        });
-
-        // Close offcanvas when clicking on nav links (except dropdown toggles)
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link:not(.dropdown-toggle)');
-        mobileNavLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
-            if (offcanvas) {
-              offcanvas.hide();
-            }
-          });
-        });
-
-        // Close offcanvas when clicking on dropdown items
-        const mobileDropdownLinks = document.querySelectorAll('.mobile-dropdown-link');
-        mobileDropdownLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
-            if (offcanvas) {
-              offcanvas.hide();
-            }
-          });
-        });
-      });
-
-      // Handle window resize
-      $(window).on('resize', function() {
-        if ($(window).width() > 992) {
-          initMenuLine(); // Re-initialize menu line on desktop
-        }
-      });
-		});
-	</script>
-  </head>
-  <body>
-    <div class="home-1-copy">
-      <div class="col-8">
-        <!-- Menu đã được di chuyển lên đầu -->
-        <div class="menu group">
-          <div class="row-4">
-            <div class="l-constrained-4 group">
-              <button class="btn btn-link mobile-menu-toggle p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                <div class="hamburger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </button>
-              <div class="logo group">
-                <img class="layer-8" src="images/logo_b.png" alt="" width="53" height="53">
-                <img class="logo-2" src="images/logo.png" alt="" width="55" height="54">
-                <p class="text-13"><span class="text-style">Make in Vietnam</span><br>Sản phẩm Việt chất lượng cao</p>
-              </div>
-              <div class="col-12 group">
-                <div class="row-10 group desktop-menu">
-                  <nav class="nav">
-                    <ul class="nav-list group">
-                      <li><p class="nav-item-1 text-item selected"><a href="#">Trang chủ</a></p></li>
-                      <li class="nav-item-dropdown">
-                        <p class="nav-item-3 text-item dropdown-toggle"><a href="#">Về giải thưởng</a></p>
-                        <div class="nav-dropdown-content">
-                          <p>Ban tổ chức</p>
-                          <p>Hội đồng giám khảo</p>
-                          <p>Kết quả giải thưởng</p>
-                        </div>
-                      </li>
-                      <li class="nav-item-dropdown">
-                        <p class="nav-item-3-2 text-item dropdown-toggle"><a href="#">Tiêu chí đánh giá</a></p>
-                        <div class="nav-dropdown-content">
-                          <p>Năm 2020</p>
-                          <p>Năm 2021</p>
-                          <p>Năm 2022</p>
-                          <p>Năm 2023</p>
-                          <p>Năm 2024</p>
-                          <p>Năm 2025</p>
-                        </div>
-                      </li>
-                      <li><p class="nav-item-3-3 text-item"><a href="#">Quyền lợi</a></p></li>
-                      <li class="nav-item-dropdown">
-                        <p class="nav-item-3-4 text-item dropdown-toggle"><a href="#">Hướng dẫn</a></p>
-                        <div class="nav-dropdown-content">
-                          <p>Mẫu hồ sơ</p>
-                          <p>Lưu ý nộp hồ sơ</p>
-                          <p>Quy chế giải thưởng</p>
-                        </div>
-                      </li>
-                      <li><p class="nav-item-3-5 text-item"><a href="#">Thông tin, hoạt động</a></p></li>
-                    </ul>
-                    <div class="menu-line selected"></div>
-                  </nav>
-                  <p class="text-14">Đăng ký/Đăng nhập</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="wrapper-13">
-          <div class="banner fade-in-scroll">
-            <div class="text-banner">
-              <p class="text animate-fadeInUp">Giải thưởng</p>
-              <img class="text-2 animate-fadeInUp delay-1" src="images/s_n_ph_m_c_ng_ngh_s.png" alt="Sản phẩm công nghệ số" width="557" height="49" title="Sản phẩm công nghệ số">
-              <div class="wrapper-4 animate-fadeInUp delay-2">
-                <div class="rectangle-8-holder">
-                  <p class="text-3">Make in Viet Nam năm 2025</p>
-                </div>
-                <img class="rectangle-8-copy" src="images/rectangle_8_copy.png" alt="" width="52" height="31">
-                <img class="rectangle-8-copy-2" src="images/rectangle_8_copy_2.png" alt="" width="52" height="31">
-                <img class="rectangle-8-copy-3" src="images/rectangle_8_copy_3.png" alt="" width="52" height="31">
-              </div>
-            </div>
-          </div>
-          <div class="group-2 fade-in-scroll">
-            <p class="text-4 animate-fadeInUp">hạng mục giải thưởng</p>
-            <div class="group-3 hover-effect">
-              <img class="layer animate-float" src="images/xu_t_s_c.png" alt="" width="134" height="134">
-              <p class="text-5 animate-fadeInUp delay-1">Sản phẩm công nghệ số<br>chiến lược xuất sắc</p>
-            </div>
-            <div class="row-7 match-height group">
-              <div class="group-4">
-                <img class="layer-2" src="images/icon_t_i_nguy_n.png" alt="" width="105" height="105">
-                <p class="text-6">Sản phẩm công nghệ số<br>xuất sắc trong lĩnh vực<br>NN, tài nguyên - môi trường</p>
-              </div>
-              <div class="cn-xd">
-                <img class="layer-3" src="images/icon_c_ng_nghi_p.png" alt="" width="105" height="105">
-                <p class="text-7">Sản phẩm công nghệ số<br>xuất sắc trong lĩnh vực<br>công nghiệp và xây dựng</p>
-              </div>
-              <div class="group-5">
-                <img class="layer-4" src="images/icon_gi_o_d_c.png" alt="" width="105" height="105">
-                <p class="text-8">Sản phẩm công nghệ số<br>xuất sắc trong lĩnh vực<br>giáo dục, y tế, văn hoá, xã hội</p>
-              </div>
-            </div>
-            <div class="row-2 match-height group">
-              <div class="group-6">
-                <img class="layer-5" src="images/ti_m_n_ng.png" alt="" width="105" height="105">
-                <p class="text-9">Sản phẩm công nghệ số<br>tiềm năng</p>
-              </div>
-              <div class="group-7">
-                <img class="layer-6" src="images/icon_n_c_ngo_i.png" alt="" width="105" height="105">
-                <p class="text-10">Sản phẩm công nghệ số<br>xuất sắc<br>cho thị trường nước ngoài</p>
-              </div>
-              <div class="group-8">
-                <img class="icon-logistics" src="images/icon_logistics.png" alt="" width="105" height="105">
-                <p class="text-11">Sản phẩm công nghệ số xuất sắc<br>trong lĩnh vực giao thông vận tải,<br>bưu chính và logistics</p>
-              </div>
-              <div class="group-9">
-                <img class="layer-7" src="images/icon_t_i_ch_nh.png" alt="" width="105" height="105">
-                <p class="text-12">Sản phẩm công nghệ số<br>xuất sắc trong lĩnh vực<br>tài chính, ngân hàng, TMDV</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="group-13 fade-in-scroll">
-          <div class="l-constrained-3">
-            <div class="group-14">
-              <p class="text-18 animate-fadeInUp">Hành trình Vinh danh</p>
-              <img class="text-19 animate-fadeInUp delay-1" src="images/s_n_ph_m_c_ng_ngh_s_make_.png" alt="Sản phẩm Công nghệ số Make in Viet Nam 2025" width="760" height="35" title="Sản phẩm Công nghệ số Make in Viet Nam 2025">
-              <div class="row-9 match-height group">
-                <div class="col-11">
-                  <p class="text-20">tiếp nhận hồ sơ</p>
-                  <p class="text-21">04.09 - 22.10.2025</p>
-                </div>
-                <div class="col-15">
-                  <p class="text-22">sơ tuyển hồ sơ</p>
-                  <p class="text-23">04.10 - 22.10.2025</p>
-                </div>
-                <div class="col-16">
-                  <p class="text-24">Vòng sơ khảo</p>
-                  <p class="text-25">24.10 - 15.11.2025</p>
-                </div>
-                <div class="col-17">
-                  <p class="text-26">Vòng chung khảo</p>
-                  <p class="text-27">16.11 - 25..2025</p>
-                </div>
-                <div class="col-18">
-                  <p class="text-28">lễ trao giải</p>
-                  <p class="text-29">Tháng 12 năm 2025</p>
-                </div>
-              </div>
-            </div>
-            <div class="group-15 group fade-in-scroll">
-              <img class="text-30 animate-fadeInUp" src="images/gi_i_th_ng_ch_nh_th_c_ti_.png" alt="Giải thưởng chính thức tiếp nhận đăng ký tham gia từ ngày 04/09 - 22/10/2025" width="554" height="67" title="Giải thưởng chính thức tiếp nhận đăng ký tham gia từ ngày 04/09 - 22/10/2025">
-              <div class="row-8 group animate-fadeInUp delay-1">
-                <div class="col-20">
-                  <p class="text-31">02</p>
-                  <p class="text-32">ngày</p>
-                </div>
-                <p class="text-33">:</p>
-                <div class="col-21">
-                  <p class="text-34">06</p>
-                  <p class="text-35">giờ</p>
-                </div>
-                <p class="text-36">:</p>
-                <div class="col-minutes">
-                  <p class="text-37">15</p>
-                  <p class="text-40">phút</p>
-                </div>
-                <p class="text-38">:</p>
-                <div class="col-seconds">
-                  <p class="text-39">48</p>
-                  <p class="text-41">giây</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="group-16">
-        <div class="rectangle-4"></div>
-        <img class="hue-saturation-1" src="images/hue_saturation_1.png" alt="" width="559" height="590">
-        <p class="text-42">“</p>
-        <p class="text-43">Không Make in Viet Nam thì Việt Nam không thể hùng cường thịnh vượng.</p>
-        <p class="text-44"><em class="text-style-2">Bộ trưởng</em> <span class="text-style-3">Nguyễn Mạnh Hùng</span><br>BỘ KHOA HỌC VÀ CÔNG NGHỆ</p>
-      </div>
-      <div class="group-17 fade-in-scroll">
-        <div class="l-constrained">
-          <p class="text-45 animate-fadeInUp">tham gia để</p>
-          <div class="row match-height group">
-            <div class="rectangle-1-copy-20-holder hover-card">
-              Được hỗ trợ đánh giá, nâng cao chất lượng sản phẩm từ các chuyên gia hàng đầu
-            </div>
-            <div class="rectangle-1-copy-11-holder hover-card">
-              Các sản phẩm đoạt giải sẽ được giới thiệu rộng rãi đến các địa phương, cơ quan nhà nước
-            </div>
-            <div class="rectangle-1-copy-12-holder hover-card">
-              Sản phẩm đoạt giải sẽ được đưa vào danh mục khuyến khích sử dụng trong quá trình chuyển đổi số
-              <br>Được hỗ trợ kết nối với thị
-            </div>
-            <div class="rectangle-1-copy-13-holder hover-card">
-              Được hỗ trợ kết nối với thị trường quốc tế
-            </div>
-            <div class="rectangle-1-copy-14-holder hover-card">
-              Được gặp gỡ các nhà đầu tư tiềm năng
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="group-18">
-        <p class="text-51">Thông tin, Hoạt động của Giải thưởng</p>
-        <div class="group-19 group">
-          <img class="rectangle-1-copy-4" src="images/rectangle_1_copy_4.jpg" alt="">
-          <div class="col-5">
-            <p class="text-52">Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày 30/12/2024</p>
-            <p class="text-53">(CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ số Make in Viet Nam năm 2024 vừa tổ chức phiên họplần thứ nhất.<br>Giải thưởng “Sản phẩm công nghệ số Make in Viet Nam” (Giải thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực công nghệ thông tin và truyền thông, trao tặng hằng năm cho các tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.</p>
-            <p class="text-54">→</p>
-          </div>
-        </div>
-        <div class="row-3 match-height group">
-          <div class="group-20">
-            <img class="rectangle-1-copy-2" src="images/rectangle_1_copy_2.jpg" alt="">
-            <p class="text-55">Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày 30/12/2024</p>
-            <p class="text-56">(CLO) Hộvi đồng giám khảo và các tiểu ban Giải thưởng công nghệ số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ nhất.<br>Giải thưởng “Sản phẩm công nghệ số Make in Viet Nam” (Giải thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực công nghệ thông tin và truyền thông, trao tặng hằng năm cho các tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.</p>
-            <p class="text-57">→</p>
-          </div>
-          <div class="group-21">
-            <img class="rectangle-1-copy" src="images/rectangle_1_copy_2.jpg" alt="">
-            <p class="text-58">Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày 30/12/2024</p>
-            <p class="text-59">(CLO) Hộvi đồng giám khảo và các tiểu ban Giải thưởng công nghệ số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ nhất.<br>Giải thưởng “Sản phẩm công nghệ số Make in Viet Nam” (Giải thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực công nghệ thông tin và truyền thông, trao tặng hằng năm cho các tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.</p>
-            <p class="text-60">→</p>
-          </div>
-          <div class="group-22">
-            <img class="rectangle-1-copy-3" src="images/rectangle_1_copy_2.jpg" alt="">
-            <div class="col">
-              <p class="text-61">Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày 30/12/2024</p>
-              <p class="text-62">(CLO) Hộvi đồng giám khảo và các tiểu ban Giải thưởng công nghệ số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ nhất.<br>Giải thưởng “Sản phẩm công nghệ số Make in Viet Nam” (Giải thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực công nghệ thông tin và truyền thông, trao tặng hằng năm cho các tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.</p>
-              <p class="text-63">→</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="foodter group">
-        <div class="row-6 group">
-          <div class="col-13">
-            <p class="text-64">Make in Viet Nam</p>
-            <p class="text-65">2025</p>
-            <p class="text-66">Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất sắc, mang tự hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế số, số hoá các ngành kinh tế, tạo bước nhẩy vọt về năng suất, chất lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng, công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời, lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày 12/6/2025 của Thủ tướng Chính phủ.</p>
-          </div>
-          <div class="col-19">
-            <div class="row-18 group">
-              <img class="layer-9" src="images/bog_b.jpg" alt="" width="134" height="134">
-              <img class="logo-vfte" src="images/logo_vfte.png" alt="" width="117" height="117">
-            </div>
-            <p class="text-67"><span class="text-style-4">Cơ quan thường trực giải thưởng</span><br><span class="text-style-5">&nbsp;</span><br>Cục Công nghiệp Công nghệ thông tin<br><span class="text-style-5">&nbsp;</span><br>Địa chỉ: Tầng 18, Tòa nhà 115 Trần Duy Hưng, P. Yên Hoà, Hà Nội<br><span class="text-style-5">&nbsp;</span><br>Hotline: 089.899.5599<br><span class="text-style-5">&nbsp;</span><br>Email: makeinvietnam@mst.gov.vn</p>
-          </div>
-          <div class="text-68">
-            <p class="text-style-7"><span class="text-style-6">Về giải thưởng</span></p>
-            <br>
-            <p>Ban tổ chức<br><span class="text-style-5">&nbsp;</span><br>Hội đồng giám khảo<br><span class="text-style-5">&nbsp;</span><br>Kết quả giải thưởng</p>
-          </div>
-        </div>
-        <div class="rectangle-1-copy-19-holder">
-          <div class="l-constrained-2">
-            <strong class="text-style-8">Bộ Khoa học và Công nghệ</strong>
-            <br>Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Mobile Menu Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
       <div class="offcanvas-header">
-        <div class="offcanvas-title d-flex align-items-center" id="mobileMenuLabel">
-          <img src="images/logo_b.png" alt="Logo" width="35" height="35">
-          <img src="images/logo.png" alt="Logo" width="37" height="36" class="ms-2">
-          <div class="ms-2">
-            <div class="fw-bold" style="font-size: 12px; line-height: 1.2; color: #991d4a;">Make in Vietnam</div>
-            <div style="font-size: 10px; line-height: 1.2; color: #666;">Sản phẩm Việt chất lượng cao</div>
-          </div>
-        </div>
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <nav class="mobile-nav">
-          <ul class="mobile-nav-list list-unstyled">
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link active">
-                <i class="fas fa-home me-2"></i>
-                Trang chủ
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <div class="mobile-nav-dropdown">
-                <a href="#" class="mobile-nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#aboutDropdown" aria-expanded="false">
-                  <span><i class="fas fa-award me-2"></i>Về giải thưởng</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="collapse" id="aboutDropdown">
-                  <ul class="mobile-dropdown-list list-unstyled ms-3">
-                    <li><a href="#" class="mobile-dropdown-link">Ban tổ chức</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Hội đồng giám khảo</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Kết quả giải thưởng</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="mobile-nav-item">
-              <div class="mobile-nav-dropdown">
-                <a href="#" class="mobile-nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#criteriaDropdown" aria-expanded="false">
-                  <span><i class="fas fa-clipboard-check me-2"></i>Tiêu chí đánh giá</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="collapse" id="criteriaDropdown">
-                  <ul class="mobile-dropdown-list list-unstyled ms-3">
-                    <li><a href="#" class="mobile-dropdown-link">Năm 2020</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Năm 2021</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Năm 2022</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Năm 2023</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Năm 2024</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Năm 2025</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-star me-2"></i>
-                Quyền lợi
-              </a>
-            </li>
-            <li class="mobile-nav-item">
-              <div class="mobile-nav-dropdown">
-                <a href="#" class="mobile-nav-link dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#guideDropdown" aria-expanded="false">
-                  <span><i class="fas fa-book me-2"></i>Hướng dẫn</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="collapse" id="guideDropdown">
-                  <ul class="mobile-dropdown-list list-unstyled ms-3">
-                    <li><a href="#" class="mobile-dropdown-link">Mẫu hồ sơ</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Lưu ý nộp hồ sơ</a></li>
-                    <li><a href="#" class="mobile-dropdown-link">Quy chế giải thưởng</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="mobile-nav-item">
-              <a href="#" class="mobile-nav-link">
-                <i class="fas fa-info-circle me-2"></i>
-                Thông tin, hoạt động
-              </a>
-            </li>
-          </ul>
-          
-          <div class="mt-4">
-            <a href="#" class="btn btn-primary w-100 mobile-login-btn">
-              <i class="fas fa-user me-2"></i>
-              Đăng ký / Đăng nhập
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link text-black" href="#">Trang chủ</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+              href="#mobileDropdown1" role="button" aria-expanded="false" aria-controls="mobileDropdown1">
+              <span>Về giải thưởng</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
             </a>
-          </div>
-          
-          <div class="mt-4 pt-4 border-top">
-            <div class="text-center">
-              <div class="mb-2">
-                <small class="text-muted">Cơ quan thường trực giải thưởng</small>
+            <div class="collapse" id="mobileDropdown1">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link text-black" href="#">Ban tổ chức</a></li>
+                <li><a class="nav-link text-black" href="#">Hội đồng giám khảo</a></li>
+                <li><a class="nav-link text-black" href="#">Kết quả giải thưởng</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+              href="#mobileDropdown2" role="button" aria-expanded="false" aria-controls="mobileDropdown2">
+              <span>Tiêu chí đánh giá</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </a>
+            <div class="collapse" id="mobileDropdown2">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link text-black" href="#">Năm 2020</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2021</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2022</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2023</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2024</a></li>
+                <li><a class="nav-link text-black" href="#">Năm 2025</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-black" href="#">Quyền lợi</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-black d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+              href="#mobileDropdown3" role="button" aria-expanded="false" aria-controls="mobileDropdown3">
+              <span>Hướng dẫn</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="collapse-arrow">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </a>
+            <div class="collapse" id="mobileDropdown3">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link text-black" href="#">Mẫu hồ sơ</a></li>
+                <li><a class="nav-link text-black" href="#">Lưu ý nộp hồ sơ</a></li>
+                <li><a class="nav-link text-black" href="#">Quy chế giải thưởng</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-black" href="#">Thông tin, hoạt động</a></li>
+          <li class="nav-item"><a class="nav-link color-1 btn btn-primary mt-2" href="#">Đăng ký/Đăng nhập</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero pt-5 overflow-hidden">
+    <div class="container">
+      <div class="hero__header mb-4">
+        <h1 class="hero__title fw-bold text-uppercase">
+          <span class="fs-1 color-6">Giải thưởng</span> <br>
+          <span class="hero__subtitle color-1">Sản phẩm công nghệ số</span>
+          <br>
+          <span class="hero__year text-white fs-4 px-2 py-1 d-inline-block mt-2 w-100">MAKE IN VIET NAM NĂM 2025</span>
+        </h1>
+      </div>
+      <div class="hero__categories text-center">
+        <h2 class="hero__categories-title color-1 fw-bold mb-3">HẠNG MỤC GIẢI THƯỞNG</h2>
+        <div class="hero__main-category d-flex justify-content-center">
+          <div class="hero__category-card col-12 col-md-8 col-lg-7 col-xl-3 mb-4">
+            <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+              <div
+                class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                <img src="images/ai-icon.svg" alt="" class="hero__icon--big mb-2 object-fit-contain">
               </div>
-              <div class="mb-2">
-                <strong style="color: #991d4a;">Cục Công nghiệp Công nghệ thông tin</strong>
-              </div>
-              <div class="small text-muted">
-                <div>📞 Hotline: 089.899.5599</div>
-                <div>✉️ Email: makeinvietnam@mst.gov.vn</div>
+              <div class="hero__category-title px-4 mt-4 fw-4">Sản phẩm công nghệ số <br> chiến lược xuất sắc
               </div>
             </div>
           </div>
-        </nav>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7 col-xl-3 mb-4">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/natural-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực NN, tài
+                  nguyên
+                  - môi
+                  trường</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/construction-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực công
+                  nghiệp và
+                  xây dựng
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/education-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực giáo dục,
+                  y
+                  tế, văn hóa,
+                  xã hội</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/potential-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số tiềm năng</div>
+                <div class="mt-3 pt-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/export-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số <br>xuất sắc<br> cho thị trường
+                  nước
+                  ngoài</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-5">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/logistics-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực giao
+                  thông vận
+                  tải, bưu
+                  chính và logistics</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-12 mb-4 mb-md-5">
+            <div class="hero__category-card h-100">
+              <div class="bg-white shadow rounded p-3 position-relative pt-md-5 mt-md-5 pt-4 mt-4">
+                <div
+                  class="position-absolute top-0 end-0 translate-middle-y d-flex align-items-center justify-content-center w-100">
+                  <img src="images/finance-icon.svg" alt="" class="hero__icon mb-2 object-fit-contain">
+                </div>
+                <div class="hero__category-title px-4 mt-3 fw-4">Sản phẩm công nghệ số xuất sắc trong lĩnh vực tài
+                  chính,
+                  ngân hàng, TMDV
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+  
+  <section class="timeline py-4 py-md-5">
+    <div class="container">
+      <div class="timeline__header text-center mb-5">
+        <h3 class="timeline__title text-uppercase fw-bold mb-2">HÀNH TRÌNH VINH DANH</h3>
+        <h2 class="timeline__subtitle text-uppercase fw-bold">SẢN PHẨM CÔNG NGHỆ SỐ MAKE IN VIET NAM 2025
+        </h2>
+      </div>
+      <div class="timeline__body">
+        <div class="timeline__content" id="timelineSteps">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+              <div
+                class="timeline__steps d-flex flex-wrap justify-content-between align-items-center position-relative">
+                <div class="timeline__step col-2 mb-4 mb-lg-0">
+                  <div
+                    class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                      TIẾP
+                      NHẬN HỒ
+                      SƠ</h4>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">04.09 - 22.10.2025</p>
+                  </div>
+                </div>
+
+                <div class="timeline__step col-2 mb-4 mb-lg-0">
+                  <div
+                    class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">SƠ
+                      TUYỂN HỒ SƠ
+                    </h4>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">04.10 - 22.10.2025</p>
+                  </div>
+                </div>
+
+                <div class="timeline__step col-2 mb-4 mb-lg-0">
+                  <div
+                    class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                      VÒNG
+                      SƠ KHẢO
+                    </h4>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">24.10 - 15.11.2025</p>
+                  </div>
+                </div>
+
+                <div class="timeline__step col-2 mb-4 mb-lg-0">
+                  <div
+                    class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                      VÒNG
+                      CHUNG
+                      KHẢO</h4>
+                    <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">16.11 - 25.2025</p>
+                  </div>
+                </div>
+
+                <div class="timeline__step col-2 mb-4 mb-lg-0">
+                  <div class="timeline__step-content text-center">
+                    <div
+                      class="timeline__step-info py-5 my-2 d-flex flex-column justify-content-center align-items-center">
+                      <h4 class="timeline__step-title text-uppercase fw-bold mb-2 text-black" style="font-size: 14px;">
+                        LỄ
+                        TRAO GIẢI
+                      </h4>
+                      <p class="timeline__step-date fw-4 mb-0 color-1 fs-6" style="font-size: 12px;">THÁNG 12 NĂM 2025</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="countdown pt-0 pb-5">
+    <div class="container">
+      <div class="countdown__content text-center">
+        <div class="countdown__header mb-4">
+          <h3 class="countdown__title text-danger fw-bold mb-2 fs-3">Giải thưởng chính thức tiếp nhận đăng ký <br class="d-none d-md-block">tham
+            gia từ ngày 04/09 - 22/10/2025</h3>
+        </div>
+
+        <div class="countdown__timer mx-auto d-flex justify-content-center">
+          <div class="countdown__display p-4 rounded shadow-lg" style="max-width: 900px; width: 100%;">
+            <div class="d-flex justify-content-center align-items-center flex-nowrap">
+
+              <div class="countdown__unit text-center flex-fill">
+                <div class="countdown__number text-white display-4 fw-bold mb-1" id="days">2</div>
+                <div class="countdown__label text-white text-uppercase small fw-semibold">NGÀY</div>
+              </div>
+
+              <div class="countdown__separator text-white display-4 fw-bold mx-2">:</div>
+
+              <div class="countdown__unit text-center flex-fill">
+                <div class="countdown__number text-white display-4 fw-bold mb-1" id="hours">06</div>
+                <div class="countdown__label text-white text-uppercase small fw-semibold">GIỜ</div>
+              </div>
+
+              <div class="countdown__separator text-white display-4 fw-bold mx-2">:</div>
+
+              <div class="countdown__unit text-center flex-fill">
+                <div class="countdown__number text-white display-4 fw-bold mb-1" id="minutes">15</div>
+                <div class="countdown__label text-white text-uppercase small fw-semibold">PHÚT</div>
+              </div>
+
+              <div class="countdown__separator text-white display-4 fw-bold mx-2">:</div>
+
+              <div class="countdown__unit text-center flex-fill">
+                <div class="countdown__number text-white display-4 fw-bold mb-1" id="seconds">48</div>
+                <div class="countdown__label text-white text-uppercase small fw-semibold">GIÂY</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="quote-section">
+      <div class="group-16">
+        <div class="rectangle-4"></div>
+        <img
+          class="hue-saturation-1"
+          src="images/hue_saturation_1.png"
+          alt="Portrait"
+        />
+        <p class="text-42 mb-0">“</p>
+        <p class="text-43">
+          Không Make in Viet Nam thì Việt Nam không thể hùng cường thịnh vượng.
+        </p>
+        <p class="text-44">
+          <em class="text-style-2">Bộ trưởng</em>
+          <span class="text-style-3">Nguyễn Mạnh Hùng</span><br />BỘ KHOA HỌC VÀ
+          CÔNG NGHỆ
+        </p>
+      </div>
+    </section>
+
+    <section class="benefits-container">
+      <h1 class="benefits-main-title benefits-fade-in">THAM GIA ĐỂ</h1>
+
+      <div class="row g-4 d-flex justify-content-center">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <div class="benefits-card benefits-fade-in">
+            <p class="benefits-card-text">
+              Được hỗ trợ đánh giá, nâng cao chất lượng sản phẩm từ các chuyên
+              gia hàng đầu
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <div class="benefits-card benefits-fade-in">
+            <p class="benefits-card-text">
+              Các sản phẩm đoạt giải sẽ được giới thiệu rộng rãi đến các địa
+              phương, cơ quan nhà nước
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <div class="benefits-card benefits-fade-in">
+            <p class="benefits-card-text">
+              Sản phẩm đoạt giải sẽ được đưa vào danh mục khuyến khích sử dụng
+              trong quá trình chuyển đổi số. Được hỗ trợ kết nối với
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <div class="benefits-card benefits-fade-in">
+            <p class="benefits-card-text">
+              Được hỗ trợ kết nối với thị trường quốc tế
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <div class="benefits-card benefits-fade-in">
+            <p class="benefits-card-text">
+              Được gặp gỡ các nhà đầu tư tiềm năng
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section class="container py-5">
+      <!-- Main Title -->
+      <h1 class="info-activities-main-title">
+        THÔNG TIN, HOẠT ĐỘNG CỦA GIẢI THƯỞNG
+      </h1>
+
+      <!-- Hero Section -->
+      <div class="info-activities-hero-section">
+        <div class="row g-0 g-md-5">
+          <div class="col-md-6">
+            <img
+              src="images/rectangle_1_copy_4.jpg"
+              alt="Conference Meeting"
+              class="info-activities-hero-image w-100 h-100 object-fit-cover"
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="info-activities-hero-content">
+              <h2 class="info-activities-hero-title">
+                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+                30/12/2024
+              </h2>
+              <p class="info-activities-hero-text mb-0">
+                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+                nhất.<br>
+                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+              </p>
+              <button class="info-activities-arrow-btn">
+                <p class="text-54">→</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="info-activities-card-section">
+            <img
+              src="images/rectangle_1_copy_2.jpg"
+              alt="Award Ceremony"
+              class="info-activities-card-image"
+            />
+            <div class="info-activities-card-content">
+              <h3 class="info-activities-card-title pb-3">
+                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+                30/12/2024
+              </h3>
+              <p class="info-activities-card-text">
+                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+                nhất.<br />
+                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+              </p>
+              <button class="info-activities-card-arrow">
+                <p class="text-57">→</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-activities-card-section">
+            <img
+              src="images/rectangle_1_copy_2.jpg"
+              alt="Award Ceremony"
+              class="info-activities-card-image"
+            />
+            <div class="info-activities-card-content">
+              <h3 class="info-activities-card-title pb-3">
+                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+                30/12/2024
+              </h3>
+              <p class="info-activities-card-text">
+                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+                nhất.<br />
+                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+              </p>
+              <button class="info-activities-card-arrow">
+                <p class="text-57">→</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-activities-card-section">
+            <img
+              src="images/rectangle_1_copy_2.jpg"
+              alt="Award Ceremony"
+              class="info-activities-card-image"
+            />
+            <div class="info-activities-card-content ">
+              <h3 class="info-activities-card-title pb-3">
+                Giải thưởng Make in Viet Nam 2024 dự kiến diễn ra vào ngày
+                30/12/2024
+              </h3>
+              <p class="info-activities-card-text">
+                (CLO) Hội đồng giám khảo và các tiểu ban Giải thưởng công nghệ
+                số Make in Viet Nam năm 2024 vừa tổ chức phiên họp lần thứ
+                nhất.<br />
+                Giải thưởng "Sản phẩm công nghệ số Make in Viet Nam" (Giải
+                thưởng Make in Viet Nam) là giải thưởng uy tín trong lĩnh vực
+                công nghệ thông tin và truyền thông, trao tặng hàng năm cho các
+                tổ chức, doanh nghiệp Việt Nam có sản phẩm công nghệ số xuất
+                sắc. Năm 2024 là năm thứ 5 giải thưởng được tổ chức.
+              </p>
+              <button class="info-activities-card-arrow">
+                <p class="text-57">→</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <section class="footer-section pt-5">
+      <div class="container">
+        <div class="row justify-content-around">
+          <!-- Left Column - Main Content -->
+          <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
+            <p class="main-title mb-0">MAKE IN VIET NAM</p>
+            <p class="year-title">2025</p>
+            <p class="description-text">
+              Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
+              sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
+              dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
+              số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
+              lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
+              tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
+              công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
+              phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
+              phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
+              lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
+              chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
+              phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
+              12/6/2025 của Thủ tướng Chính phủ.
+            </p>
+          </div>
+
+          <!-- Right Column - Contact & Navigation -->
+          <div class="col-lg-5 col-md-6 footer-section-center">
+            <!-- Contact Information -->
+            <div class="mb-4">
+              <div class="footer-logo group">
+                <img
+                  class="layer-9 me-2"
+                  src="images/bog_b.jpg"
+                  alt=""
+                  width="134"
+                  height="134"
+                />
+                <img
+                  class="logo-vfte"
+                  src="images/logo_vfte.png"
+                  alt=""
+                  width="117"
+                  height="117"
+                />
+              </div>
+              <div class="section-footer-contact">
+                <h5 class="section-footer-title">
+                CƠ QUAN THƯỜNG TRỰC GIẢI THƯỞNG
+              </h5>
+              <div class="contact-info">
+                <p><strong>Cục Công nghệ Công nghệ thông tin</strong></p>
+                <p>
+                  <strong>Địa chỉ:</strong> Tầng 18, Tòa nhà 115 Trần Duy Hưng,
+                  P. Yên Hoà, Hà Nội
+                </p>
+                <p><strong>Hotline:</strong> 089.899.5599</p>
+                <p><strong>Email:</strong> makeinvietnam@mst.gov.vn</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <!-- Navigation Links -->
+          </div>
+          <div class="col-md-2 mb-4 section-footer-nav">
+            <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
+            <ul class="nav-links list-unstyled section-footer-content">
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ban-to-chuc"
+                  >Ban tổ chức</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#hoi-dong-giam-khao"
+                  >Hội đồng giám khảo</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ket-qua-giai-thuong"
+                  >Kết quả giải thưởng</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section-bottom text-center py-4">
+        <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
+        <div class="fs-5">
+          Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
+        </div>
+      </div>
+    </section>
+</body>
+
 </html>

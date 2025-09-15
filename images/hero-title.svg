@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="558.188" height="31.407" viewBox="0 0 558.188 31.407">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="361.562" y1="254.766" x2="919.75" y2="254.766" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#921d4c"/>
+      <stop offset="1" stop-color="#d51d3e"/>
+    </linearGradient>
+  </defs>
+  <path id="Rectangle_8_copy_3" data-name="Rectangle 8 copy 3" class="cls-1" d="M361.574,239.06l489.2,0.007-34.138,31.407H361.574V239.06Zm494.884,0.007h18.487l-34.13,31.4H823.039Zm22.754,0H897.7l-34.13,31.4H845.792Zm22.042,0h18.488l-34.131,31.4H867.835Z" transform="translate(-361.562 -239.062)"/>
+</svg>
