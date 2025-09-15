@@ -1,0 +1,114 @@
+.hero-card {
+  background-image: url("../images/bg-trong-dong-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding: 30px 25px;
+  margin-bottom: 80px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.member-card {
+  background-image: url("../images/bg-trong-dong.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding: 30px 25px;
+  margin-bottom: 50px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-title {
+  color: #991d4a;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.position {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.department {
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.hero-name {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.hero-position {
+  font-size: 1rem;
+}
+
+.hero-department {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .member-card {
+    padding: 25px 9px;
+    min-height: 140px;
+    margin-bottom: 10px;
+  }
+  .hero-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    background-image: url("/images/bg-trong-dong.svg");
+    padding: 25px 20px;
+    min-height: 140px;
+  }
+
+  .member-card {
+    padding: 25px 20px;
+    min-height: 140px;
+    margin-bottom: 30px;
+  }
+
+  .hero-name {
+    font-size: 1.2rem;
+  }
+
+  .name-title {
+    font-size: 1rem;
+  }
+
+  .position {
+    font-size: 0.85rem;
+  }
+
+  .department {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-card {
+    padding: 25px 15px;
+  }
+
+  .member-card {
+    padding: 20px 15px;
+  }
+}

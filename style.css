@@ -217,7 +217,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 40vh;
+  min-height: 450px;
   position: relative;
   display: flex;
   align-items: center;
@@ -247,6 +247,6 @@
     font-size: 2.5rem;
   }
   .banner-section {
-    min-height: 30vh;
+    min-height: 300px;
   }
 }

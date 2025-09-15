@@ -1,0 +1,81 @@
+
+.award-header {
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+
+}
+
+/*  Simplified year sections - removed shadows and rounded corners */
+.year-section {
+  background: white;
+  margin-bottom: 1rem;
+}
+
+/*  Plain year header - removed hover effects and fancy styling */
+.year-header {
+  background: #f8f9fa;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*  Simple category title - removed background color */
+.category-title {
+  background: #ffffff;
+  color: #333;
+  padding: 2rem 1rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*  Plain table styling - removed all color effects */
+.awards-table {
+  margin: 0;
+}
+
+.awards-table th {
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.awards-table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+/*  Removed all award badge colors - plain text only */
+.award-text {
+  font-weight: normal;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .awards-table {
+    font-size: 0.9rem;
+  }
+
+  .awards-table th,
+  .awards-table td {
+    padding: 0.5rem;
+  }
+
+  .year-header {
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+  }
+}

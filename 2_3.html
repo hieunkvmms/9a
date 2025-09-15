@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MAKE IN VIỆT NAM" />
+    <meta name="keywords" content="MAKE IN VIỆT NAM" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/2_3.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="global.css" rel="stylesheet" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <section class="header container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="logo col-7 col-sm col-md-5 col-lg-3 py-2">
+          <img
+            src="images/logo.png"
+            class="w-100 h-100 object-fit-cover"
+            alt="Logo make in vietnam"
+          />
+        </div>
+        <div
+          class="menu d-none d-lg-flex align-items-center col-10 d-flex justify-content-end"
+        >
+          <ul class="menu__list list-group-numbered d-flex mb-0">
+            <li class="menu__item menu__item--active">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Về giải thưởng</a
+              >
+              <ul class="menu__dropdown list-group-numbered position-absolute">
+                <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Hội đồng giám khảo</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Kết quả giải thưởng</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Tiêu chí đánh giá</a
+              >
+              <ul class="menu__dropdown list-group-numbered position-absolute">
+                <li><a class="dropdown-item" href="#">Năm 2020</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2021</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2022</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2023</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2024</a></li>
+                <li><a class="dropdown-item" href="#">Năm 2025</a></li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Quyền lợi</a
+              >
+            </li>
+            <li class="menu__item menu__item--has-dropdown position-relative">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Hướng dẫn</a
+              >
+              <ul class="menu__dropdown list-group-numbered position-absolute">
+                <li><a class="dropdown-item" href="#">Mẫu hồ sơ</a></li>
+                <li><a class="dropdown-item" href="#">Lưu ý nộp hồ sơ</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Quy chế giải thưởng</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link text-decoration-none text-black py-4 d-block px-3 fw-4"
+                href="#"
+                >Thông tin, hoạt động</a
+              >
+            </li>
+            <li class="login-button d-flex align-items-center">
+              <a class="menu__link text-decoration-none fw-4 color-1" href="#"
+                >Đăng ký/Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="py-2">
+          <button
+            class="color-1 border-0 d-lg-none ms-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+          >
+            <span>
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <rect y="4" width="24" height="2" rx="1"></rect>
+                <rect y="11" width="24" height="2" rx="1"></rect>
+                <rect y="18" width="24" height="2" rx="1"></rect>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-black d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#mobileDropdown1"
+                role="button"
+                aria-expanded="false"
+                aria-controls="mobileDropdown1"
+              >
+                <span>Về giải thưởng</span>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="collapse-arrow"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+              <div class="collapse" id="mobileDropdown1">
+                <ul class="nav flex-column ms-3">
+                  <li>
+                    <a class="nav-link text-black" href="#">Ban tổ chức</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-black" href="#"
+                      >Hội đồng giám khảo</a
+                    >
+                  </li>
+                  <li>
+                    <a class="nav-link text-black" href="#"
+                      >Kết quả giải thưởng</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-black d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#mobileDropdown2"
+                role="button"
+                aria-expanded="false"
+                aria-controls="mobileDropdown2"
+              >
+                <span>Tiêu chí đánh giá</span>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="collapse-arrow"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+              <div class="collapse" id="mobileDropdown2">
+                <ul class="nav flex-column ms-3">
+                  <li><a class="nav-link text-black" href="#">Năm 2020</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2021</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2022</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2023</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2024</a></li>
+                  <li><a class="nav-link text-black" href="#">Năm 2025</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Quyền lợi</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-black d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#mobileDropdown3"
+                role="button"
+                aria-expanded="false"
+                aria-controls="mobileDropdown3"
+              >
+                <span>Hướng dẫn</span>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  class="collapse-arrow"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+              <div class="collapse" id="mobileDropdown3">
+                <ul class="nav flex-column ms-3">
+                  <li><a class="nav-link text-black" href="#">Mẫu hồ sơ</a></li>
+                  <li>
+                    <a class="nav-link text-black" href="#">Lưu ý nộp hồ sơ</a>
+                  </li>
+                  <li>
+                    <a class="nav-link text-black" href="#"
+                      >Quy chế giải thưởng</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Thông tin, hoạt động</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color-1 btn btn-primary mt-2" href="#"
+                >Đăng ký/Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+      <div class="container">
+        <div class="content-wrapper">
+          <h1 class="banner-title">HỘI ĐỒNG GIÁM KHẢO</h1>
+        </div>
+      </div>
+    </section>
+    <section class="py-4">
+      <div class="award-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="mb-0 fs-6" style="color: #333">
+                Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
+                sắc, mang tự hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
+                dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh
+                tế số, số hoá các ngành kinh tế, tạo bước nhẩy vọt về năng suất,
+                chất lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng
+                thời hướng tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ
+                nền tảng, công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn
+                vinh các sản phẩm công nghệ số Việt Nam chinh phục thế giới,
+                đóng góp cho sự phát triển của nhân loại và làm thịnh vượng Việt
+                Nam. Đồng thời, lần đầu tiên Giải thưởng sẽ tôn vinh các sản
+                phẩm công nghệ số chiến lược xuất sắc trong Danh mục công nghệ
+                chiến lược và sản phẩm công nghệ chiến lược tại Quyết định số
+                1131/QĐ-TTg ngày 12/6/2025 của Thủ tướng Chính phủ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Năm 2020 -->
+        <div class="year-section">
+          <button
+            class="year-header"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#year2020"
+            aria-expanded="true"
+            aria-controls="year2020"
+          >
+            <span>NĂM 2020</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse show" id="year2020">
+            <h4 class="category-title">
+              HẠNG MỤC GIẢI THƯỞNG NỀN TẢNG SỐ XUẤT SẮC (10 SẢN PHẨM)
+            </h4>
+            <div class="table-responsive">
+              <table class="table awards-table">
+                <thead>
+                  <tr>
+                    <th style="width: 8%">TT</th>
+                    <th style="width: 45%">TÊN SẢN PHẨM</th>
+                    <th style="width: 32%">DOANH NGHIỆP</th>
+                    <th style="width: 15%">GIẢI THƯỞNG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td>Nền tảng quản trị và điều hành doanh nghiệp Base.vn</td>
+                    <td>Công ty Cổ phần Base Enterprise</td>
+                    <td class="award-text">Giải Nhất</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td>Ứng dụng gọi xe Be</td>
+                    <td>Công ty cổ phần BE GROUP</td>
+                    <td class="award-text">Giải Nhì</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>Nền tảng Trí tuệ Nhân tạo Toàn diện FPT.AI</td>
+                    <td>Công ty TNHH FPT Smart Cloud</td>
+                    <td class="award-text">Giải Ba</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>Nền tảng học và thi trực tuyến (VNPT Elearning)</td>
+                    <td>VNPT</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>Nền tảng Điện toán đám mây Viettel vCloud</td>
+                    <td>Tổng công ty Mạng lưới Viettel</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td>akaChain</td>
+                    <td>FPT Software</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td>Nền tảng quản trị doanh nghiệp hợp nhất MISA AMIS</td>
+                    <td>Công ty Cổ phần MISA</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">8</td>
+                    <td>
+                      Nền tảng công nghệ Trí tuệ nhân tạo của Viettel - Viettel
+                      AI Open Platform
+                    </td>
+                    <td>
+                      Trung tâm Không gian mạng Viettel - Tập đoàn Công nghiệp -
+                      Viễn thông Quân đội
+                    </td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">9</td>
+                    <td>Hệ sinh thái VNPT SmartCloud</td>
+                    <td>VNPT</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">10</td>
+                    <td>
+                      Giải pháp công quản lý dữ liệu lớn phục vụ kết nối tập
+                      trung cho các dịch vụ - Big Data management gateway for
+                      centralized connection (MobiFone BMCC gateway)
+                    </td>
+                    <td>Trung tâm Công nghệ thông tin MobiFone</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Hạng mục Giải thưởng Sản phẩm số xuất sắc -->
+            <h4 class="category-title">
+              HẠNG MỤC GIẢI THƯỞNG SẢN PHẨM SỐ XUẤT SẮC (10 SẢN PHẨM)
+            </h4>
+            <div class="table-responsive">
+              <table class="table awards-table">
+                <thead>
+                  <tr>
+                    <th style="width: 8%">TT</th>
+                    <th style="width: 45%">TÊN SẢN PHẨM</th>
+                    <th style="width: 32%">DOANH NGHIỆP</th>
+                    <th style="width: 15%">GIẢI THƯỞNG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td>akaBot</td>
+                    <td>FPT Software</td>
+                    <td class="award-text">Giải Nhất</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td>ViettelPay</td>
+                    <td>Tổng Công ty Dịch vụ số Viettel</td>
+                    <td class="award-text">Giải Nhì</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>VNPT electronic Know Your Customer (VNPT eKYC)</td>
+                    <td>VNPT</td>
+                    <td class="award-text">Giải Ba</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>Hệ thống số hóa D-IONE</td>
+                    <td>
+                      Công ty Cổ phần Đầu tư Thương mại và Phát triển Công nghệ
+                      FSI
+                    </td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>Kho dữ liệu tập trung Viettel Data Lake</td>
+                    <td>Tập đoàn Công nghiệp - Viễn thông Quân đội</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td>ViettelPost</td>
+                    <td>Tổng Công ty Cổ phần Bưu chính Viettel</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td>Phần mềm diệt virus Bkav Pro Internet Security AI</td>
+                    <td>Công ty cổ phần phần mềm diệt virus Bkav</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">8</td>
+                    <td>Bộ sản phẩm Văn phòng điện tử MobiFone Smart Office</td>
+                    <td>
+                      Trung tâm Công nghệ thông tin MobiFone - CN Tổng công ty
+                      Viễn thông MobiFone
+                    </td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">9</td>
+                    <td>Trợ lý ảo Tiếng Việt KI-KI</td>
+                    <td>Công ty Cổ phần VNG</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">10</td>
+                    <td>Hệ thống giải pháp thông minh điện quang smart v2</td>
+                    <td>Công ty Cổ phần Bóng đèn Điện Quang</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Hạng mục Giải thưởng Giải pháp số xuất sắc -->
+            <h4 class="category-title">
+              HẠNG MỤC GIẢI THƯỞNG GIẢI PHÁP SỐ XUẤT SẮC (10 SẢN PHẨM)
+            </h4>
+            <div class="table-responsive">
+              <table class="table awards-table">
+                <thead>
+                  <tr>
+                    <th style="width: 8%">TT</th>
+                    <th style="width: 45%">TÊN SẢN PHẨM</th>
+                    <th style="width: 32%">DOANH NGHIỆP</th>
+                    <th style="width: 15%">GIẢI THƯỞNG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td>Giải pháp số OneATS</td>
+                    <td>
+                      Công ty Cổ phần Hệ thống Kỹ thuật Ứng dụng (ATS JSC)
+                    </td>
+                    <td class="award-text">Giải Nhất</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td>DrAid™ - AI Trợ lý bác sĩ</td>
+                    <td>VINBRAIN</td>
+                    <td class="award-text">Giải Nhì</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>
+                      Giải pháp nhận dạng ký tự quang học tiếng Việt - OCR
+                    </td>
+                    <td>
+                      Trung tâm Không gian mạng Viettel - Tập đoàn Công nghiệp -
+                      Viễn thông Quân đội
+                    </td>
+                    <td class="award-text">Giải Ba</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>
+                      Phần mềm quản lý phát hiện và ứng phó các mối đe dọa an
+                      toàn an ninh thông tin - FPT EagleEye MDR
+                    </td>
+                    <td>Công ty TNHH Hệ thống Thông tin FPT</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>Phần mềm quản lý Nhà hàng MISA CukCuk</td>
+                    <td>Công ty Cổ phần MISA</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td>
+                      Giải pháp quản lý và điều hành vận tải hành khách công
+                      cộng bằng xe buýt (FPT.iBus)
+                    </td>
+                    <td>Công ty TNHH Hệ thống Thông tin FPT</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td>Hệ sinh thái ezCloud</td>
+                    <td>Công ty TNHH Công nghệ ezCloud Toàn Cầu</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">8</td>
+                    <td>
+                      Ứng dụng các tri thức kinh doanh dựa trên nền tảng Big
+                      Data và ứng dụng học máy để phân tích dự liệu nhằm xây
+                      dựng Hệ thống Điều hành kinh doanh toàn cầu GBOC (Global
+                      Business Operation Center)
+                    </td>
+                    <td>Tổng công ty Viễn thông Viettel</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">9</td>
+                    <td>Trung tâm điều hành thông minh (VNPT IOC)</td>
+                    <td>VNPT</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">10</td>
+                    <td>Phần mềm quản lý hệ thống camera thông minh</td>
+                    <td>Trung tâm Vi mạch Đà Nẵng (CENTIC)</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Hạng mục Giải thưởng Thu hẹp khoảng cách số -->
+            <h4 class="category-title">
+              HẠNG MỤC GIẢI THƯỞNG THU HẸP KHOẢNG CÁCH SỐ (10 SẢN PHẨM)
+            </h4>
+            <div class="table-responsive">
+              <table class="table awards-table">
+                <thead>
+                  <tr>
+                    <th style="width: 8%">TT</th>
+                    <th style="width: 45%">TÊN SẢN PHẨM</th>
+                    <th style="width: 32%">DOANH NGHIỆP</th>
+                    <th style="width: 15%">GIẢI THƯỞNG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td>Hệ sinh thái Giáo dục thông minh vnEdu 4.0</td>
+                    <td>Tập đoàn VNPT</td>
+                    <td class="award-text">Giải Nhất</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td>Sàn thương mại điện tử Vỏ Số</td>
+                    <td>Tổng Công ty Cổ phần Bưu chính Viettel</td>
+                    <td class="award-text">Giải Nhì</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>Nền tảng học trực tuyến Hocmai.vn</td>
+                    <td>Công ty Cổ phần Đầu tư và Dịch vụ Giáo dục</td>
+                    <td class="award-text">Giải Ba</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>Hệ thống học Code- Codelearn</td>
+                    <td>FPT Software</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>
+                      Ứng dụng và website học tiếng Anh trực tuyến Tiếng Anh 123
+                    </td>
+                    <td>Công ty TNHH Hỗ Trực Tuyến</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td>
+                      Ứng dụng theo dõi và tư vấn sức khỏe cho người Việt -
+                      MEDIC
+                    </td>
+                    <td>Công ty Cổ phần Công nghệ Dịch vụ Y tế Medici</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td>
+                      Hệ thống quản trị phân ánh và tương tác trực tuyến (DRIMX)
+                    </td>
+                    <td>Tập đoàn VNPT</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">8</td>
+                    <td>KuuHo - Ứng dụng kết nối hỗ trợ cộng đồng</td>
+                    <td>Công ty cổ phần KuuHo</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">9</td>
+                    <td>Đem cả trang trại vào trong túi bạn</td>
+                    <td>
+                      Công ty Cổ phần Công nghệ phát triển nông nghiệp Việt Nam
+                    </td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">10</td>
+                    <td>Ứng dụng kết nối gia sư uTEACHER</td>
+                    <td>Công ty cổ phần Gia sư thông minh uTEACHER</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Hạng mục Giải thưởng Sản phẩm số tiềm năng -->
+            <h4 class="category-title">
+              HẠNG MỤC GIẢI THƯỞNG SẢN PHẨM SỐ TIỀM NĂNG (10 SẢN PHẨM)
+            </h4>
+            <div class="table-responsive">
+              <table class="table awards-table">
+                <thead>
+                  <tr>
+                    <th style="width: 8%">TT</th>
+                    <th style="width: 45%">TÊN SẢN PHẨM</th>
+                    <th style="width: 32%">DOANH NGHIỆP</th>
+                    <th style="width: 15%">GIẢI THƯỞNG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td>AI Smart Warning</td>
+                    <td>Công ty TNHH công nghệ Acilla Việt Nam</td>
+                    <td class="award-text">Giải Nhất</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td>
+                      Xây dựng hệ thống nhận dạng có thể người 3D trong gương
+                      dạy, sử dụng thực tế ảo tăng cường và trực quan hóa dữ
+                      liệu lớn
+                    </td>
+                    <td>Trường Đại học Duy Tân</td>
+                    <td class="award-text">Giải Nhì</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>Điện thoại thông minh Bkav Bphone</td>
+                    <td>Công ty cổ phần Bkav</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>
+                      ChatOps - Conversational AI for Seamless Collaboration
+                    </td>
+                    <td>Công ty cổ phần NAL Việt Nam</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>
+                      VNPT Pay - Giải pháp thúc đẩy tài chính toàn diện tại Việt
+                      Nam
+                    </td>
+                    <td>Tập đoàn Bưu chính Viễn thông (VNPT)</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td>Nền tảng số hóa giáo thông công cộng</td>
+                    <td>Công ty cổ phần RustMap</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td>
+                      Hệ thống phần mềm phân tích và quản lý hình ảnh thông minh
+                      cho nhận diện khuôn mặt - CIVAMS.Face
+                    </td>
+                    <td>Viện nghiên cứu Ứng dụng Công nghệ CMC</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">8</td>
+                    <td>Nền tảng Số hóa doanh nghiệp IBPMS</td>
+                    <td>Tổng Công ty Mạng lưới Viettel</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">9</td>
+                    <td>ViettelSafe</td>
+                    <td>Tổng Công ty Cổ phần Bưu chính Viettel</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">10</td>
+                    <td>Nền tảng Chatbot bán hàng đa kênh</td>
+                    <td>Công ty Cổ phần Công nghệ Chatbot Việt Nam</td>
+                    <td class="award-text">Top 10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section pt-5">
+      <div class="container">
+        <div class="row justify-content-around">
+          <!-- Left Column - Main Content -->
+          <div class="col-lg-5 col-md-6 mb-4 footer-main-content">
+            <p class="main-title mb-0">MAKE IN VIET NAM</p>
+            <p class="year-title">2025</p>
+            <p class="description-text">
+              Giải thưởng năm 2025 sẽ tôn vinh các sản phẩm công nghệ số xuất
+              sắc, mang tư hào trí tuệ Việt Nam, thúc đẩy chuyển đổi số toàn
+              dân, toàn diện, toàn trình để tăng tốc, bứt phá phát triển kinh tế
+              số, số hóa các ngành kinh tế, tạo bước nhảy vọt về năng suất, chất
+              lượng, hiệu quả và sức cạnh tranh của nền kinh tế, đồng thời hướng
+              tới mục tiêu làm chủ các công nghệ cốt lõi, công nghệ nền tảng,
+              công nghệ chiến lược. Giải thưởng cũng tiếp tục tôn vinh các sản
+              phẩm công nghệ số Việt Nam chinh phục thế giới, đóng góp cho sự
+              phát triển của nhân loại và làm thịnh vượng Việt Nam. Đồng thời,
+              lần đầu tiên Giải thưởng sẽ tôn vinh các sản phẩm công nghệ số
+              chiến lược xuất sắc trong Danh mục công nghệ chiến lược và sản
+              phẩm công nghệ chiến lược tại Quyết định số 1131/QĐ-TTg ngày
+              12/6/2025 của Thủ tướng Chính phủ.
+            </p>
+          </div>
+
+          <!-- Right Column - Contact & Navigation -->
+          <div class="col-lg-5 col-md-6 footer-section-center">
+            <!-- Contact Information -->
+            <div class="mb-4">
+              <div class="footer-logo group">
+                <img
+                  class="layer-9 me-2"
+                  src="images/bog_b.jpg"
+                  alt=""
+                  width="134"
+                  height="134"
+                />
+                <img
+                  class="logo-vfte"
+                  src="images/logo_vfte.png"
+                  alt=""
+                  width="117"
+                  height="117"
+                />
+              </div>
+              <div class="section-footer-contact">
+                <h5 class="section-footer-title">
+                  CƠ QUAN THƯỜNG TRỰC GIẢI THƯỞNG
+                </h5>
+                <div class="contact-info">
+                  <p><strong>Cục Công nghệ Công nghệ thông tin</strong></p>
+                  <p>
+                    <strong>Địa chỉ:</strong> Tầng 18, Tòa nhà 115 Trần Duy
+                    Hưng, P. Yên Hoà, Hà Nội
+                  </p>
+                  <p><strong>Hotline:</strong> 089.899.5599</p>
+                  <p><strong>Email:</strong> makeinvietnam@mst.gov.vn</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Links -->
+          </div>
+          <div class="col-md-2 mb-4 section-footer-nav">
+            <h5 class="section-footer-title">VỀ GIẢI THƯỞNG</h5>
+            <ul class="nav-links list-unstyled section-footer-content">
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ban-to-chuc"
+                  >Ban tổ chức</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#hoi-dong-giam-khao"
+                  >Hội đồng giám khảo</a
+                >
+              </li>
+              <li class="pb-3">
+                <a class="text-decoration-none" href="#ket-qua-giai-thuong"
+                  >Kết quả giải thưởng</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section-bottom text-center py-4">
+        <div class="fw-bold fs-5">BỘ KHOA HỌC VÀ CÔNG NGHỆ</div>
+        <div class="fs-5">
+          Phát triển bởi Trung tâm Công nghệ thông tin MobiFone
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
