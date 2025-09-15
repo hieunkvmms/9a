@@ -220,3 +220,15 @@
     background-clip: text;
     color: transparent;
 }
+
+.banner__bg {
+    background: url('/images/bg_hero.png') center center/cover no-repeat;
+    min-height: 300px;
+}
+
+.banner__title {
+    font-size: 64px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
