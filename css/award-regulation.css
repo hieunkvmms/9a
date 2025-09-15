@@ -3,7 +3,6 @@
     background-color: #ffffff;
     font-family: 'Times New Roman', serif;
 }
-
 .award-regulation p {
     margin: 0;
     padding: 0;
@@ -186,4 +185,16 @@
 }
 .highlight-blue {
   color: #0066cc;
+}
+.award-regulation__ministry-info {
+  margin: 0 100px;
+}
+@media (max-width: 768px) {
+  .award-regulation__ministry-right {
+    text-align: center;
+    margin-top: 0.5rem !important;
+  }
+  .award-regulation__ministry-info {
+    margin: 0 20px;
+  }
 }
